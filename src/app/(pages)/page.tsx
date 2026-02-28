@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { WhatsAppBookingSection } from "@/components/whatsapp-booking-section";
-import { WhatsAppButton } from "@/components/whatsapp-button";
 import {
   homeJsonLd,
   physioWhatsAppHref,
@@ -46,12 +45,29 @@ export default function Home() {
       text: "Seguimiento de cargas y progresión adaptada a tu caso.",
     },
   ] as const;
+  const featuredHomeServices = [
+    {
+      title: "Fisioterapia",
+      description:
+        "Valoración, tratamiento y ejercicio terapéutico para reducir dolor, recuperar movilidad y volver a tu actividad con seguridad.",
+    },
+    {
+      title: "Entrenamiento",
+      description:
+        "Plan de fuerza individualizado con progresión de cargas y seguimiento para mejorar rendimiento y prevenir recaídas.",
+    },
+    {
+      title: "Readaptación",
+      description:
+        "Proceso coordinado de fisioterapia y entrenamiento para recuperar función, volver a tu actividad y seguir progresando con seguridad.",
+    }
+  ] as const;
 
   return (
     <>
       <main id="inicio" className="bg-white">
-        <section className="mx-auto w-full max-w-7xl px-4 pt-6 sm:px-6 lg:px-8 lg:pt-8">
-          <div className="px-3 mb-6 flex flex-col md:flex-row items-center md:flex-wrap md:items-end justify-between gap-4 lg:mb-8">
+        <section className="w-full pt-6 lg:pt-8">
+          <div className="mx-auto mb-6 flex w-full max-w-7xl flex-col items-center justify-between gap-4 px-4 md:flex-row md:flex-wrap md:items-end sm:px-6 lg:mb-8 lg:px-8">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--electric)]">
                 Rehab Strength · Molina de Segura
@@ -70,7 +86,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-white">
+          <div className="relative w-full overflow-hidden bg-white">
             <div className="relative h-[430px] w-full sm:h-[560px] lg:h-[640px]">
               <Image
                 src="/images/Pesas imagen.avif"
@@ -117,61 +133,69 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mx-auto w-full max-w-7xl px-6 pt-12 lg:px-8" aria-label="Ventajas principales">
-          <div className="grid gap-5 border-y border-slate-200 py-6 md:grid-cols-3">
-            <article className="relative border-l border-slate-200 pl-14 pr-2">
-              <span
-                className="absolute left-2 top-0 grid h-9 w-9 place-items-center rounded-lg bg-[var(--electric)]/8 text-[var(--electric)]"
-                aria-hidden="true"
-              >
-                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M4 13h4l2-4 4 8 2-4h4" />
-                </svg>
-              </span>
-              <h3 className="font-display text-[1.08rem] leading-[1.05] text-[#133242]">
-                Recuperación con criterio clínico
-              </h3>
-              <p className="mt-2 text-[0.95rem] leading-[1.45] text-slate-600">
-                Tratamiento y ejercicio guiado para reducir dolor y recuperar función real.
+        <section className="w-full px-10 pt-12" aria-label="Ventajas principales">
+          <div className="grid gap-7 py-8 md:grid-cols-3 md:gap-10 md:py-10">
+            <article className="text-center">
+              <div className="flex items-center justify-center gap-4">
+                <span
+                  className="inline-grid h-12 w-12 place-items-center rounded-full border border-black/20 bg-slate-100 text-black"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.7">
+                    <path d="M4 13h4l2-4 4 8 2-4h4" />
+                  </svg>
+                </span>
+                <h3 className="font-display text-[clamp(2rem,3.2vw,3rem)] leading-[0.9] text-[#0e2234]">
+                  Recuperación
+                </h3>
+              </div>
+              <p className="mx-auto mt-3 max-w-sm text-[0.98rem] text-justify leading-relaxed text-slate-600">
+                Tratamiento y ejercicio guiado para reducir dolor y recuperar función real desde el primer paso.
               </p>
             </article>
-            <article className="relative border-l border-slate-200 pl-14 pr-2">
-              <span
-                className="absolute left-2 top-0 grid h-9 w-9 place-items-center rounded-lg bg-[var(--electric)]/8 text-[var(--electric)]"
-                aria-hidden="true"
-              >
-                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M4 18V6m8 12V10m8 8V4" />
-                </svg>
-              </span>
-              <h3 className="font-display text-[1.08rem] leading-[1.05] text-[#133242]">
-                Progresión y seguimiento
-              </h3>
-              <p className="mt-2 text-[0.95rem] leading-[1.45] text-slate-600">
-                Objetivos claros y control de cargas para que avances con seguridad.
+
+            <article className="text-center">
+              <div className="flex items-center justify-center gap-4">
+                <span
+                  className="inline-grid h-12 w-12 place-items-center rounded-full border border-black/20 bg-slate-100 text-black"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.7">
+                    <path d="M4 18V6m8 12V10m8 8V4" />
+                  </svg>
+                </span>
+                <h3 className="font-display text-[clamp(2rem,3.2vw,3rem)] leading-[0.9] text-[#0e2234]">
+                  Progresión
+                </h3>
+              </div>
+              <p className="mx-auto mt-3 max-w-sm text-[0.98rem] text-justify leading-relaxed text-slate-600">
+                Objetivos claros, control de cargas y seguimiento continuo para que avances con seguridad.
               </p>
             </article>
-            <article className="relative border-l border-slate-200 pl-14 pr-2">
-              <span
-                className="absolute left-2 top-0 grid h-9 w-9 place-items-center rounded-lg bg-[var(--electric)]/8 text-[var(--electric)]"
-                aria-hidden="true"
-              >
-                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M8 12h8M12 8v8" />
-                  <circle cx="12" cy="12" r="8.5" />
-                </svg>
-              </span>
-              <h3 className="font-display text-[1.08rem] leading-[1.05] text-[#133242]">
-                Un solo centro, dos servicios
-              </h3>
-              <p className="mt-2 text-[0.95rem] leading-[1.45] text-slate-600">
-                Fisioterapia y entrenamiento coordinados para evitar recaídas y mejorar rendimiento.
+
+            <article className="text-center">
+              <div className="flex items-center justify-center gap-4">
+                <span
+                  className="inline-grid h-12 w-12 place-items-center rounded-full border border-black/20 bg-slate-100 text-black"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.7">
+                    <circle cx="12" cy="12" r="8.5" />
+                    <path d="M8 12h8M12 8v8" />
+                  </svg>
+                </span>
+                <h3 className="font-display text-[clamp(2rem,3.2vw,3rem)] leading-[0.9] text-[#0e2234]">
+                  Coordinación
+                </h3>
+              </div>
+              <p className="mx-auto mt-3 max-w-sm text-justify text-[0.98rem] leading-relaxed text-slate-600">
+                Fisioterapia y entrenamiento conectados en un mismo plan para evitar recaídas y mejorar rendimiento.
               </p>
             </article>
           </div>
         </section>
 
-        <section id="servicios" className="section-wrap mx-auto w-full max-w-7xl px-6 pt-18 lg:px-8">
+        {/* <section id="servicios" className="section-wrap mx-auto w-full max-w-7xl px-6 pt-18 lg:px-8">
           <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--electric)]">
                   Nuestros servicios
@@ -245,19 +269,36 @@ export default function Home() {
               </article>
             ))}
           </div>
+        </section> */}
+
+        <section className="service-stripe-section" aria-label="Servicios destacados">
+          {featuredHomeServices.map((service) => (
+            <article
+              key={service.title}
+              className="service-stripe"
+            >
+              <h3 className="service-stripe-title">{service.title}</h3>
+              <p className="service-stripe-description">{service.description}</p>
+            </article>
+          ))}
+        </section>
+
+        <section className="section-wrap pt-14 flex justify-center" aria-label="Mensaje principal">
+          <blockquote className="methodology-quote">
+            <p className="methodology-quote-lead">
+              Somos un equipo clínico y de entrenamiento coordinado para acompañarte en todo el proceso.
+            </p>
+            <p className="methodology-quote-body">
+              Unificamos valoración, tratamiento y progresión de fuerza en un mismo plan para que
+              entiendas qué se hace, por qué se hace y cómo avanzar sin recaídas.
+            </p>
+          </blockquote>
         </section>
 
         <section id="metodologia" className="section-wrap">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--electric)]">
               Enfoque de trabajo
-            </p>
-            <h2 className="mt-3 max-w-3xl font-display text-[clamp(2rem,4vw,3.35rem)] leading-[0.95] text-[#0c1f4f]">
-              Equipo clínico y entrenamiento coordinados para acompañarte en todo el proceso.
-            </h2>
-            <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">
-              Unificamos valoración, tratamiento y progresión de fuerza en un mismo plan para que
-              entiendas qué se hace, por qué se hace y cómo avanzar sin recaídas.
             </p>
 
             <div className="mt-10 grid gap-x-7 gap-y-5 md:grid-cols-2 lg:gap-x-8 lg:gap-y-6">

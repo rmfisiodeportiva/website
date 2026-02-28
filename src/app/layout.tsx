@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans, Teko } from "next/font/google";
+import { Teachers, League_Spartan } from "next/font/google";
 import "./globals.css";
 
-const plusJakartaSans = Plus_Jakarta_Sans({
-  variable: "--font-body",
+const leagueSpartan = League_Spartan({
+  variable: "--font-display",
   subsets: ["latin"],
   display: "swap",
 });
 
-const teko = Teko({
-  variable: "--font-display",
+const teachers = Teachers({
+  variable: "--font-body",
   subsets: ["latin"],
   display: "swap",
 });
@@ -58,7 +58,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${plusJakartaSans.variable} ${teko.variable} antialiased`}>
+      <body className={`${teachers.variable} ${leagueSpartan.variable} antialiased`}>
         {children}
       </body>
     </html>

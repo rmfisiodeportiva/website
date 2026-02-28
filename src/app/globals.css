@@ -319,6 +319,81 @@ body {
   background: #fff;
 }
 
+.service-stripe-section {
+  margin-top: 4.5rem;
+  border-top: 1px solid #111;
+  border-bottom: 1px solid #111;
+}
+
+.service-stripe {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.2rem;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #111;
+  background: #f2f2f2;
+  transition: background-color 240ms ease;
+}
+
+.service-stripe:last-child {
+  border-bottom: 0;
+}
+
+.service-stripe:hover,
+.service-stripe:focus-visible,
+.service-stripe:focus-within {
+  background-color: #0582c2 !important;
+  outline: none;
+}
+
+.service-stripe-title {
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(2.4rem, 9vw, 7rem);
+  line-height: 0.9;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #04080d;
+  transition: color 220ms ease;
+}
+
+.service-stripe-description {
+  max-width: 32rem;
+  min-height: 3.2rem;
+  font-size: clamp(0.86rem, 1.15vw, 1.02rem);
+  line-height: 1.35;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 180ms ease;
+}
+
+.service-stripe:hover .service-stripe-title,
+.service-stripe:focus-visible .service-stripe-title,
+.service-stripe:focus-within .service-stripe-title {
+  color: #fff;
+}
+
+.service-stripe:hover .service-stripe-description,
+.service-stripe:focus-visible .service-stripe-description,
+.service-stripe:focus-within .service-stripe-description {
+  visibility: visible;
+  opacity: 1;
+  color: #fff;
+}
+
+@media (min-width: 900px) {
+  .service-stripe {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
+    gap: 2.5rem;
+    padding: 2rem 1.6rem;
+  }
+
+  .service-stripe-description {
+    justify-self: end;
+  }
+}
+
 .hero-caption-card {
   border-radius: 1rem;
   border: 1px solid rgba(223, 226, 228, 0.95);

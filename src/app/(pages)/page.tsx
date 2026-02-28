@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { WhatsAppBookingSection } from "@/components/whatsapp-booking-section";
-import { WhatsAppButton } from "@/components/whatsapp-button";
 import {
   homeJsonLd,
   physioWhatsAppHref,
@@ -46,12 +45,29 @@ export default function Home() {
       text: "Seguimiento de cargas y progresión adaptada a tu caso.",
     },
   ] as const;
+  const featuredHomeServices = [
+    {
+      title: "Fisioterapia",
+      description:
+        "Valoración, tratamiento y ejercicio terapéutico para reducir dolor, recuperar movilidad y volver a tu actividad con seguridad.",
+    },
+    {
+      title: "Entrenamiento",
+      description:
+        "Plan de fuerza individualizado con progresión de cargas y seguimiento para mejorar rendimiento y prevenir recaídas.",
+    },
+    {
+      title: "Readaptación",
+      description:
+        "Proceso coordinado de fisioterapia y entrenamiento para recuperar función, volver a tu actividad y seguir progresando con seguridad.",
+    }
+  ] as const;
 
   return (
     <>
       <main id="inicio" className="bg-white">
-        <section className="mx-auto w-full max-w-7xl px-4 pt-6 sm:px-6 lg:px-8 lg:pt-8">
-          <div className="px-3 mb-6 flex flex-col md:flex-row items-center md:flex-wrap md:items-end justify-between gap-4 lg:mb-8">
+        <section className="w-full pt-6 lg:pt-8">
+          <div className="mx-auto mb-6 flex w-full max-w-7xl flex-col items-center justify-between gap-4 px-4 md:flex-row md:flex-wrap md:items-end sm:px-6 lg:mb-8 lg:px-8">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--electric)]">
                 Rehab Strength · Molina de Segura
@@ -70,7 +86,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-white">
+          <div className="relative w-full overflow-hidden bg-white">
             <div className="relative h-[430px] w-full sm:h-[560px] lg:h-[640px]">
               <Image
                 src="/images/Pesas imagen.avif"
@@ -171,7 +187,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="servicios" className="section-wrap mx-auto w-full max-w-7xl px-6 pt-18 lg:px-8">
+        {/* <section id="servicios" className="section-wrap mx-auto w-full max-w-7xl px-6 pt-18 lg:px-8">
           <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--electric)]">
                   Nuestros servicios
@@ -245,6 +261,18 @@ export default function Home() {
               </article>
             ))}
           </div>
+        </section> */}
+
+        <section className="service-stripe-section" aria-label="Servicios destacados">
+          {featuredHomeServices.map((service) => (
+            <article
+              key={service.title}
+              className="service-stripe"
+            >
+              <h3 className="service-stripe-title">{service.title}</h3>
+              <p className="service-stripe-description">{service.description}</p>
+            </article>
+          ))}
         </section>
 
         <section id="metodologia" className="section-wrap">

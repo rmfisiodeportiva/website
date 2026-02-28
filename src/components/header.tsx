@@ -21,7 +21,7 @@ export function Header() {
       >
         <Link href="/" className="group inline-flex items-center gap-3">
           <Logo src="/logo.svg" alt="Logo Rehab Strength" className="logo-image" priority />
-          <span className="font-display hidden md:inline-block text-md leading-none tracking-[0.01em] text-slate-900">
+          <span className="font-display hidden md:inline-block text-md font-bold leading-none tracking-[0.01em] text-slate-900">
             REHAB STRENGTH
           </span>
         </Link>

@@ -133,55 +133,63 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mx-auto w-full max-w-7xl px-6 pt-12 lg:px-8" aria-label="Ventajas principales">
-          <div className="grid gap-5 border-y border-slate-200 py-6 md:grid-cols-3">
-            <article className="relative border-l border-slate-200 pl-14 pr-2">
-              <span
-                className="absolute left-2 top-0 grid h-9 w-9 place-items-center rounded-lg bg-[var(--electric)]/8 text-[var(--electric)]"
-                aria-hidden="true"
-              >
-                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M4 13h4l2-4 4 8 2-4h4" />
-                </svg>
-              </span>
-              <h3 className="font-display text-[1.08rem] leading-[1.05] text-[#133242]">
-                Recuperación con criterio clínico
-              </h3>
-              <p className="mt-2 text-[0.95rem] leading-[1.45] text-slate-600">
-                Tratamiento y ejercicio guiado para reducir dolor y recuperar función real.
+        <section className="w-full px-10 pt-12" aria-label="Ventajas principales">
+          <div className="grid gap-7 py-8 md:grid-cols-3 md:gap-10 md:py-10">
+            <article className="text-center">
+              <div className="flex items-center justify-center gap-4">
+                <span
+                  className="inline-grid h-12 w-12 place-items-center rounded-full border border-black/20 bg-slate-100 text-black"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.7">
+                    <path d="M4 13h4l2-4 4 8 2-4h4" />
+                  </svg>
+                </span>
+                <h3 className="font-display text-[clamp(2rem,3.2vw,3rem)] leading-[0.9] text-[#0e2234]">
+                  Recuperación
+                </h3>
+              </div>
+              <p className="mx-auto mt-3 max-w-sm text-[0.98rem] text-justify leading-relaxed text-slate-600">
+                Tratamiento y ejercicio guiado para reducir dolor y recuperar función real desde el primer paso.
               </p>
             </article>
-            <article className="relative border-l border-slate-200 pl-14 pr-2">
-              <span
-                className="absolute left-2 top-0 grid h-9 w-9 place-items-center rounded-lg bg-[var(--electric)]/8 text-[var(--electric)]"
-                aria-hidden="true"
-              >
-                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M4 18V6m8 12V10m8 8V4" />
-                </svg>
-              </span>
-              <h3 className="font-display text-[1.08rem] leading-[1.05] text-[#133242]">
-                Progresión y seguimiento
-              </h3>
-              <p className="mt-2 text-[0.95rem] leading-[1.45] text-slate-600">
-                Objetivos claros y control de cargas para que avances con seguridad.
+
+            <article className="text-center">
+              <div className="flex items-center justify-center gap-4">
+                <span
+                  className="inline-grid h-12 w-12 place-items-center rounded-full border border-black/20 bg-slate-100 text-black"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.7">
+                    <path d="M4 18V6m8 12V10m8 8V4" />
+                  </svg>
+                </span>
+                <h3 className="font-display text-[clamp(2rem,3.2vw,3rem)] leading-[0.9] text-[#0e2234]">
+                  Progresión
+                </h3>
+              </div>
+              <p className="mx-auto mt-3 max-w-sm text-[0.98rem] text-justify leading-relaxed text-slate-600">
+                Objetivos claros, control de cargas y seguimiento continuo para que avances con seguridad.
               </p>
             </article>
-            <article className="relative border-l border-slate-200 pl-14 pr-2">
-              <span
-                className="absolute left-2 top-0 grid h-9 w-9 place-items-center rounded-lg bg-[var(--electric)]/8 text-[var(--electric)]"
-                aria-hidden="true"
-              >
-                <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <path d="M8 12h8M12 8v8" />
-                  <circle cx="12" cy="12" r="8.5" />
-                </svg>
-              </span>
-              <h3 className="font-display text-[1.08rem] leading-[1.05] text-[#133242]">
-                Un solo centro, dos servicios
-              </h3>
-              <p className="mt-2 text-[0.95rem] leading-[1.45] text-slate-600">
-                Fisioterapia y entrenamiento coordinados para evitar recaídas y mejorar rendimiento.
+
+            <article className="text-center">
+              <div className="flex items-center justify-center gap-4">
+                <span
+                  className="inline-grid h-12 w-12 place-items-center rounded-full border border-black/20 bg-slate-100 text-black"
+                  aria-hidden="true"
+                >
+                  <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" stroke="currentColor" strokeWidth="1.7">
+                    <circle cx="12" cy="12" r="8.5" />
+                    <path d="M8 12h8M12 8v8" />
+                  </svg>
+                </span>
+                <h3 className="font-display text-[clamp(2rem,3.2vw,3rem)] leading-[0.9] text-[#0e2234]">
+                  Coordinación
+                </h3>
+              </div>
+              <p className="mx-auto mt-3 max-w-sm text-justify text-[0.98rem] leading-relaxed text-slate-600">
+                Fisioterapia y entrenamiento conectados en un mismo plan para evitar recaídas y mejorar rendimiento.
               </p>
             </article>
           </div>

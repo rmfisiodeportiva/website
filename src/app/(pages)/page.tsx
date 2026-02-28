@@ -67,12 +67,12 @@ export default function Home() {
     <>
       <main id="inicio" className="bg-white">
         <section className="w-full pt-6 lg:pt-8">
-          <div className="mx-auto mb-6 flex w-full max-w-7xl flex-col items-center justify-between gap-4 px-4 md:flex-row md:flex-wrap md:items-end sm:px-6 lg:mb-8 lg:px-8">
+          <div className="mb-6 flex flex-col items-center justify-between gap-4 px-4 md:flex-row md:flex-wrap md:items-end sm:px-6 lg:mb-8 lg:px-8">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--electric)]">
                 Rehab Strength · Molina de Segura
               </p>
-              <p className="mt-2 max-w-2xl text-sm text-slate-600 sm:text-base">
+              <p className="mt-2 text-sm text-slate-600 sm:text-base">
                 Centro de fisioterapia y rendimiento con enfoque clínico y progresión de fuerza.
               </p>
             </div>

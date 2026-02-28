@@ -283,17 +283,22 @@ export default function Home() {
           ))}
         </section>
 
+        <section className="section-wrap pt-14 flex justify-center" aria-label="Mensaje principal">
+          <blockquote className="methodology-quote">
+            <p className="methodology-quote-lead">
+              Somos un equipo clínico y de entrenamiento coordinado para acompañarte en todo el proceso.
+            </p>
+            <p className="methodology-quote-body">
+              Unificamos valoración, tratamiento y progresión de fuerza en un mismo plan para que
+              entiendas qué se hace, por qué se hace y cómo avanzar sin recaídas.
+            </p>
+          </blockquote>
+        </section>
+
         <section id="metodologia" className="section-wrap">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--electric)]">
               Enfoque de trabajo
-            </p>
-            <h2 className="mt-3 max-w-3xl font-display text-[clamp(2rem,4vw,3.35rem)] leading-[0.95] text-[#0c1f4f]">
-              Equipo clínico y entrenamiento coordinados para acompañarte en todo el proceso.
-            </h2>
-            <p className="mt-5 max-w-3xl text-lg leading-relaxed text-slate-600">
-              Unificamos valoración, tratamiento y progresión de fuerza en un mismo plan para que
-              entiendas qué se hace, por qué se hace y cómo avanzar sin recaídas.
             </p>
 
             <div className="mt-10 grid gap-x-7 gap-y-5 md:grid-cols-2 lg:gap-x-8 lg:gap-y-6">

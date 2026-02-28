@@ -124,6 +124,39 @@ body {
   color: #0582c2;
 }
 
+.methodology-quote {
+  position: relative;
+  margin-top: 1rem;
+  max-width: 56rem;
+  padding: 0.8rem 0 0.2rem 2rem;
+}
+
+.methodology-quote::before {
+  content: "\201C";
+  position: absolute;
+  left: 0;
+  top: -0.2rem;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(2.6rem, 4.6vw, 4rem);
+  line-height: 1;
+  color: rgba(5, 130, 194, 0.26);
+}
+
+.methodology-quote-lead {
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(1.9rem, 3.8vw, 3rem);
+  line-height: 0.96;
+  color: #0c1f4f;
+}
+
+.methodology-quote-body {
+  margin-top: 1rem;
+  max-width: 50rem;
+  font-size: 1.08rem;
+  line-height: 1.65;
+  color: var(--text-soft);
+}
+
 .btn-primary,
 .btn-secondary,
 .btn-ghost {

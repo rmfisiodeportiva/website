@@ -76,14 +76,14 @@ export default function Home() {
                 Centro de fisioterapia y rendimiento con enfoque clínico y progresión de fuerza.
               </p>
             </div>
-           <div className="flex flex-wrap flex-row gap-4 md:gap-3">
+           {/* <div className="flex flex-wrap flex-row gap-4 md:gap-3">
               <a href="#reserva" className="btn-primary text-nowrap">
                 Reserva cita
               </a>
               <Link href="/servicios" className="btn-ghost text-nowrap">
                 Ver servicios
               </Link>
-            </div>
+            </div> */}
           </div>
 
           <div className="relative w-full overflow-hidden bg-white">

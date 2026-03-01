@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { MethodologyShowcase } from "@/components/methodology-showcase";
 import { WhatsAppBookingSection } from "@/components/whatsapp-booking-section";
 import {
   homeJsonLd,
   physioWhatsAppHref,
-  services,
   team,
   testimonials,
   trainingWhatsAppHref,
@@ -18,31 +18,36 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const serviceImages = ["/images/Pesas imagen.avif", "/images/green.avif"] as const;
   const approachItems = [
     {
       title: "Base científica",
       text: "Tratamiento y entrenamiento con base científica",
+      image: "/images/grey.avif",
     },
     {
       title: "Plan individual",
       text: "Plan individualizado según tu punto de partida",
+      image: "/images/Pesas imagen.avif",
     },
     {
       title: "Trabajo conjunto",
       text: "Comunicación real entre fisioterapia y entrenamiento",
+      image: "/images/green.avif",
     },
     {
       title: "Seguimiento",
       text: "Seguimiento continuo para progresar con seguridad",
+      image: "/images/Pesas imagen.avif",
     },
     {
       title: "Comunicación",
       text: "Comunicación real entre fisioterapia y entrenamiento.",
+      image: "/images/grey.avif",
     },
     {
       title: "Control de cargas",
       text: "Seguimiento de cargas y progresión adaptada a tu caso.",
+      image: "/images/green.avif",
     },
   ] as const;
   const featuredHomeServices = [
@@ -295,33 +300,7 @@ export default function Home() {
           </blockquote>
         </section>
 
-        <section id="metodologia" className="section-wrap">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--electric)]">
-              Enfoque de trabajo
-            </p>
-
-            <div className="mt-10 grid gap-x-7 gap-y-5 md:grid-cols-2 lg:gap-x-8 lg:gap-y-6">
-              {approachItems.map((row, index) => (
-                <article
-                  key={row.title}
-                  className="mt-0"
-                >
-                  <div
-                    className={`rounded-2xl px-5 py-5 shadow-[0_10px_24px_rgba(33,78,209,0.12)] ring-1 ring-inset ring-white/14 sm:px-6 sm:py-6 ${
-                      index % 2 === 0 ? "bg-[var(--electric)]" : "bg-[#0c3d72]"
-                    }`}
-                  >
-                    <p className="font-display text-2xl leading-tight text-white">{row.title}</p>
-                    <p className="mt-3 max-w-[34rem] text-base leading-relaxed text-white/82 sm:text-[1.05rem]">
-                    {row.text}
-                    </p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
+        <MethodologyShowcase points={approachItems} />
 
         <section id="equipo" className="section-wrap">
           <div className="section-heading">

@@ -35,10 +35,10 @@ export function MethodologyShowcase({ points }: MethodologyShowcaseProps) {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8">
-            <p className="font-display text-[clamp(2rem,5vw,3.8rem)] leading-[0.9] text-white">
+            <p className="font-display text-[clamp(2rem,5vw,2.5rem)] leading-[0.9] text-white">
               {activePoint.title}
             </p>
-            <p className="mt-3 max-w-xl text-[0.98rem] leading-relaxed text-white/88 sm:text-[1.03rem]">
+            <p className="block lg:hidden mt-3 max-w-xl text-[0.98rem] leading-relaxed text-white/88 sm:text-[1.03rem]">
               {activePoint.text}
             </p>
           </div>
@@ -82,13 +82,13 @@ export function MethodologyShowcase({ points }: MethodologyShowcaseProps) {
             </div>
 
             <div className="px-5 pb-7 pt-6 sm:px-7 sm:pb-8">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-[var(--electric)]">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-[#31D1F8]">
               Enfoque de trabajo
             </p>
-            <p className="font-display text-[clamp(1.7rem,3vw,2.4rem)] leading-[0.95] text-white">
+            {/* <p className="font-display text-[clamp(1.7rem,3vw,2.4rem)] leading-[0.95] text-white">
               {activePoint.title}
-            </p>
-            <p className="mt-3 text-[1.02rem] leading-relaxed text-white/82">
+            </p> */}
+            <p className="mt-3 text-[clamp(1.7rem,3vw,2.4rem)] leading-relaxed text-white/82">
               {activePoint.text}
             </p>
             </div>

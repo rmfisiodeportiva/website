@@ -38,7 +38,7 @@ export default function TarifasPage() {
                     >
                       <div className="flex items-center justify-between gap-4">
                         <p className="font-semibold text-slate-900">{item.name}</p>
-                        <p className="font-display text-2xl text-[#214ED1]">{item.price}</p>
+                        <p className="font-display text-2xl text-[var(--accent)]">{item.price}</p>
                       </div>
                       <p className="mt-2 text-sm text-slate-600">{item.note}</p>
                     </div>
@@ -51,7 +51,7 @@ export default function TarifasPage() {
             ))}
           </div>
 
-          <div className="mt-8 rounded-2xl border border-[#214ED1]/20 bg-[#214ED1]/5 p-5 text-sm text-slate-700">
+          <div className="mt-8 rounded-2xl border border-[var(--accent-a20)] bg-[var(--accent-a05)] p-5 text-sm text-slate-700">
             <p>
               Los importes pueden variar según frecuencia, duración de sesión y objetivos de
               recuperación o readaptación.

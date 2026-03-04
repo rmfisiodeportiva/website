@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
+import { HomeServicesStripes } from "@/components/home-services-stripes";
 import { MethodologyShowcase } from "@/components/methodology-showcase";
 import { WhatsAppBookingSection } from "@/components/whatsapp-booking-section";
 import {
@@ -50,23 +50,6 @@ export default function Home() {
       image: "/images/green.avif",
     },
   ] as const;
-  const featuredHomeServices = [
-    {
-      title: "Fisioterapia",
-      description:
-        "Valoración, tratamiento y ejercicio terapéutico para reducir dolor, recuperar movilidad y volver a tu actividad con seguridad.",
-    },
-    {
-      title: "Entrenamiento",
-      description:
-        "Plan de fuerza individualizado con progresión de cargas y seguimiento para mejorar rendimiento y prevenir recaídas.",
-    },
-    {
-      title: "Readaptación",
-      description:
-        "Proceso coordinado de fisioterapia y entrenamiento para recuperar función, volver a tu actividad y seguir progresando con seguridad.",
-    }
-  ] as const;
 
   return (
     <>
@@ -74,21 +57,13 @@ export default function Home() {
         <section className="w-full pt-6 lg:pt-8">
           <div className="mb-6 flex flex-col items-center justify-between gap-4 px-4 md:flex-row md:flex-wrap md:items-end sm:px-6 lg:mb-8 lg:px-8">
             <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--electric)]">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-[var(--primary)]">
                 Rehab Strength · Molina de Segura
               </p>
               <p className="mt-2 text-sm text-slate-600 sm:text-base">
                 Centro de fisioterapia y rendimiento con enfoque clínico y progresión de fuerza.
               </p>
             </div>
-           {/* <div className="flex flex-wrap flex-row gap-4 md:gap-3">
-              <a href="#reserva" className="btn-primary text-nowrap">
-                Reserva cita
-              </a>
-              <Link href="/servicios" className="btn-ghost text-nowrap">
-                Ver servicios
-              </Link>
-            </div> */}
           </div>
 
           <div className="relative w-full overflow-hidden bg-white">
@@ -100,7 +75,7 @@ export default function Home() {
                 className="object-cover"
                 priority
               />
-              <div className="absolute inset-0 bg-gradient-to-l from-[var(--electric)]/20 via-[var(--electric)]/50 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-l from-[var(--primary)]/20 via-[var(--primary)]/50 to-transparent" />
               <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-transparent" />
 
               <div className="absolute inset-x-0 top-0 flex items-center justify-between gap-4 p-5 sm:p-7">
@@ -150,7 +125,7 @@ export default function Home() {
                     <path d="M4 13h4l2-4 4 8 2-4h4" />
                   </svg>
                 </span>
-                <h3 className="font-display text-[clamp(2rem,3.2vw,3rem)] leading-[0.9] text-[#0e2234]">
+                <h3 className="font-display text-[clamp(2rem,3.2vw,3rem)] leading-[0.9] text-[var(--secondary)]">
                   Recuperación
                 </h3>
               </div>
@@ -169,7 +144,7 @@ export default function Home() {
                     <path d="M4 18V6m8 12V10m8 8V4" />
                   </svg>
                 </span>
-                <h3 className="font-display text-[clamp(2rem,3.2vw,3rem)] leading-[0.9] text-[#0e2234]">
+                <h3 className="font-display text-[clamp(2rem,3.2vw,3rem)] leading-[0.9] text-[var(--secondary)]">
                   Progresión
                 </h3>
               </div>
@@ -189,7 +164,7 @@ export default function Home() {
                     <path d="M8 12h8M12 8v8" />
                   </svg>
                 </span>
-                <h3 className="font-display text-[clamp(2rem,3.2vw,3rem)] leading-[0.9] text-[#0e2234]">
+                <h3 className="font-display text-[clamp(2rem,3.2vw,3rem)] leading-[0.9] text-[var(--secondary)]">
                   Coordinación
                 </h3>
               </div>
@@ -200,93 +175,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* <section id="servicios" className="section-wrap mx-auto w-full max-w-7xl px-6 pt-18 lg:px-8">
-          <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--electric)]">
-                  Nuestros servicios
-                </p>
-            <div className="grid gap-8 lg:grid-cols-[0.72fr_1.28fr]">
-              <div>
-                <h2 className="mt-3 font-display text-[clamp(2rem,4vw,3.4rem)] leading-[0.95] text-[#0c1f4f]">
-                  Fisioterapia y fuerza con un mismo criterio clínico.
-                </h2>
-              </div>
-              <p className="max-w-4xl text-lg leading-relaxed text-slate-600">
-                Diseñamos un proceso continuo para que no tengas que separar tratamiento y progreso.
-                Valoramos tu caso, tratamos el dolor y planificamos el entrenamiento para recuperar
-                función y reducir recaídas.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-12 grid gap-0 border-y border-slate-200">
-            {services.map((service, index) => (
-              <article
-                key={service.title}
-                className="group/program grid gap-6 border-b border-slate-200 py-6 last:border-b-0 lg:grid-cols-[1.08fr_0.92fr] lg:items-center"
-              >
-                <div className="min-w-0">
-                  <div className="program-row">
-                    <div className="program-row-track">
-                      <span className="program-row-index">{String(index + 1).padStart(2, "0")}</span>
-                      <h3 className="program-row-title">{service.title}</h3>
-                      <span className="program-row-meta">Programa</span>
-                    </div>
-                    <div aria-hidden="true" className="program-row-track program-row-track-clone">
-                      <span className="program-row-index">{String(index + 1).padStart(2, "0")}</span>
-                      <span className="program-row-title">{service.title}</span>
-                      <span className="program-row-meta">Programa</span>
-                    </div>
-                  </div>
-                  <p className="mt-4 max-w-[40rem] text-lg leading-relaxed text-slate-600">
-                    {service.description}
-                  </p>
-                  <ul className="mt-5 grid gap-2 text-sm text-slate-600">
-                    {service.bullets.map((bullet) => (
-                      <li key={bullet} className="flex items-start gap-2">
-                        <span
-                          aria-hidden="true"
-                          className="mt-1.5 h-1.5 w-1.5 rounded-lg bg-[var(--electric)]"
-                        />
-                        <span>{bullet}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="mt-5 flex flex-col sm:flex-row flex-wrap gap-2 text-sm">
-                    <Link href={service.pageHref} className="btn-ghost">
-                      Ver {service.title.toLowerCase()}
-                    </Link>
-                    <WhatsAppButton href={service.whatsappHref} className="btn-ghost gap-2">
-                      {service.ctaLabel}
-                    </WhatsAppButton>
-                  </div>
-                </div>
-
-                <div className="relative h-56 w-full overflow-hidden rounded-xl border border-slate-200 bg-slate-100 sm:h-64">
-                  <Image
-                    src={serviceImages[index % serviceImages.length]}
-                    alt={service.title}
-                    fill
-                    className="object-cover transition duration-500 group-hover/program:scale-[1.03]"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--electric)]/20 to-transparent" />
-                </div>
-              </article>
-            ))}
-          </div>
-        </section> */}
-
-        <section className="service-stripe-section" aria-label="Servicios destacados">
-          {featuredHomeServices.map((service) => (
-            <article
-              key={service.title}
-              className="service-stripe"
-            >
-              <h3 className="service-stripe-title">{service.title}</h3>
-              <p className="service-stripe-description">{service.description}</p>
-            </article>
-          ))}
-        </section>
+        <HomeServicesStripes />
 
         <section className="section-wrap pt-14 flex justify-center" aria-label="Mensaje principal">
           <blockquote className="methodology-quote">
@@ -304,7 +193,7 @@ export default function Home() {
 
         <section id="equipo" className="section-wrap">
           <div className="section-heading">
-            <p className="eyebrow text-[var(--electric)]">Equipo profesional</p>
+            <p className="eyebrow text-[var(--primary)]">Equipo profesional</p>
             <h2>Expertos en recuperación funcional, readaptación y fuerza terapéutica.</h2>
             <p className="mt-4 max-w-4xl text-slate-600">
               Trabajamos con personas que quieren dejar atrás el dolor, recuperar su actividad y
@@ -323,7 +212,7 @@ export default function Home() {
                   </div>
                   <div className="text-center mt-4">
                     <h3 className="font-display text-2xl text-slate-900">{member.name}</h3>
-                    <p className="mt-1 text-sm font-semibold uppercase tracking-[0.12em] text-[#0371a8]">
+                    <p className="mt-1 text-sm font-semibold uppercase tracking-[0.12em] text-[var(--primary)]">
                       {member.role}
                     </p>
                     <p className="mt-3 text-slate-600">{member.bio}</p>

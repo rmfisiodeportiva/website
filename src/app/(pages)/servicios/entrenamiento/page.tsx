@@ -33,7 +33,7 @@ export default function EntrenamientoPage() {
               </Link>
             </div>
           </div>
-          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_18px_36px_rgba(15,39,66,0.07)]">
+          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_18px_36px_var(--shadow-card-a08)]">
             <div className="relative h-[360px] w-full">
               <Image src="/images/green.avif" alt="Barra y discos de entrenamiento en el centro" fill className="object-cover" />
             </div>
@@ -50,7 +50,7 @@ export default function EntrenamientoPage() {
               <ul className="mt-6 grid gap-3 text-slate-700">
                 {program.bullets.map((bullet) => (
                   <li key={bullet} className="flex items-start gap-3">
-                    <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 rounded-full bg-[#214ED1]" />
+                    <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
                     <span>{bullet}</span>
                   </li>
                 ))}
@@ -59,7 +59,7 @@ export default function EntrenamientoPage() {
           ))}
         </div>
 
-        <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_18px_40px_rgba(15,39,66,0.08)] md:p-8">
+        <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_18px_40px_var(--shadow-card-a08)] md:p-8">
           <p className="eyebrow">Reserva y plazas</p>
           <h2 className="font-display text-3xl text-slate-900">Cuéntanos qué necesitas y te orientamos</h2>
           <p className="mt-4 max-w-3xl text-slate-600">

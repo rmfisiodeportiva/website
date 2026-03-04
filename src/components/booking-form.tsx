@@ -128,7 +128,7 @@ export function BookingForm() {
           name="consent"
           value="accepted"
           required
-          className="mt-1 h-4 w-4 rounded border-slate-500 bg-slate-900 text-[#214ED1]"
+          className="mt-1 h-4 w-4 rounded border-slate-500 bg-slate-900 text-[var(--accent)]"
         />
         <span>Acepto la politica de privacidad y el tratamiento de datos para gestionar mi cita.</span>
       </label>

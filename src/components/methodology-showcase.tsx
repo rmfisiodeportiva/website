@@ -22,7 +22,7 @@ export function MethodologyShowcase({ points }: MethodologyShowcaseProps) {
   return (
     <section
       id="metodologia"
-      className="mt-22 w-full border !border-black bg-[#f3f5f7]"
+      className="mt-22 w-full border !border-black bg-[var(--surface-soft)]"
       aria-label="Enfoque de trabajo"
     >
       <div className="grid w-full lg:grid-cols-[0.42fr_0.58fr]">
@@ -44,7 +44,7 @@ export function MethodologyShowcase({ points }: MethodologyShowcaseProps) {
           </div>
         </div>
 
-        <div className="order-1 bg-[#1B1B1B] lg:order-2">
+        <div className="order-1 bg-[var(--panel)] lg:order-2">
           <div className="grid grid-cols-3 gap-px overflow-hidden bg-white">
             {points.map((point, index) => {
               const isActive = activeIndex === index;
@@ -57,8 +57,8 @@ export function MethodologyShowcase({ points }: MethodologyShowcaseProps) {
                   onFocus={() => setActiveIndex(index)}
                   className={`min-h-[120px] appearance-none border-0 px-3 py-3 text-left outline-none transition focus:outline-none focus-visible:outline-none focus-visible:ring-0 sm:min-h-[200px] sm:px-5 sm:py-4 ${
                     isActive
-                      ? "bg-[var(--electric)] text-[#111827]"
-                      : "bg-[#1B1B1B] text-white hover:bg-[#20242d]"
+                      ? "bg-[var(--primary)] text-[var(--neutral-950)]"
+                      : "bg-[var(--panel)] text-white hover:bg-[var(--panel-hover)]"
                   }`}
                 >
                   <p className={`font-display text-[clamp(1rem,2vw,1.55rem)]  text-center leading-[0.96] ${
@@ -76,13 +76,13 @@ export function MethodologyShowcase({ points }: MethodologyShowcaseProps) {
               {activeIndex >= 3 && (
                 <span
                   aria-hidden="true"
-                  className={`absolute top-0 h-px w-1/3 bg-[#e7e8ea] ${activeBottomMaskClass}`}
+                  className={`absolute top-0 h-px w-1/3 bg-[var(--border)] ${activeBottomMaskClass}`}
                 />
               )}
             </div>
 
             <div className="px-5 pb-7 pt-6 sm:px-7 sm:pb-8">
-            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-[#31D1F8]">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.24em] text-[var(--primary)]">
               Enfoque de trabajo
             </p>
             {/* <p className="font-display text-[clamp(1.7rem,3vw,2.4rem)] leading-[0.95] text-white">

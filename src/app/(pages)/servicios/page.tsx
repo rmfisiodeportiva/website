@@ -44,7 +44,7 @@ export default function ServiciosPage() {
                 <ul className="mt-5 grid gap-3 text-sm text-slate-700">
                   {service.bullets.map((bullet) => (
                     <li key={bullet} className="flex items-start gap-3">
-                      <span aria-hidden="true" className="mt-1 h-2 w-2 rounded-full bg-[#214ED1]" />
+                      <span aria-hidden="true" className="mt-1 h-2 w-2 rounded-full bg-[var(--accent)]" />
                       <span>{bullet}</span>
                     </li>
                   ))}

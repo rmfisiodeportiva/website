@@ -26,10 +26,10 @@ export default function HorariosEntrenamientosPage() {
         </section>
 
         <section className="section-wrap">
-          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_18px_40px_rgba(15,39,66,0.08)]">
+          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_18px_40px_var(--shadow-card-a08)]">
             <div className="grid grid-cols-[1fr] border-b border-slate-200 bg-slate-50 px-5 py-4 md:grid-cols-[180px_1fr]">
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--text-table)]">Día</p>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--text-table)]">Turnos</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--secondary)]">Día</p>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[var(--secondary)]">Turnos</p>
             </div>
 
             {trainingSchedule.map((row) => (
@@ -42,7 +42,7 @@ export default function HorariosEntrenamientosPage() {
                   {row.slots.map((slot) => (
                     <span
                       key={slot}
-                      className="inline-flex items-center rounded-full border border-[var(--electric-soft)]/20 bg-[var(--electric-soft)]/10 px-3 py-1 text-sm font-semibold text-[#001391]"
+                      className="inline-flex items-center rounded-full border border-[var(--accent-a20)] bg-[var(--accent-a10)] px-3 py-1 text-sm font-semibold text-[var(--secondary)]"
                     >
                       {slot}
                     </span>

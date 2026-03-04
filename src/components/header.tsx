@@ -14,7 +14,7 @@ export function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/90 shadow-[0_10px_28px_rgba(5,18,35,0.045)] backdrop-blur-xl">
+    <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/90 shadow-[0_10px_28px_var(--shadow-main-a05)] backdrop-blur-xl">
       <nav
         className="flex w-full items-center justify-between px-6 py-4 lg:px-10"
         aria-label="Principal"
@@ -31,7 +31,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className={`nav-link ${pathname === item.href ? "text-[#0582c2]" : ""}`}
+              className={`nav-link ${pathname === item.href ? "text-[var(--primary)]" : ""}`}
             >
               {item.label}
             </Link>

@@ -67,19 +67,6 @@ export const pillars = [
   "Seguimiento continuo para progresar con seguridad",
 ] as const;
 
-export const team = [
-  {
-    name: "Dra. Sofia Ramirez",
-    role: "Fisioterapia Musculoesquelética",
-    bio: "12 años de experiencia en rehabilitación de lesiones deportivas y dolor crónico.",
-  },
-  {
-    name: "Carlos Mena",
-    role: "Preparador Físico",
-    bio: "Especialista en fuerza aplicada a readaptación y retorno al deporte sin recaídas.",
-  },
-] as const;
-
 export const testimonials = [
   {
     quote:

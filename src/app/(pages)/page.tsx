@@ -2,14 +2,16 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { HomeServicesStripes } from "@/components/home-services-stripes";
 import { MethodologyShowcase } from "@/components/methodology-showcase";
+import { HomeTeamSection } from "@/components/home-team-section";
+import { QuoteBlock } from "@/components/quote-block";
 import { WhatsAppBookingSection } from "@/components/whatsapp-booking-section";
 import {
   homeJsonLd,
   physioWhatsAppHref,
-  team,
   testimonials,
   trainingWhatsAppHref,
 } from "@/lib/home-page-data";
+import { homeQuotes } from "@/lib/home-quotes-data";
 
 export const metadata: Metadata = {
   title: "Centro de Rehabilitacion y Rendimiento",
@@ -178,50 +180,15 @@ export default function Home() {
         <HomeServicesStripes />
 
         <section className="section-wrap pt-14 flex justify-center" aria-label="Mensaje principal">
-          <blockquote className="methodology-quote">
-            <p className="methodology-quote-lead">
-              Somos un equipo clínico y de entrenamiento coordinado para acompañarte en todo el proceso.
-            </p>
-            <p className="methodology-quote-body">
-              Unificamos valoración, tratamiento y progresión de fuerza en un mismo plan para que
-              entiendas qué se hace, por qué se hace y cómo avanzar sin recaídas.
-            </p>
-          </blockquote>
+          <QuoteBlock
+            title={homeQuotes.methodology.title}
+            description={homeQuotes.methodology.description}
+          />
         </section>
 
         <MethodologyShowcase points={approachItems} />
 
-        <section id="equipo" className="section-wrap">
-          <div className="section-heading">
-            <p className="eyebrow text-[var(--primary)]">Equipo profesional</p>
-            <h2>Expertos en recuperación funcional, readaptación y fuerza terapéutica.</h2>
-            <p className="mt-4 max-w-4xl text-slate-600">
-              Trabajamos con personas que quieren dejar atrás el dolor, recuperar su actividad y
-              seguir entrenando con una base sólida y segura, con seguimiento continuo y objetivos claros.
-            </p>
-          </div>
-          <div className="mt-10 grid gap-8 md:grid-cols-2">
-            {team.map((member) => (
-              <article key={member.name} className="border-t border-slate-200 pt-6">
-                <div className="flex flex-col items-center gap-4">
-                  <div className="avatar-ring" aria-hidden="true">
-                    {member.name
-                      .split(" ")
-                      .map((chunk) => chunk[0])
-                      .join("")}
-                  </div>
-                  <div className="text-center mt-4">
-                    <h3 className="font-display text-2xl text-slate-900">{member.name}</h3>
-                    <p className="mt-1 text-sm font-semibold uppercase tracking-[0.12em] text-[var(--primary)]">
-                      {member.role}
-                    </p>
-                    <p className="mt-3 text-slate-600">{member.bio}</p>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
+        <HomeTeamSection />
 
         <section className="section-wrap">
           <div className="section-heading">

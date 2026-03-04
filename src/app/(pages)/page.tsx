@@ -277,13 +277,22 @@ export default function Home() {
         </section> */}
 
         <section className="service-stripe-section" aria-label="Servicios destacados">
+          <div className="service-stripe-header">
+            <p className="eyebrow">Servicios destacados</p>
+            <Link href="/servicios" className="service-stripe-link">
+              Ver todos los servicios
+            </Link>
+          </div>
+
           {featuredHomeServices.map((service) => (
             <article
               key={service.title}
               className="service-stripe"
             >
-              <h3 className="service-stripe-title">{service.title}</h3>
-              <p className="service-stripe-description">{service.description}</p>
+              <div className="service-stripe-content">
+                <h3 className="service-stripe-title">{service.title}</h3>
+                <p className="service-stripe-description">{service.description}</p>
+              </div>
             </article>
           ))}
         </section>

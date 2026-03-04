@@ -353,77 +353,86 @@ body {
 }
 
 .service-stripe-section {
-  margin-top: 4.5rem;
-  border-top: 1px solid #111;
-  border-bottom: 1px solid #111;
+  margin: 4.5rem auto 0;
+  width: 100%;
+  max-width: 76rem;
+  padding: 0 1.5rem;
+}
+
+.service-stripe-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.9rem;
+}
+
+.service-stripe-link {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #0c1f4f;
+  transition: color 200ms ease;
+}
+
+.service-stripe-link:hover,
+.service-stripe-link:focus-visible {
+  color: #0582c2;
 }
 
 .service-stripe {
   display: grid;
   grid-template-columns: minmax(0, 1fr);
-  gap: 1.2rem;
+  gap: 0.75rem;
   align-items: center;
-  padding: 1.5rem;
-  border-bottom: 1px solid #111;
-  background: #f2f2f2;
-  transition: background-color 240ms ease;
+  border-top: 1px solid #111;
+  padding: 1.15rem 0.3rem 1.15rem 0.5rem;
 }
 
 .service-stripe:last-child {
-  border-bottom: 0;
+  border-bottom: 1px solid #111;
 }
 
-.service-stripe:hover,
-.service-stripe:focus-visible,
-.service-stripe:focus-within {
-  background-color: #0582c2 !important;
-  outline: none;
+.service-stripe:hover {
+  background-color: #0582c2;
+}
+
+.service-stripe:hover p, .service-stripe:hover h3 {
+  color: #fff !important;
+}
+
+.service-stripe-content {
+  display: grid;
+  gap: 0.3rem;
 }
 
 .service-stripe-title {
   font-family: var(--font-display), sans-serif;
-  font-size: clamp(2.4rem, 9vw, 7rem);
-  line-height: 0.9;
-  letter-spacing: 0.01em;
-  text-transform: uppercase;
-  color: #04080d;
-  transition: color 220ms ease;
+  font-size: clamp(1.45rem, 2.7vw, 2.3rem);
+  line-height: 0.94;
+  letter-spacing: 0.005em;
+  color: #06162e;
 }
 
 .service-stripe-description {
-  max-width: 32rem;
-  min-height: 3.2rem;
-  font-size: clamp(0.86rem, 1.15vw, 1.02rem);
-  line-height: 1.35;
-  color: #111;
-  visibility: hidden;
-  opacity: 0;
-  transition: opacity 180ms ease;
-}
-
-.service-stripe:hover .service-stripe-title,
-.service-stripe:focus-visible .service-stripe-title,
-.service-stripe:focus-within .service-stripe-title {
-  color: #fff;
-}
-
-.service-stripe:hover .service-stripe-description,
-.service-stripe:focus-visible .service-stripe-description,
-.service-stripe:focus-within .service-stripe-description {
-  visibility: visible;
-  opacity: 1;
-  color: #fff;
+  max-width: 48rem;
+  font-size: clamp(0.94rem, 1.25vw, 1.06rem);
+  line-height: 1.5;
+  color: #5a6774;
 }
 
 @media (min-width: 900px) {
   .service-stripe {
-    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
-    gap: 2.5rem;
-    padding: 2rem 1.6rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.1rem 2.2rem;
   }
 
-  .service-stripe-description {
-    justify-self: end;
+  .service-stripe-content {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    align-items: start;
+    gap: 2rem;
   }
 }
 
@@ -603,5 +612,11 @@ body {
   .btn-secondary,
   .btn-ghost {
     font-size: small;
+  }
+
+  .service-stripe-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
   }
 }

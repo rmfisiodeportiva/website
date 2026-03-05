@@ -1,0 +1,61 @@
+.section {
+  width: 100%;
+  padding: 3rem 2.5rem 0;
+}
+
+.grid {
+  display: grid;
+  gap: 1.75rem;
+  padding: 2rem 0;
+}
+
+.item {
+  text-align: center;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.iconWrap {
+  display: inline-grid;
+  height: 3rem;
+  width: 3rem;
+  place-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  background: var(--surface-soft);
+  color: var(--black);
+}
+
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.title {
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  line-height: 0.9;
+  color: var(--secondary);
+}
+
+.description {
+  margin: 0.75rem auto 0;
+  max-width: 24rem;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--secondary-500);
+  text-align: justify;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2.5rem;
+    padding: 2.5rem 0;
+  }
+}

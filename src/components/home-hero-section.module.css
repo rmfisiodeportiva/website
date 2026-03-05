@@ -1,0 +1,209 @@
+.section {
+  width: 100%;
+  padding-top: 1.5rem;
+}
+
+.headerRow {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.metaGroup {
+  width: 100%;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--primary);
+}
+
+.supportingText {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--secondary-500);
+}
+
+.mediaWrap {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: var(--white);
+}
+
+.media {
+  position: relative;
+  height: 430px;
+  width: 100%;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.overlayPrimary {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to left, rgba(5, 130, 194, 0.2), rgba(5, 130, 194, 0.5), transparent);
+}
+
+.overlayTop {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), transparent, transparent);
+}
+
+.pills {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem;
+}
+
+.pill {
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--white);
+  backdrop-filter: blur(4px);
+}
+
+.pillUpper {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.pillDesktopOnly {
+  display: none;
+}
+
+.content {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1.25rem;
+}
+
+.titleWrap {
+  max-width: 48rem;
+}
+
+.title {
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(2.15rem, 5.8vw, 4.4rem);
+  line-height: 0.95;
+  color: var(--white);
+}
+
+.description {
+  margin-top: 1.25rem;
+  max-width: 42rem;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--white-a90);
+}
+
+.bottomRow {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 1rem;
+  color: var(--white-a90);
+}
+
+.bottomText {
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--white);
+  transition: color 200ms ease;
+}
+
+.cta:hover {
+  color: var(--white-a90);
+}
+
+@media (min-width: 640px) {
+  .headerRow {
+    padding: 0 1.5rem;
+  }
+
+  .supportingText {
+    font-size: 1rem;
+  }
+
+  .media {
+    height: 560px;
+  }
+
+  .pills {
+    padding: 1.75rem;
+  }
+
+  .pillDesktopOnly {
+    display: inline-flex;
+  }
+
+  .content {
+    padding: 1.75rem;
+  }
+
+  .description {
+    font-size: 1.125rem;
+  }
+
+  .bottomRow {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .headerRow {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding-top: 2rem;
+  }
+
+  .headerRow {
+    margin-bottom: 2rem;
+    padding: 0 2rem;
+  }
+
+  .media {
+    height: 640px;
+  }
+
+  .content {
+    padding: 2.5rem;
+  }
+}

@@ -26,7 +26,7 @@ export function Header() {
           </span>
         </Link>
 
-        <div className="hidden items-center gap-8 text-sm font-semibold uppercase tracking-[0.06em] text-slate-800 md:flex">
+        <div className="hidden items-center gap-8 text-sm font-semibold uppercase tracking-[0.06em] text-black md:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}

@@ -13,7 +13,7 @@
 html,
 body {
     background: var(--white);
-    color: var(--secondary);
+    color: var(--neutral-950);
     font-family: var(--font-body), sans-serif;
     scroll-behavior: smooth;
 }
@@ -78,7 +78,7 @@ body {
     text-transform: uppercase;
     line-height: 0.92;
     letter-spacing: 0.01em;
-    color: var(--secondary);
+    color: var(--black);
     text-wrap: balance;
 }
 
@@ -99,7 +99,7 @@ body {
     line-height: 1;
     font-size: clamp(1.35rem, 3.5vw, 2.2rem);
     letter-spacing: 0.01em;
-    color: var(--secondary);
+    color: var(--black);
 }
 
 .eyebrow {
@@ -189,7 +189,7 @@ body {
     margin-top: 1rem;
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--secondary);
+    color: var(--black);
 }
 
 .info-card p {
@@ -206,7 +206,7 @@ body {
 }
 
 .pillar-item p {
-    color: var(--secondary);
+    color: var(--black);
 }
 
 

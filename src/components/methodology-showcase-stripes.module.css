@@ -1,0 +1,228 @@
+.section {
+    margin: 2rem auto 0;
+    width: 100%;
+    background: var(--surface-soft);
+}
+
+.layout {
+    display: grid;
+    width: 100%;
+}
+
+.imagePanel {
+    order: 2;
+    position: relative;
+    min-height: 340px;
+}
+
+.activeImage {
+    object-fit: cover;
+    transition: opacity 300ms ease;
+}
+
+.imageOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1), transparent);
+}
+
+.imageCopy {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1.5rem;
+}
+
+.imageTitle {
+    font-family: var(--font-display), sans-serif;
+    font-size: clamp(2rem, 5vw, 2.5rem);
+    line-height: 0.9;
+    color: var(--white);
+}
+
+.mobileText {
+    margin-top: 0.75rem;
+    max-width: 40rem;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    color: var(--white-a90);
+}
+
+.menuPanel {
+    order: 1;
+    background: var(--panel);
+}
+
+.pointsList {
+    display: grid;
+    gap: 0;
+    height: 100%;
+    grid-auto-rows: 1fr;
+}
+
+.pointButton {
+    --stripe-accent: var(--primary);
+    --stripe-fill: var(--primary);
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    min-height: 60px;
+    border: 0;
+    border-bottom: 1px solid var(--border-soft-a90);
+    padding: 0.5rem 0.8rem 0.5rem 0.92rem;
+    text-align: left;
+    outline: none;
+    appearance: none;
+    background: var(--panel);
+    transition: color 240ms ease;
+}
+
+.pointButton:last-child {
+    border-bottom: none;
+}
+
+.pointButton::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0.45rem;
+    height: 100%;
+    background: var(--stripe-accent);
+    z-index: 1;
+}
+
+.pointButton::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    width: 0;
+    background: var(--stripe-fill);
+    transition: width 460ms cubic-bezier(0.22, 1, 0.36, 1);
+    z-index: 0;
+}
+
+.pointButton:hover::after,
+.pointButton:focus-visible::after,
+.pointButtonActive::after {
+    width: 100%;
+}
+
+.pointButton:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+.pointContent {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    gap: 0.25rem;
+}
+
+.pointTitle {
+    font-family: var(--font-display), sans-serif;
+    font-size: clamp(1.05rem, 1.45vw, 1.75rem);
+    line-height: 1;
+    color: var(--white-a95);
+    transition: color 220ms ease;
+}
+
+.pointDescription {
+    max-width: 48rem;
+    font-size: clamp(0.82rem, 0.95vw, 0.98rem);
+    line-height: 1.3;
+    color: var(--white-a90);
+    transition: color 220ms ease;
+}
+
+.pointButton:hover .pointTitle,
+.pointButton:focus-visible .pointTitle,
+.pointButtonActive .pointTitle {
+    color: var(--white);
+}
+
+.pointButton:hover .pointDescription,
+.pointButton:focus-visible .pointDescription,
+.pointButtonActive .pointDescription {
+    color: var(--white);
+}
+
+@media (min-width: 640px) {
+    .imagePanel {
+        min-height: 430px;
+    }
+
+    .imageCopy {
+        padding: 2rem;
+    }
+
+    .mobileText {
+        font-size: 1.03rem;
+    }
+
+    .pointButton {
+        min-height: 72px;
+        padding: 0.62rem 0.95rem 0.62rem 0.95rem;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .layout {
+        grid-template-columns: 0.42fr 0.58fr;
+    }
+
+    .imagePanel {
+        order: 1;
+        min-height: 560px;
+    }
+
+    .menuPanel {
+        order: 2;
+    }
+
+    .mobileText {
+        display: none;
+    }
+
+    .pointContent {
+        grid-template-columns: minmax(0, 0.44fr) minmax(0, 1fr);
+        align-items: start;
+        column-gap: 2rem;
+    }
+
+    .pointDescription {
+        padding-top: 0.1rem;
+    }
+
+    .pointButton {
+        min-height: 0;
+    }
+
+    .pointTitle {
+        font-size: clamp(1.25rem, 1.65vw, 1.95rem);
+    }
+
+    .pointDescription {
+        font-size: clamp(0.94rem, 1.08vw, 1.1rem);
+        line-height: 1.36;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pointButton::after {
+        transition: none;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .pointButton::after {
+        transition: none;
+    }
+
+    .pointButton:hover::after {
+        width: 0;
+    }
+}

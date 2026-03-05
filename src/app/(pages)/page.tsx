@@ -3,6 +3,7 @@ import { HomeBenefitsSection } from "@/components/home-benefits-section";
 import { HomeHeroSection } from "@/components/home-hero-section";
 import { HomeServicesStripes } from "@/components/home-services-stripes";
 import { MethodologyShowcase } from "@/components/methodology-showcase";
+import { MethodologyShowcaseStripes } from "@/components/methodology-showcase-stripes";
 import { HomeReviewsSection } from "@/components/home-reviews-section";
 import { HomeTeamSection } from "@/components/home-team-section";
 import { QuoteBlock } from "@/components/quote-block";
@@ -38,6 +39,7 @@ export default function Home() {
         </section>
 
         <MethodologyShowcase />
+        <MethodologyShowcaseStripes />
 
         <HomeTeamSection />
 

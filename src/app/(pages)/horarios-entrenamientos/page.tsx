@@ -18,7 +18,7 @@ export default function HorariosEntrenamientosPage() {
         <div className="mx-auto w-full max-w-6xl px-6 pt-14 lg:px-10 lg:pt-24">
           <p className="eyebrow">Horarios</p>
           <h1 className="hero-title">Horarios de entrenamientos</h1>
-          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--neutral-950)]">
             Consulta los horarios disponibles y solicita tu plaza por WhatsApp. Te confirmamos
             disponibilidad y el grupo más adecuado para tu nivel.
           </p>
@@ -55,7 +55,7 @@ export default function HorariosEntrenamientosPage() {
         <div className="mt-8 grid gap-4">
           {scheduleNotes.map((note) => (
             <div key={note} className="pillar-item px-4 py-3">
-              <p className="text-sm text-slate-700">{note}</p>
+              <p className="text-sm text-[var(--neutral-950)]">{note}</p>
             </div>
           ))}
         </div>

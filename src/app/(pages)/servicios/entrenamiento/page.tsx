@@ -20,7 +20,7 @@ export default function EntrenamientoPage() {
           <div>
             <p className="eyebrow">Entrenamiento físico</p>
             <h1 className="hero-title">Fuerza como pilar del rendimiento y la salud</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--neutral-950)]">
               Entrenamiento para mejorar fuerza, rendimiento y salud con progresión estructurada,
               supervisión y foco en prevención de lesiones.
             </p>
@@ -47,7 +47,7 @@ export default function EntrenamientoPage() {
             <article key={program.title} className="info-card">
               <p className="eyebrow">{program.title}</p>
               <h2 className="font-display text-3xl text-slate-900">{program.subtitle}</h2>
-              <ul className="mt-6 grid gap-3 text-slate-700">
+              <ul className="mt-6 grid gap-3 text-[var(--neutral-950)]">
                 {program.bullets.map((bullet) => (
                   <li key={bullet} className="flex items-start gap-3">
                     <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
@@ -62,7 +62,7 @@ export default function EntrenamientoPage() {
         <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_18px_40px_var(--shadow-card-a08)] md:p-8">
           <p className="eyebrow">Reserva y plazas</p>
           <h2 className="font-display text-3xl text-slate-900">Cuéntanos qué necesitas y te orientamos</h2>
-          <p className="mt-4 max-w-3xl text-slate-600">
+          <p className="mt-4 max-w-3xl text-[var(--neutral-950)]">
             Indica si buscas grupos reducidos, entrenamiento personal, rendimiento deportivo u
             opción online. Te orientamos según tu objetivo, experiencia y disponibilidad.
           </p>

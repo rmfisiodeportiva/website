@@ -17,7 +17,7 @@ export default function TarifasPage() {
           <div className="mx-auto w-full max-w-6xl px-6 pt-14 lg:px-10 lg:pt-24">
           <p className="eyebrow">Tarifas</p>
           <h1 className="hero-title">Opciones de sesiones y bonos</h1>
-          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--neutral-950)]">
             Consulta las opciones de sesiones y bonos de fisioterapia y entrenamiento. Si tienes
             dudas, te orientamos por WhatsApp según tu objetivo y la frecuencia recomendada.
           </p>
@@ -40,7 +40,7 @@ export default function TarifasPage() {
                         <p className="font-semibold text-slate-900">{item.name}</p>
                         <p className="font-display text-2xl text-[var(--accent)]">{item.price}</p>
                       </div>
-                      <p className="mt-2 text-sm text-slate-600">{item.note}</p>
+                      <p className="mt-2 text-sm text-[var(--neutral-950)]">{item.note}</p>
                     </div>
                   ))}
                 </div>
@@ -51,7 +51,7 @@ export default function TarifasPage() {
             ))}
           </div>
 
-          <div className="mt-8 rounded-2xl border border-[var(--accent-a20)] bg-[var(--accent-a05)] p-5 text-sm text-slate-700">
+          <div className="mt-8 rounded-2xl border border-[var(--accent-a20)] bg-[var(--accent-a05)] p-5 text-sm text-[var(--neutral-950)]">
             <p>
               Los importes pueden variar según frecuencia, duración de sesión y objetivos de
               recuperación o readaptación.

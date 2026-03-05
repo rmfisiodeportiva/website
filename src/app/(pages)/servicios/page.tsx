@@ -18,7 +18,7 @@ export default function ServiciosPage() {
         <div className="mx-auto w-full max-w-6xl px-6 pt-14 lg:px-10 lg:pt-24">
           <p className="eyebrow">Servicios</p>
           <h1 className="hero-title">Fisioterapia y entrenamiento físico</h1>
-          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-slate-600">
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-[var(--neutral-950)]">
             Dos servicios complementarios para tratar dolor, recuperar función y seguir progresando
             con fuerza y control.
           </p>
@@ -40,8 +40,8 @@ export default function ServiciosPage() {
               <div className="flex h-full flex-col p-6">
                 <p className="eyebrow">{service.title}</p>
                 <h2 className="font-display text-3xl text-slate-900">{service.subtitle}</h2>
-                <p className="mt-4 text-slate-600">{service.description}</p>
-                <ul className="mt-5 grid gap-3 text-sm text-slate-700">
+                <p className="mt-4 text-[var(--neutral-950)]">{service.description}</p>
+                <ul className="mt-5 grid gap-3 text-sm text-[var(--neutral-950)]">
                   {service.bullets.map((bullet) => (
                     <li key={bullet} className="flex items-start gap-3">
                       <span aria-hidden="true" className="mt-1 h-2 w-2 rounded-full bg-[var(--accent)]" />

@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { HomeServicesStripes } from "@/components/home-services-stripes";
 import { MethodologyShowcase } from "@/components/methodology-showcase";
+import { HomeReviewsSection } from "@/components/home-reviews-section";
 import { HomeTeamSection } from "@/components/home-team-section";
 import { QuoteBlock } from "@/components/quote-block";
 import { WhatsAppBookingSection } from "@/components/whatsapp-booking-section";
 import {
   homeJsonLd,
   physioWhatsAppHref,
-  testimonials,
   trainingWhatsAppHref,
 } from "@/lib/home-page-data";
 import { homeQuotes } from "@/lib/home-quotes-data";
@@ -190,25 +190,7 @@ export default function Home() {
 
         <HomeTeamSection />
 
-        <section className="section-wrap">
-          <div className="section-heading">
-            <p className="eyebrow">Testimonios</p>
-            <h2>Personas que volvieron a moverse, entrenar y confiar en su cuerpo.</h2>
-          </div>
-          <div className="mt-10 grid gap-7 md:grid-cols-3">
-            {testimonials.map((item) => (
-              <blockquote
-                key={item.author}
-                className="border-t border-slate-200 pt-5 text-slate-600"
-              >
-                <p className="leading-relaxed">{item.quote}</p>
-                <footer className="mt-4 text-sm font-semibold uppercase tracking-[0.12em] text-slate-900">
-                  {item.author}
-                </footer>
-              </blockquote>
-            ))}
-          </div>
-        </section>
+        <HomeReviewsSection />
 
         <WhatsAppBookingSection
           physioHref={physioWhatsAppHref}

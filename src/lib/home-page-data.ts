@@ -67,24 +67,6 @@ export const pillars = [
   "Seguimiento continuo para progresar con seguridad",
 ] as const;
 
-export const testimonials = [
-  {
-    quote:
-      "Pasé de no poder correr por dolor lumbar a volver a entrenar 3 días por semana sin molestias.",
-    author: "Miguel A.",
-  },
-  {
-    quote:
-      "El trabajo conjunto entre fisioterapia y fuerza marcó la diferencia. Trato cercano y muy profesional.",
-    author: "Andrea L.",
-  },
-  {
-    quote:
-      "Desde la primera valoración supe que había método. Todo estaba medido y orientado a objetivos reales.",
-    author: "Jorge P.",
-  },
-] as const;
-
 export const homeJsonLd = {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",

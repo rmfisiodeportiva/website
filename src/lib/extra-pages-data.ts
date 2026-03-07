@@ -29,10 +29,24 @@ export const detailedServices = [
     ],
     whatsappHref: trainingWhatsAppHref,
   },
+  {
+    title: "Readaptación",
+    subtitle: "Vuelve a moverte sin dolor y con seguridad",
+    description:
+      "Combinamos fisioterapia y entrenamiento para recuperar función, reforzar la zona afectada y reducir recaídas.",
+    pageHref: "/servicios/readaptacion",
+    bullets: [
+      "Evaluación inicial y valoración funcional",
+      "Plan individualizado según lesión y objetivos",
+      "Trabajo progresivo de movilidad, fuerza y estabilidad",
+      "Retorno seguro a tu actividad o deporte",
+    ],
+    whatsappHref: physioWhatsAppHref,
+  },
 ] as const;
 
 export const physioProcess = [
-  "Valoración inicial (entrevista)",
+  "Entrevista inicial",
   "Diagnóstico funcional",
   "Tratamiento",
   "Plan de ejercicio",

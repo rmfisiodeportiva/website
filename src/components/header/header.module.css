@@ -1,0 +1,160 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  background: var(--white);
+  box-shadow: 0 10px 28px rgba(5, 18, 35, 0.045);
+  backdrop-filter: blur(20px);
+}
+
+.nav {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.brandLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brandText {
+  display: none;
+  font-family: var(--font-display), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  color: var(--secondary-700);
+}
+
+.navigation {
+  display: none;
+  align-items: center;
+  gap: 2rem;
+}
+
+.menuItemGroup {
+  position: relative;
+}
+
+.menuLink {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--secondary-800);
+  transition: color 180ms ease;
+}
+
+.menuLink:hover,
+.menuLink:focus-visible {
+  color: var(--primary);
+}
+
+.activeLink {
+  color: var(--primary);
+}
+
+.servicesLink {
+  position: relative;
+}
+
+.servicesArrow {
+  position: absolute;
+  left: 50%;
+  z-index: 51;
+  top: 100%;
+  height: 0.75rem;
+  width: 0.75rem;
+  transform: translate(-50%, -0.25rem);
+  color: var(--primary);
+  opacity: 0;
+  transition: all 200ms ease;
+}
+
+.menuItemGroup:hover .servicesArrow,
+.menuItemGroup:focus-within .servicesArrow {
+  transform: translate(-50%, 0);
+  opacity: 1;
+}
+
+.dropdown {
+  background: var(--white);
+  pointer-events: none;
+  visibility: hidden;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  z-index: 50;
+  width: 10rem;
+  transform: translateX(-50%);
+  padding-top: 0.75rem;
+  opacity: 0;
+  transition: all 200ms ease-out;
+}
+
+.menuItemGroup:hover .dropdown,
+.menuItemGroup:focus-within .dropdown {
+  pointer-events: auto;
+  visibility: visible;
+  opacity: 1;
+}
+
+.dropdownList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.dropdownItem {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--secondary-700);
+  transition: color 200ms ease;
+}
+
+.dropdownItem:hover,
+.dropdownItem:focus-visible {
+  color: var(--primary);
+}
+
+.ctaButton {
+  display: none;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .brandText {
+    display: inline-block;
+  }
+
+  .navigation {
+    display: flex;
+  }
+
+  .ctaButton {
+    display: inline-flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    padding: 1rem 2.5rem;
+  }
+}

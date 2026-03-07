@@ -2,55 +2,63 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { WhatsAppButton } from "@/components/whatsapp-button";
-import { trainingPrograms } from "@/lib/extra-pages-data";
-import { trainingWhatsAppHref } from "@/lib/constants/contact";
+import { trainingWhatsAppHref } from "@/lib/home-page-data";
+import {
+  entrenamientoBookingContent,
+  entrenamientoHeroContent,
+  entrenamientoPageMetadata,
+  trainingPrograms,
+} from "./constants";
+import sharedStyles from "../services-global.module.css";
+import styles from "./entrenamiento-page.module.css";
 
-export const metadata: Metadata = {
-  title: "Entrenamiento Fisico",
-  description:
-    "Entrenamiento físico en Molina de Segura (Murcia): grupos reducidos, entrenamiento personal, rendimiento deportivo y formato online.",
-};
+export const metadata: Metadata = entrenamientoPageMetadata;
 
 export default function EntrenamientoPage() {
   return (
-    <main className="page-flow">
-      <section className="hero-section">
+    <main className={`${sharedStyles.page} page-flow`}>
+      <section className={`${sharedStyles.heroSection} hero-section`}>
         <div className="electric-lines" aria-hidden="true" />
-        <div className="mx-auto grid w-full max-w-6xl gap-8 px-6 py-20 lg:grid-cols-[1fr_0.95fr] lg:px-10 lg:py-24">
+        <div className={sharedStyles.heroInner}>
           <div>
-            <p className="eyebrow">Entrenamiento físico</p>
-            <h1 className="hero-title">Fuerza como pilar del rendimiento y la salud</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--neutral-950)]">
-              Entrenamiento para mejorar fuerza, rendimiento y salud con progresión estructurada,
-              supervisión y foco en prevención de lesiones.
+            <p className={sharedStyles.eyebrow}>{entrenamientoHeroContent.eyebrow}</p>
+            <h1 className={sharedStyles.heroTitle}>{entrenamientoHeroContent.title}</h1>
+            <p className={`${sharedStyles.heroLead} ${styles.heroLead}`}>
+              {entrenamientoHeroContent.description}
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <WhatsAppButton href={trainingWhatsAppHref} className="btn-primary gap-2">
-                Solicita plaza
+            <div className={sharedStyles.ctaRow}>
+              <WhatsAppButton href={trainingWhatsAppHref} className={sharedStyles.buttonPrimary}>
+                {entrenamientoHeroContent.primaryCta.label}
               </WhatsAppButton>
-              <Link href="/horarios-entrenamientos" className="btn-ghost">
-                Ver horarios
+              <Link href={entrenamientoHeroContent.secondaryCta.href} className={sharedStyles.buttonGhost}>
+                {entrenamientoHeroContent.secondaryCta.label}
               </Link>
             </div>
           </div>
-          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_18px_36px_var(--shadow-card-a08)]">
-            <div className="relative h-[360px] w-full">
-              <Image src="/images/green.avif" alt="Barra y discos de entrenamiento en el centro" fill className="object-cover" />
+          <div className={sharedStyles.heroMediaCard}>
+            <div className={sharedStyles.heroMedia}>
+              <Image
+                src={entrenamientoHeroContent.image.src}
+                alt={entrenamientoHeroContent.image.alt}
+                fill
+                className={sharedStyles.imageCover}
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section-wrap pb-20">
-        <div className="grid gap-6 md:grid-cols-2">
+      <section className={`${sharedStyles.section} ${sharedStyles.sectionLast}`}>
+        <div className={styles.programGrid}>
           {trainingPrograms.map((program) => (
-            <article key={program.title} className="info-card">
-              <p className="eyebrow">{program.title}</p>
-              <h2 className="font-display text-3xl text-slate-900">{program.subtitle}</h2>
-              <ul className="mt-6 grid gap-3 text-[var(--neutral-950)]">
+            <article key={program.title} className={sharedStyles.infoCard}>
+              <p className={sharedStyles.eyebrow}>{program.title}</p>
+              {program.subtitle ? <h2 className={sharedStyles.cardTitle}>{program.subtitle}</h2> : null}
+              <p className={sharedStyles.cardText}>{program.description}</p>
+              <ul className={sharedStyles.bulletList}>
                 {program.bullets.map((bullet) => (
-                  <li key={bullet} className="flex items-start gap-3">
-                    <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
+                  <li key={bullet} className={sharedStyles.bulletItem}>
+                    <span aria-hidden="true" className={sharedStyles.bulletDot} />
                     <span>{bullet}</span>
                   </li>
                 ))}
@@ -59,22 +67,19 @@ export default function EntrenamientoPage() {
           ))}
         </div>
 
-        <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_18px_40px_var(--shadow-card-a08)] md:p-8">
-          <p className="eyebrow">Reserva y plazas</p>
-          <h2 className="font-display text-3xl text-slate-900">Cuéntanos qué necesitas y te orientamos</h2>
-          <p className="mt-4 max-w-3xl text-[var(--neutral-950)]">
-            Indica si buscas grupos reducidos, entrenamiento personal, rendimiento deportivo u
-            opción online. Te orientamos según tu objetivo, experiencia y disponibilidad.
-          </p>
-          <div className="mt-6 flex flex-wrap gap-4">
-            <WhatsAppButton href={trainingWhatsAppHref} className="btn-primary gap-2">
-              Solicita información
+        <div className={sharedStyles.panel}>
+          <p className={sharedStyles.eyebrow}>{entrenamientoBookingContent.eyebrow}</p>
+          <h2 className={sharedStyles.sectionTitle}>{entrenamientoBookingContent.title}</h2>
+          <p className={sharedStyles.text}>{entrenamientoBookingContent.description}</p>
+          <div className={sharedStyles.ctaRow}>
+            <WhatsAppButton href={trainingWhatsAppHref} className={sharedStyles.buttonPrimary}>
+              {entrenamientoBookingContent.ctas[0].label}
             </WhatsAppButton>
-            <Link href="/tarifas" className="btn-ghost">
-              Ver tarifas
+            <Link href={entrenamientoBookingContent.ctas[1].href} className={sharedStyles.buttonGhost}>
+              {entrenamientoBookingContent.ctas[1].label}
             </Link>
-            <Link href="/horarios-entrenamientos" className="btn-ghost">
-              Ver horarios
+            <Link href={entrenamientoBookingContent.ctas[2].href} className={sharedStyles.buttonGhost}>
+              {entrenamientoBookingContent.ctas[2].label}
             </Link>
           </div>
         </div>

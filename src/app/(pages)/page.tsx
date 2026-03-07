@@ -1,17 +1,13 @@
 import type { Metadata } from "next";
 import { HomeBenefitsSection } from "@/components/home-benefits-section";
 import { HomeHeroSection } from "@/components/home-hero-section";
-import { HomeServicesStripes } from "@/components/home-services-stripes";
+import { HomeServicesShowcase } from "@/components/home-services-showcase";
 import { MethodologyShowcaseStripes } from "@/components/methodology-showcase-stripes";
 import { HomeReviewsSection } from "@/components/home-reviews-section";
 import { HomeTeamSection } from "@/components/home-team-section";
 import { QuoteBlock } from "@/components/quote-block";
 import { WhatsAppBookingSection } from "@/components/whatsapp-booking-section";
-import {
-  homeJsonLd,
-  physioWhatsAppHref,
-  trainingWhatsAppHref,
-} from "@/lib/home-page-data";
+import { homeJsonLd } from "@/lib/home-page-data";
 import { homeQuotes } from "@/components/quote-block/constants";
 
 export const metadata: Metadata = {
@@ -28,9 +24,9 @@ export default function Home() {
 
         <HomeBenefitsSection />
 
-        <HomeServicesStripes />
+        <HomeServicesShowcase />
 
-        <section className="section-wrap pt-14 flex justify-center" aria-label="Mensaje principal">
+        <section className="section-wrap pt-8 md:pt-14 flex justify-center" aria-label="Mensaje principal">
           <QuoteBlock
             title={homeQuotes.methodology.title}
             description={homeQuotes.methodology.description}
@@ -43,10 +39,7 @@ export default function Home() {
 
         <HomeReviewsSection />
 
-        <WhatsAppBookingSection
-          physioHref={physioWhatsAppHref}
-          trainingHref={trainingWhatsAppHref}
-        />
+        <WhatsAppBookingSection />
       </main>
 
       <script

@@ -1,6 +1,6 @@
 import { QuoteBlock } from "@/components/quote-block";
-import styles from "@/components/home-team-section.module.css";
-import { homeTeamSectionContent } from "@/lib/home-team-section-data";
+import styles from "./home-team-section.module.css";
+import { homeTeamSectionContent } from "./constants";
 
 export function HomeTeamSection() {
   return (

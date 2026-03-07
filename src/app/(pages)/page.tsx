@@ -12,7 +12,7 @@ import {
   physioWhatsAppHref,
   trainingWhatsAppHref,
 } from "@/lib/home-page-data";
-import { homeQuotes } from "@/lib/home-quotes-data";
+import { homeQuotes } from "@/components/quote-block/constants";
 
 export const metadata: Metadata = {
   title: "Centro de Rehabilitacion y Rendimiento",

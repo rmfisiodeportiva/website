@@ -1,6 +1,6 @@
 import Image from "next/image";
-import styles from "@/components/home-hero-section.module.css";
-import { homeHeroSectionContent } from "@/lib/home-hero-section-data";
+import styles from "./home-hero-section.module.css";
+import { homeHeroSectionContent } from "./constants";
 
 export function HomeHeroSection() {
   return (

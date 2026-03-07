@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import styles from "@/components/methodology-showcase-stripes.module.css";
-import { homeMethodologyShowcasePoints } from "@/lib/home-methodology-showcase-data";
+import styles from "./methodology-showcase-stripes.module.css";
+import { homeMethodologyShowcasePoints } from "./constants";
 
 export function MethodologyShowcaseStripes() {
   const points = homeMethodologyShowcasePoints;

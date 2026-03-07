@@ -2,12 +2,12 @@
 
 import { useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import styles from "@/components/home-reviews-section.module.css";
-import { homeReviewsSectionContent } from "@/lib/home-reviews-section-data";
+import styles from "./home-reviews-section.module.css";
+import { homeReviewsSectionContent } from "./constants";
 
 export function HomeReviewsSection() {
   const baseReviews = homeReviewsSectionContent.reviews;
-  const loopReviews =[...baseReviews, ...baseReviews];
+  const loopReviews = [...baseReviews, ...baseReviews];
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,

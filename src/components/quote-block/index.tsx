@@ -1,4 +1,4 @@
-import styles from "@/components/quote-block.module.css";
+import styles from "./quote-block.module.css";
 
 type QuoteBlockProps = {
   title: string;

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { featuredHomeServices } from "@/lib/home-services-data";
-import styles from "@/components/home-services-stripes.module.css";
+import styles from "./home-services-stripes.module.css";
+import { featuredHomeServices } from "./constants";
 
 export function HomeServicesStripes() {
   return (

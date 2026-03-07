@@ -1,5 +1,5 @@
-import styles from "@/components/home-benefits-section.module.css";
-import { homeBenefitsSectionContent } from "@/lib/home-benefits-section-data";
+import styles from "./home-benefits-section.module.css";
+import { homeBenefitsSectionContent } from "./constants";
 
 type IconName = (typeof homeBenefitsSectionContent.items)[number]["icon"];
 

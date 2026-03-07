@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import styles from "./home-services-showcase.module.css";
@@ -13,9 +12,9 @@ export function HomeServicesShowcase() {
   return (
     <section className={styles.section} aria-label="Servicios destacados">
       <div className={styles.header}>
-        <p className={`eyebrow ${styles.eyebrow}`}>Servicios destacados</p>
+        <p className={`eyebrow ${styles.eyebrow}`}>SERVICIOS</p>
         <Link href="/servicios" className={styles.allServicesLink}>
-          Ver todos los servicios
+          Ver todos
         </Link>
       </div>
 
@@ -40,21 +39,13 @@ export function HomeServicesShowcase() {
             })}
           </div>
 
-          <div className={styles.detailBlock}>
-            <p className={styles.description}>{activeService.description}</p>
-            <Link href={activeService.href} className={styles.cta}>
-              Descubrir servicio
-            </Link>
-          </div>
         </div>
 
-        <div className={styles.mediaWrap}>
-          <Image
-            src={activeService.image}
-            alt={activeService.imageAlt}
-            fill
-            className={styles.media}
-          />
+        <div className={styles.detailBlock}>
+          <p className={styles.description}>{activeService.description}</p>
+          <Link href={activeService.href} className={styles.cta}>
+            Descubrir servicio
+          </Link>
         </div>
       </div>
     </section>

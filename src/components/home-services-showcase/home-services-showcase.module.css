@@ -12,7 +12,7 @@
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
-    margin-bottom: 0.9rem;
+    margin-bottom: 3rem;
 }
 
 .eyebrow {
@@ -128,36 +128,15 @@
     color: var(--primary);
 }
 
-.mediaWrap {
-    position: relative;
-    overflow: hidden;
-    min-height: 15rem;
-    border: 1px solid var(--border-soft-a90);
-}
-
-.media {
-    object-fit: cover;
-    object-position: center;
-}
-
 @media (min-width: 920px) {
     .layout {
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
         gap: 2rem;
-    }
-
-    .mediaWrap {
-        min-height: 21rem;
+        align-items: center;
     }
 }
 
 @media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.35rem;
-    }
-
     .serviceTrigger {
         font-size: clamp(1.9rem, 10vw, 3rem);
     }

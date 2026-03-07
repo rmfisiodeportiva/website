@@ -57,10 +57,12 @@ export default function FisioterapiaPage() {
           <p className={sharedStyles.eyebrow}>{fisioterapiaSectionsContent.process.eyebrow}</p>
           <h2 className={sharedStyles.sectionTitle}>{fisioterapiaSectionsContent.process.title}</h2>
         </div>
-        <div className={styles.processGrid}>
+        <div className={styles.timeline}>
           {physioProcess.map((step, index) => (
-            <div key={step} className={styles.processItem}>
-              <span className={styles.processNumber}>{String(index + 1).padStart(2, "0")}</span>
+            <div key={step} className={styles.timelineItem}>
+              <span className={styles.timelineMarker}>
+                <span className={styles.processNumber}>{String(index + 1).padStart(2, "0")}</span>
+              </span>
               <p className={styles.processText}>{step}</p>
             </div>
           ))}

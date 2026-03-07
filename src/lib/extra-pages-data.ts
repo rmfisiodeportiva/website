@@ -46,7 +46,7 @@ export const detailedServices = [
 ] as const;
 
 export const physioProcess = [
-  "Valoración inicial (entrevista)",
+  "Entrevista inicial",
   "Diagnóstico funcional",
   "Tratamiento",
   "Plan de ejercicio",

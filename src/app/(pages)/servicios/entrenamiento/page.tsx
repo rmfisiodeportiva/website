@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { trainingPrograms } from "@/lib/extra-pages-data";
-import { trainingWhatsAppHref } from "@/lib/home-page-data";
+import { trainingWhatsAppHref } from "@/lib/constants/contact";
 
 export const metadata: Metadata = {
   title: "Entrenamiento Fisico",

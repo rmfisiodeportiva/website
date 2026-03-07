@@ -7,7 +7,7 @@ import {
   physioSpecificServices,
   physioTreatments,
 } from "@/lib/extra-pages-data";
-import { physioWhatsAppHref } from "@/lib/home-page-data";
+import { physioWhatsAppHref } from "@/lib/constants/contact";
 
 export const metadata: Metadata = {
   title: "Fisioterapia",

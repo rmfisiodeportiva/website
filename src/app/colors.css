@@ -1,39 +1,40 @@
 :root {
-  /* Core palette */
-  --white: #ffffff;
-  --black: #000000;
-  --primary: #0582c2;
-  --primary-700: #0d3d71;
-  --secondary: #0c1f4f;
-  --secondary-700: #10233a;
-  --secondary-500: #1f2937;
-  --accent: #214ed1;
-  --surface-soft: #f1f5f9;
-  --border: #e5e7eb;
-  --panel: #1b1b1b;
-  --panel-hover: #20242d;
-  --neutral-950: #111111;
+    /* Core palette */
+    --white: #ffffff;
+    --black: #000000;
+    --primary: #0582c2;
+    --primary-700: #0d3d71;
+    --secondary: #0c1f4f;
+    --secondary-700: #10233a;
+    --secondary-500: #1f2937;
+    --accent: #214ed1;
+    --surface-soft: #f1f5f9;
+    --border: #e5e7eb;
+    --panel: #1b1b1b;
+    --panel-hover: #20242d;
+    --neutral-400: #aeaeae;
+    --neutral-950: #111111;
 
-  /* Reduced alpha scale */
-  --white-a95: rgba(255, 255, 255, 0.95);
-  --white-a90: rgba(255, 255, 255, 0.9);
-  --white-a75: rgba(255, 255, 255, 0.75);
+    /* Reduced alpha scale */
+    --white-a95: rgba(255, 255, 255, 0.95);
+    --white-a90: rgba(255, 255, 255, 0.9);
+    --white-a75: rgba(255, 255, 255, 0.75);
 
-  --primary-a26: rgba(5, 130, 194, 0.26);
+    --primary-a26: rgba(5, 130, 194, 0.26);
 
-  --accent-a80: rgba(33, 78, 209, 0.8);
-  --accent-a20: rgba(33, 78, 209, 0.2);
-  --accent-a10: rgba(33, 78, 209, 0.1);
-  --accent-a08: rgba(33, 78, 209, 0.08);
-  --accent-a05: rgba(33, 78, 209, 0.05);
+    --accent-a80: rgba(33, 78, 209, 0.8);
+    --accent-a20: rgba(33, 78, 209, 0.2);
+    --accent-a10: rgba(33, 78, 209, 0.1);
+    --accent-a08: rgba(33, 78, 209, 0.08);
+    --accent-a05: rgba(33, 78, 209, 0.05);
 
-  --border-soft-a90: rgba(229, 231, 235, 0.9);
-  --input-border-a35: rgba(143, 163, 188, 0.35);
-  --secondary-a82: rgba(12, 31, 79, 0.82);
-  --pattern-a08: rgba(196, 202, 208, 0.08);
-  --logo-shadow-a08: rgba(12, 31, 79, 0.08);
+    --border-soft-a90: rgba(229, 231, 235, 0.9);
+    --input-border-a35: rgba(143, 163, 188, 0.35);
+    --secondary-a82: rgba(12, 31, 79, 0.82);
+    --pattern-a08: rgba(196, 202, 208, 0.08);
+    --logo-shadow-a08: rgba(12, 31, 79, 0.08);
 
-  --shadow-main-a05: rgba(15, 39, 66, 0.05);
-  --shadow-deep-a06: rgba(12, 27, 42, 0.06);
-  --shadow-card-a08: rgba(15, 39, 66, 0.08);
+    --shadow-main-a05: rgba(15, 39, 66, 0.05);
+    --shadow-deep-a06: rgba(12, 27, 42, 0.06);
+    --shadow-card-a08: rgba(15, 39, 66, 0.08);
 }

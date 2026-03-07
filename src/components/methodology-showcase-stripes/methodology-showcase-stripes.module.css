@@ -1,7 +1,7 @@
 .section {
     margin: 4rem auto 0;
     width: 100%;
-    padding: 4rem 1.5rem;
+    padding: 4rem 2.5rem;
     position: relative;
     isolation: isolate;
     background-image: url("/images/backgorund.webp");

@@ -9,12 +9,7 @@ export function WhatsAppBookingSection() {
     <section id="reserva" className={styles.section}>
       <div className="section-heading">
         <p className={`eyebrow ${styles.eyebrow}`}>{whatsappBookingSectionContent.eyebrow}</p>
-        <h2 className={styles.title}>
-          <span className={styles.titleIcon}>
-            <WhatsAppIcon className={styles.titleIconSvg} />
-          </span>
-          {whatsappBookingSectionContent.title}
-        </h2>
+        <h2 className={styles.title}>{whatsappBookingSectionContent.title}</h2>
       </div>
 
       <div className={styles.serviceList}>
@@ -27,8 +22,13 @@ export function WhatsAppBookingSection() {
             className={styles.serviceLink}
             aria-label={`Contactar por WhatsApp para ${service.label.toLowerCase()}`}
           >
-            <span className={styles.serviceLabel}>{service.label.toUpperCase()}</span>
-            <span className={styles.inlineDescription}>: {service.description}</span>
+            <span className={styles.serviceLabelGroup}>
+              <span className={styles.serviceLabel}>{service.label.toUpperCase()}</span>
+              <span className={styles.serviceIcon} aria-hidden="true">
+                <WhatsAppIcon className={styles.serviceIconSvg} />
+              </span>
+            </span>
+            <span className={styles.inlineDescription}> {service.description}</span>
           </a>
         ))}
       </div>

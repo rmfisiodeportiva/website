@@ -1,12 +1,16 @@
 .section {
-    margin: 0 auto;
+    margin: 4rem auto 0;
     width: 100%;
-    max-width: 76rem;
-    padding: 4rem 1.5rem 0;
+    padding: 4rem 1.5rem 4rem;
+    background-image: url("/images/backgorund.webp");
 }
 
 .heading {
     max-width: 76rem;
+}
+
+.eyebrow {
+    margin-bottom: 0.6rem;
 }
 
 .headingTitle {
@@ -21,7 +25,6 @@
 .carousel {
     margin-top: 1.75rem;
     position: relative;
-    max-width: calc(100% - 3rem);
     margin-left: auto;
     margin-right: auto;
 }
@@ -145,6 +148,10 @@
 }
 
 @media (min-width: 768px) {
+    .eyebrow {
+        margin-bottom: 3rem;
+    }
+
     .carousel {
         max-width: calc(100% - 6.5rem);
     }
@@ -158,11 +165,11 @@
     }
 
     .controlPrev {
-        left: -1.25rem;
+        left: -3rem;
     }
 
     .controlNext {
-        right: -1.25rem;
+        right: -3rem;
     }
 
     .controlButton {

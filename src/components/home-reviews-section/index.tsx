@@ -53,7 +53,7 @@ export function HomeReviewsSection() {
   return (
     <section className={styles.section}>
       <div className={styles.heading}>
-        <p className="eyebrow">{homeReviewsSectionContent.heading.eyebrow}</p>
+        <p className={`eyebrow ${styles.eyebrow}`}>{homeReviewsSectionContent.heading.eyebrow}</p>
         <h2 className={styles.headingTitle}>{homeReviewsSectionContent.heading.title}</h2>
       </div>
 

@@ -1,0 +1,110 @@
+.heroLead {
+  max-width: 56rem;
+}
+
+.timeline {
+  position: relative;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  display: grid;
+  gap: 1.25rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 1.2rem;
+  top: 1.2rem;
+  bottom: 1.2rem;
+  width: 2px;
+  background: var(--border-soft-a90);
+}
+
+.timelineItem {
+  position: relative;
+  padding-left: 4rem;
+  min-height: 3rem;
+}
+
+.timelineMarker {
+  position: absolute;
+  left: 0;
+  top: 0.1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-soft-a90);
+  background: var(--white);
+}
+
+.processNumber {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.processText {
+  padding-top: 0.5rem;
+  color: var(--accent);
+  font-size: 0.84rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .timeline {
+    --timeline-line-offset: 0rem;
+    --timeline-marker-size: 2.7rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0;
+  }
+
+  .timeline::before {
+    left: 1.2rem;
+    right: 1.2rem;
+    top: auto;
+    bottom: var(--timeline-line-offset);
+    width: auto;
+    height: 2px;
+  }
+
+  .timelineItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+  }
+
+  .timelineMarker {
+    left: 50%;
+    top: auto;
+    bottom: calc(
+      var(--timeline-line-offset) - (var(--timeline-marker-size) / 2)
+    );
+    transform: translateX(-50%);
+    width: var(--timeline-marker-size);
+    height: var(--timeline-marker-size);
+    z-index: 1;
+  }
+
+  .processText {
+    width: 100%;
+    max-width: 14ch;
+    padding-top: 0;
+    padding-bottom: calc((var(--timeline-marker-size) / 2) + 1.2rem);
+    text-align: center;
+    line-height: 1.12;
+    font-size: clamp(0.8rem, 1vw, 0.92rem);
+  }
+}

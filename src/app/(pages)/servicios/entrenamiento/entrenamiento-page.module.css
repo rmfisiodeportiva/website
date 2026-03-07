@@ -1,0 +1,14 @@
+.heroLead {
+  max-width: 56rem;
+}
+
+.programGrid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .programGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

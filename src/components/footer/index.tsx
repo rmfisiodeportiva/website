@@ -3,6 +3,8 @@ import {
   contactInfo,
   physioWhatsAppHref,
   trainingWhatsAppHref,
+} from "@/lib/constants/contact";
+import {
   homeJsonLd,
 } from "@/lib/home-page-data";
 import {

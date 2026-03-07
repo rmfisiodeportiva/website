@@ -1,0 +1,37 @@
+.heroLead {
+  max-width: 56rem;
+}
+
+.processGrid {
+  margin-top: 2.5rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.processItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-soft-a90);
+  background: linear-gradient(180deg, var(--white), var(--white));
+  padding: 1rem;
+}
+
+.processNumber {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.9rem;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.processText {
+  padding-top: 0.2rem;
+  color: var(--black);
+}
+
+@media (min-width: 768px) {
+  .processGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

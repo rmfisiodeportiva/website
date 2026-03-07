@@ -8,6 +8,8 @@ import {
   physioTreatments,
 } from "@/lib/extra-pages-data";
 import { physioWhatsAppHref } from "@/lib/home-page-data";
+import sharedStyles from "../services-global.module.css";
+import styles from "./fisioterapia-page.module.css";
 
 export const metadata: Metadata = {
   title: "Fisioterapia",
@@ -17,73 +19,78 @@ export const metadata: Metadata = {
 
 export default function FisioterapiaPage() {
   return (
-    <main className="page-flow">
-      <section className="hero-section">
+    <main className={`${sharedStyles.page} page-flow`}>
+      <section className={`${sharedStyles.heroSection} hero-section`}>
         <div className="electric-lines" aria-hidden="true" />
-        <div className="mx-auto grid w-full max-w-6xl gap-8 px-6 py-20 lg:grid-cols-[1fr_0.95fr] lg:px-10 lg:py-24">
+        <div className={sharedStyles.heroInner}>
           <div>
-            <p className="eyebrow">Fisioterapia</p>
-            <h1 className="hero-title">Enfoque clínico, movimiento y fuerza</h1>
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-[var(--neutral-950)]">
+            <p className={sharedStyles.eyebrow}>Fisioterapia</p>
+            <h1 className={sharedStyles.heroTitle}>Enfoque clínico, movimiento y fuerza</h1>
+            <p className={`${sharedStyles.heroLead} ${styles.heroLead}`}>
               Tratamos dolor y lesiones con un enfoque activo: evaluación, tratamiento y ejercicio
               para que recuperes función y vuelvas a moverte con seguridad.
             </p>
-            <div className="mt-8 flex flex-wrap gap-4">
-              <WhatsAppButton href={physioWhatsAppHref} className="btn-primary gap-2">
+            <div className={sharedStyles.ctaRow}>
+              <WhatsAppButton href={physioWhatsAppHref} className={sharedStyles.buttonPrimary}>
                 Reserva fisioterapia
               </WhatsAppButton>
-              <Link href="/tarifas" className="btn-ghost">
+              <Link href="/tarifas" className={sharedStyles.buttonGhost}>
                 Ver tarifas
               </Link>
             </div>
           </div>
-          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_18px_36px_var(--shadow-card-a08)]">
-            <div className="relative h-[360px] w-full">
-              <Image src="/images/grey.avif" alt="Zona de trabajo del centro en Molina de Segura" fill className="object-cover" />
+          <div className={sharedStyles.heroMediaCard}>
+            <div className={sharedStyles.heroMedia}>
+              <Image
+                src="/images/grey.avif"
+                alt="Zona de trabajo del centro en Molina de Segura"
+                fill
+                className={sharedStyles.imageCover}
+              />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section-wrap">
-        <div className="section-heading">
-          <p className="eyebrow">Proceso del paciente</p>
-          <h2>Te acompañamos con un proceso claro desde la primera visita.</h2>
+      <section className={sharedStyles.section}>
+        <div className={sharedStyles.sectionHeading}>
+          <p className={sharedStyles.eyebrow}>Proceso del paciente</p>
+          <h2 className={sharedStyles.sectionTitle}>
+            Te acompañamos con un proceso claro desde la primera visita.
+          </h2>
         </div>
-        <div className="mt-10 grid gap-4 md:grid-cols-2">
+        <div className={styles.processGrid}>
           {physioProcess.map((step, index) => (
-            <div key={step} className="pillar-item flex items-start gap-4 p-4">
-              <span className="font-display text-3xl leading-none text-[var(--accent)]">
-                {String(index + 1).padStart(2, "0")}
-              </span>
-              <p className="pt-1">{step}</p>
+            <div key={step} className={styles.processItem}>
+              <span className={styles.processNumber}>{String(index + 1).padStart(2, "0")}</span>
+              <p className={styles.processText}>{step}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="section-wrap">
-        <div className="grid gap-6 md:grid-cols-2">
-          <article className="info-card">
-            <p className="eyebrow">Tratamientos</p>
-            <h2 className="font-display text-3xl text-slate-900">Herramientas de trabajo</h2>
-            <ul className="mt-6 grid gap-3 text-[var(--neutral-950)]">
+      <section className={sharedStyles.section}>
+        <div className={sharedStyles.cardsGridTwo}>
+          <article className={sharedStyles.infoCard}>
+            <p className={sharedStyles.eyebrow}>Tratamientos</p>
+            <h2 className={sharedStyles.cardTitle}>Herramientas de trabajo</h2>
+            <ul className={sharedStyles.bulletList}>
               {physioTreatments.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
+                <li key={item} className={sharedStyles.bulletItem}>
+                  <span aria-hidden="true" className={sharedStyles.bulletDot} />
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
           </article>
 
-          <article className="info-card">
-            <p className="eyebrow">Servicios específicos</p>
-            <h2 className="font-display text-3xl text-slate-900">Casos frecuentes</h2>
-            <ul className="mt-6 grid gap-3 text-[var(--neutral-950)]">
+          <article className={sharedStyles.infoCard}>
+            <p className={sharedStyles.eyebrow}>Servicios específicos</p>
+            <h2 className={sharedStyles.cardTitle}>Casos frecuentes</h2>
+            <ul className={sharedStyles.bulletList}>
               {physioSpecificServices.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <span aria-hidden="true" className="mt-2 h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
+                <li key={item} className={sharedStyles.bulletItem}>
+                  <span aria-hidden="true" className={sharedStyles.bulletDot} />
                   <span>{item}</span>
                 </li>
               ))}
@@ -92,19 +99,19 @@ export default function FisioterapiaPage() {
         </div>
       </section>
 
-      <section className="section-wrap pb-20">
-        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-[0_18px_40px_var(--shadow-card-a08)] md:p-8">
-          <p className="eyebrow">Reserva</p>
-          <h2 className="font-display text-3xl text-slate-900">Solicita tu valoración o cita de fisioterapia</h2>
-          <p className="mt-4 max-w-3xl text-[var(--neutral-950)]">
+      <section className={`${sharedStyles.section} ${sharedStyles.sectionLast}`}>
+        <div className={sharedStyles.panel}>
+          <p className={sharedStyles.eyebrow}>Reserva</p>
+          <h2 className={sharedStyles.sectionTitle}>Solicita tu valoración o cita de fisioterapia</h2>
+          <p className={sharedStyles.text}>
             Cuéntanos tu caso y te orientamos según tu dolor, lesión o fase de recuperación.
             Confirmamos la cita por WhatsApp.
           </p>
-          <div className="mt-6 flex flex-wrap gap-4">
-            <WhatsAppButton href={physioWhatsAppHref} className="btn-primary gap-2">
+          <div className={sharedStyles.ctaRow}>
+            <WhatsAppButton href={physioWhatsAppHref} className={sharedStyles.buttonPrimary}>
               Solicita cita
             </WhatsAppButton>
-            <Link href="/servicios" className="btn-ghost">
+            <Link href="/servicios" className={sharedStyles.buttonGhost}>
               Volver a servicios
             </Link>
           </div>

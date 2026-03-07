@@ -34,7 +34,7 @@ export const detailedServices = [
     subtitle: "Vuelve a moverte sin dolor y con seguridad",
     description:
       "Combinamos fisioterapia y entrenamiento para recuperar función, reforzar la zona afectada y reducir recaídas.",
-    pageHref: "/servicios/adaptacion",
+    pageHref: "/servicios/readaptacion",
     bullets: [
       "Evaluación inicial y valoración funcional",
       "Plan individualizado según lesión y objetivos",

@@ -22,6 +22,8 @@ export function Header() {
   const pathname = usePathname();
   const [isServicesHovered, setIsServicesHovered] = useState(false);
   const [suppressDropdown, setSuppressDropdown] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileServicesOpen, setIsMobileServicesOpen] = useState(false);
   const isServicesOpen = isServicesHovered && !suppressDropdown;
 
   return (
@@ -31,6 +33,18 @@ export function Header() {
           <Logo src="/logo.svg" alt="Logo Rehab Strength" className="logo-image" priority />
           <span className={styles.brandText}>REHAB STRENGTH</span>
         </Link>
+
+        <button
+          type="button"
+          className={styles.mobileMenuButton}
+          aria-label="Abrir menú"
+          aria-expanded={isMobileMenuOpen}
+          onClick={() => setIsMobileMenuOpen((value) => !value)}
+        >
+          <span className={styles.mobileMenuLine} />
+          <span className={styles.mobileMenuLine} />
+          <span className={styles.mobileMenuLine} />
+        </button>
 
         <div className={styles.navigation}>
           {navItems.map((item) => {
@@ -104,6 +118,85 @@ export function Header() {
           Solicita cita
         </Link>
       </nav>
+
+      <div className={`${styles.mobilePanel} ${isMobileMenuOpen ? styles.mobilePanelOpen : ""}`}>
+        <div className={styles.mobileNav}>
+          {navItems.map((item) => {
+            if (item.label === "Servicios") {
+              return (
+                <div key={item.href} className={styles.mobileServicesBlock}>
+                  <div className={styles.mobileServicesHeader}>
+                    <Link
+                      href={item.href}
+                      className={`${styles.mobileLink} ${
+                        pathname.startsWith("/servicios") ? styles.activeLink : ""
+                      }`}
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        setIsMobileServicesOpen(false);
+                      }}
+                    >
+                      {item.label}
+                    </Link>
+                    <button
+                      type="button"
+                      className={styles.mobileServicesToggle}
+                      aria-label="Mostrar submenú de servicios"
+                      aria-expanded={isMobileServicesOpen}
+                      onClick={() => setIsMobileServicesOpen((value) => !value)}
+                    >
+                      <span className={styles.mobileServicesIcon}>{isMobileServicesOpen ? "−" : "+"}</span>
+                    </button>
+                  </div>
+
+                  <div className={`${styles.mobileServicesList} ${isMobileServicesOpen ? styles.mobileServicesListOpen : ""}`}>
+                    {serviceItems.map((service) => (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        className={`${styles.mobileSubLink} ${
+                          pathname === service.href ? styles.activeLink : ""
+                        }`}
+                        onClick={() => {
+                          setIsMobileMenuOpen(false);
+                          setIsMobileServicesOpen(false);
+                        }}
+                      >
+                        {service.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              );
+            }
+
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`${styles.mobileLink} ${pathname === item.href ? styles.activeLink : ""}`}
+                onClick={() => {
+                  setIsMobileMenuOpen(false);
+                  setIsMobileServicesOpen(false);
+                }}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
+
+          <Link
+            href="/#reserva"
+            className={`${styles.mobileCta} btn-secondary`}
+            onClick={() => {
+              setIsMobileMenuOpen(false);
+              setIsMobileServicesOpen(false);
+            }}
+          >
+            Solicita cita
+          </Link>
+        </div>
+      </div>
     </header>
   );
 }

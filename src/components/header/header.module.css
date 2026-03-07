@@ -9,6 +9,8 @@
 }
 
 .nav {
+  position: relative;
+  z-index: 2;
   display: flex;
   width: 100%;
   align-items: center;
@@ -36,6 +38,24 @@
   display: none;
   align-items: center;
   gap: 2rem;
+}
+
+.mobileMenuButton {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--white);
+}
+
+.mobileMenuLine {
+  display: block;
+  width: 1.2rem;
+  height: 2px;
+  margin: 0 auto;
+  background: var(--secondary-700);
 }
 
 .menuItemGroup {
@@ -137,9 +157,96 @@
   font-size: 0.9rem;
 }
 
+.mobilePanel {
+  display: none;
+  background: var(--white);
+}
+
+.mobilePanelOpen {
+  display: block;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.9rem 1.5rem 1.1rem;
+}
+
+.mobileLink {
+  display: block;
+  padding: 0.55rem 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--secondary-800);
+}
+
+.mobileServicesBlock {
+  padding: 0.2rem 0;
+}
+
+.mobileServicesHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.mobileServicesToggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  background: transparent;
+  color: var(--secondary-700);
+}
+
+.mobileServicesIcon {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.mobileServicesList {
+  display: none;
+  padding: 0.2rem 0 0.35rem 0.65rem;
+}
+
+.mobileServicesListOpen {
+  display: block;
+}
+
+.mobileSubLink {
+  display: block;
+  padding: 0.45rem 0;
+  font-size: 0.83rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--secondary-700);
+}
+
+.mobileCta {
+  margin-top: 0.65rem;
+  width: fit-content;
+  min-height: 2.5rem;
+}
+
 @media (min-width: 768px) {
   .brandText {
     display: inline-block;
+  }
+
+  .mobileMenuButton {
+    display: none;
+  }
+
+  .mobilePanel {
+    display: none !important;
   }
 
   .navigation {

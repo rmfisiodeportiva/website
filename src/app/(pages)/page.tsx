@@ -26,7 +26,7 @@ export default function Home() {
 
         <HomeServicesShowcase />
 
-        <section className="section-wrap pt-14 flex justify-center" aria-label="Mensaje principal">
+        <section className="section-wrap pt-8 md:pt-14 flex justify-center" aria-label="Mensaje principal">
           <QuoteBlock
             title={homeQuotes.methodology.title}
             description={homeQuotes.methodology.description}

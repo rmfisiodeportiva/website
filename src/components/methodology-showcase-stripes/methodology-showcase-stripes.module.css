@@ -1,5 +1,5 @@
 .section {
-    margin: 4rem auto 0;
+    margin: 2rem auto 0;
     width: 100%;
     padding: 4rem 2.5rem;
     position: relative;
@@ -98,6 +98,12 @@
 }
 
 @media (min-width: 920px) {
+
+    .section {
+        margin: 4rem auto 0;
+
+    }
+
     .layout {
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
         gap: 2rem;

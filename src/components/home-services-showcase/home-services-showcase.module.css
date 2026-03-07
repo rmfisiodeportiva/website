@@ -1,7 +1,7 @@
 .section {
-    margin: 4.5rem auto 0;
+    margin: 2.5rem auto 0;
     width: 100%;
-    padding: 4rem 2.5rem;
+    padding: 2rem 2.5rem;
     position: relative;
     isolation: isolate;
     background-image: url("/images/backgorund.webp");
@@ -129,6 +129,11 @@
 }
 
 @media (min-width: 920px) {
+
+    .section {
+        margin: 4.5rem auto 0;
+    }
+
     .layout {
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
         gap: 2rem;

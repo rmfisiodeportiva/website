@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { WhatsAppButton } from "@/components/whatsapp-button";
-import { physioWhatsAppHref } from "@/lib/home-page-data";
+import { physioWhatsAppHref } from "@/lib/constants/contact";
 import {
   readaptationPlan,
   readaptacionBookingContent,

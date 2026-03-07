@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { WhatsAppButton } from "@/components/whatsapp-button";
-import { trainingWhatsAppHref } from "@/lib/home-page-data";
+import { trainingWhatsAppHref } from "@/lib/constants/contact";
 import {
   entrenamientoBookingContent,
   entrenamientoHeroContent,

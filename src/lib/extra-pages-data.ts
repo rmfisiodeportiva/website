@@ -1,4 +1,4 @@
-import { physioWhatsAppHref, trainingWhatsAppHref } from "@/lib/home-page-data";
+import { physioWhatsAppHref, trainingWhatsAppHref } from "@/lib/constants/contact";
 
 export const detailedServices = [
   {

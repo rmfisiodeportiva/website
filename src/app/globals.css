@@ -117,7 +117,6 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 6px;
     font-weight: 700;
     transition: all 220ms ease;
     min-height: 2.5rem;
@@ -125,26 +124,30 @@ body {
 }
 
 .btn-primary {
+    border: 2px solid transparent;
     background: var(--primary);
     color: var(--white);
 }
 
 .btn-secondary {
+    border: 2px solid transparent;
     background: var(--black);
     color: var(--white);
 }
 
 .btn-primary:hover,
+.btn-primary:focus-visible,
 .btn-secondary:hover,
-.btn-primary:focus-visible {
-    background: var(--primary-700);
+.btn-secondary:focus-visible {
+    border-color: var(--black);
+    background: var(--white-a95);
+    color: var(--black);
 }
 
 .btn-ghost {
     border: 1px solid var(--black);
     background: var(--white-a95);
     color: var(--black);
-    box-shadow: none;
 }
 
 .btn-ghost:hover,

@@ -80,8 +80,7 @@
   transition: all 200ms ease;
 }
 
-.menuItemGroup:hover .servicesArrow,
-.menuItemGroup:focus-within .servicesArrow {
+.menuItemGroupOpen .servicesArrow {
   transform: translate(-50%, 0);
   opacity: 1;
 }
@@ -101,8 +100,7 @@
   transition: all 200ms ease-out;
 }
 
-.menuItemGroup:hover .dropdown,
-.menuItemGroup:focus-within .dropdown {
+.menuItemGroupOpen .dropdown {
   pointer-events: auto;
   visibility: visible;
   opacity: 1;

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "@/components/logo";
+import { useState } from "react";
 import styles from "./header.module.css";
 
 const navItems = [
@@ -19,6 +20,9 @@ const serviceItems = [
 
 export function Header() {
   const pathname = usePathname();
+  const [isServicesHovered, setIsServicesHovered] = useState(false);
+  const [suppressDropdown, setSuppressDropdown] = useState(false);
+  const isServicesOpen = isServicesHovered && !suppressDropdown;
 
   return (
     <header className={styles.header}>
@@ -32,12 +36,24 @@ export function Header() {
           {navItems.map((item) => {
             if (item.label === "Servicios") {
               return (
-                <div key={item.href} className={styles.menuItemGroup}>
+                <div
+                  key={item.href}
+                  className={`${styles.menuItemGroup} ${isServicesOpen ? styles.menuItemGroupOpen : ""}`}
+                  onMouseEnter={() => setIsServicesHovered(true)}
+                  onMouseLeave={() => {
+                    setIsServicesHovered(false);
+                    setSuppressDropdown(false);
+                  }}
+                >
                   <Link
                     href={item.href}
                     className={`${styles.menuLink} ${styles.servicesLink} ${
                       pathname.startsWith("/servicios") ? styles.activeLink : ""
                     }`}
+                    onClick={() => {
+                      setSuppressDropdown(true);
+                      setIsServicesHovered(false);
+                    }}
                   >
                     {item.label}
                     <svg viewBox="0 0 20 20" fill="none" aria-hidden="true" className={styles.servicesArrow}>
@@ -54,7 +70,15 @@ export function Header() {
                   <div className={styles.dropdown}>
                     <div className={styles.dropdownList}>
                       {serviceItems.map((service) => (
-                        <Link key={service.href} href={service.href} className={styles.dropdownItem}>
+                        <Link
+                          key={service.href}
+                          href={service.href}
+                          className={styles.dropdownItem}
+                          onClick={() => {
+                            setSuppressDropdown(true);
+                            setIsServicesHovered(false);
+                          }}
+                        >
                           {service.label}
                         </Link>
                       ))}

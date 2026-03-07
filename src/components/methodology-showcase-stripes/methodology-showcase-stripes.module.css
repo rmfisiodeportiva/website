@@ -1,228 +1,138 @@
 .section {
     margin: 2rem auto 0;
     width: 100%;
-    background: var(--surface-soft);
+    padding: 4rem 2.5rem;
+    position: relative;
+    isolation: isolate;
+    background-image: url("/images/backgorund.webp");
 }
 
 .layout {
     display: grid;
+    gap: 1.5rem;
+}
+
+.leftColumn {
+    display: grid;
+}
+
+.eyebrow {
+    margin-bottom: 1.2rem;
+}
+
+.pointList {
+    display: grid;
+}
+
+.pointTrigger {
+    position: relative;
+    display: inline-block;
+    justify-self: start;
+    width: fit-content;
+    border: 0;
+    background: transparent;
+    text-align: left;
+    font-family: var(--font-display), sans-serif;
+    font-size: clamp(1.35rem, 3.6vw, 2.35rem);
+    line-height: 0.93;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: rgba(17, 17, 17, 0.32);
+    margin-bottom: 0.7rem;
+    cursor: pointer;
+    transition: color 220ms ease;
+}
+
+.pointTrigger::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.02em;
+    width: 0;
+    height: 3px;
+    background: var(--black);
+    transition: width 300ms ease;
+}
+
+.pointTrigger:hover,
+.pointTrigger:focus-visible {
+    color: var(--black);
+}
+
+.pointTrigger:hover::before,
+.pointTrigger:focus-visible::before {
     width: 100%;
 }
 
+.pointTriggerActive {
+    color: var(--black);
+}
+
+.detailBlock {
+    max-width: 35rem;
+}
+
+.detailTitle {
+    font-family: var(--font-display), sans-serif;
+    font-size: clamp(1.25rem, 2.4vw, 1.8rem);
+    line-height: 0.95;
+    color: var(--black);
+}
+
+.detailText {
+    font-size: clamp(1rem, 1.2vw, 1.15rem);
+    line-height: 1.58;
+    color: var(--secondary-500);
+}
+
 .imagePanel {
-    order: 2;
     position: relative;
-    min-height: 340px;
+    overflow: hidden;
+    border: 1px solid var(--border-soft-a90);
+    min-height: 17rem;
 }
 
 .activeImage {
     object-fit: cover;
-    transition: opacity 300ms ease;
 }
 
-.imageOverlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1), transparent);
-}
+@media (min-width: 920px) {
 
-.imageCopy {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1.5rem;
-}
+    .section {
+        margin: 4rem auto 0;
 
-.imageTitle {
-    font-family: var(--font-display), sans-serif;
-    font-size: clamp(2rem, 5vw, 2.5rem);
-    line-height: 0.9;
-    color: var(--white);
-}
-
-.mobileText {
-    margin-top: 0.75rem;
-    max-width: 40rem;
-    font-size: 0.98rem;
-    line-height: 1.6;
-    color: var(--white-a90);
-}
-
-.menuPanel {
-    order: 1;
-    background: var(--panel);
-}
-
-.pointsList {
-    display: grid;
-    gap: 0;
-    height: 100%;
-    grid-auto-rows: 1fr;
-}
-
-.pointButton {
-    --stripe-accent: var(--primary);
-    --stripe-fill: var(--primary);
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-    min-height: 60px;
-    border: 0;
-    border-bottom: 1px solid var(--border-soft-a90);
-    padding: 0.5rem 0.8rem 0.5rem 0.92rem;
-    text-align: left;
-    outline: none;
-    appearance: none;
-    background: var(--panel);
-    transition: color 240ms ease;
-}
-
-.pointButton:last-child {
-    border-bottom: none;
-}
-
-.pointButton::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0.45rem;
-    height: 100%;
-    background: var(--stripe-accent);
-    z-index: 1;
-}
-
-.pointButton::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    width: 0;
-    background: var(--stripe-fill);
-    transition: width 1500ms cubic-bezier(0.22, 1, 0.36, 1);
-    z-index: 0;
-}
-
-.pointButton:hover::after,
-.pointButton:focus-visible::after,
-.pointButtonActive::after {
-    width: 100%;
-}
-
-.pointButton:focus-visible {
-    outline: 2px solid var(--primary);
-    outline-offset: 2px;
-}
-
-.pointContent {
-    position: relative;
-    z-index: 2;
-    display: grid;
-    gap: 0.25rem;
-}
-
-.pointTitle {
-    font-family: var(--font-display), sans-serif;
-    font-size: clamp(1.05rem, 1.45vw, 1.75rem);
-    line-height: 1;
-    color: var(--white-a95);
-    transition: color 220ms ease;
-}
-
-.pointDescription {
-    max-width: 48rem;
-    font-size: clamp(0.82rem, 0.95vw, 0.98rem);
-    line-height: 1.3;
-    color: var(--white-a90);
-    transition: color 220ms ease;
-}
-
-.pointButton:hover .pointTitle,
-.pointButton:focus-visible .pointTitle,
-.pointButtonActive .pointTitle {
-    color: var(--white);
-}
-
-.pointButton:hover .pointDescription,
-.pointButton:focus-visible .pointDescription,
-.pointButtonActive .pointDescription {
-    color: var(--white);
-}
-
-@media (min-width: 640px) {
-    .imagePanel {
-        min-height: 430px;
     }
 
-    .imageCopy {
-        padding: 2rem;
-    }
-
-    .mobileText {
-        font-size: 1.03rem;
-    }
-
-    .pointButton {
-        min-height: 72px;
-        padding: 0.62rem 0.95rem 0.62rem 0.95rem;
-    }
-
-}
-
-@media (min-width: 1024px) {
     .layout {
-        grid-template-columns: 0.42fr 0.58fr;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .eyebrow {
+        margin-bottom: 3rem;
+    }
+
+    .leftColumn {
+        order: 2;
     }
 
     .imagePanel {
         order: 1;
-        min-height: 560px;
     }
 
-    .menuPanel {
-        order: 2;
+    .imagePanel {
+        min-height: 24rem;
     }
 
-    .mobileText {
-        display: none;
-    }
-
-    .pointContent {
-        grid-template-columns: minmax(0, 0.44fr) minmax(0, 1fr);
-        align-items: start;
-        column-gap: 2rem;
-    }
-
-    .pointDescription {
-        padding-top: 0.1rem;
-    }
-
-    .pointButton {
-        min-height: 0;
-    }
-
-    .pointTitle {
-        font-size: clamp(1.25rem, 1.65vw, 1.95rem);
-    }
-
-    .pointDescription {
-        font-size: clamp(0.94rem, 1.08vw, 1.1rem);
-        line-height: 1.36;
+    .detailText {
+        margin-top: 0.7rem;
     }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .pointButton::after {
-        transition: none;
-    }
-}
-
-@media (hover: none) and (pointer: coarse) {
-    .pointButton::after {
-        transition: none;
-    }
-
-    .pointButton:hover::after {
-        width: 0;
+@media (max-width: 768px) {
+    .pointTrigger {
+        font-size: clamp(1.2rem, 7.2vw, 1.95rem);
     }
 }

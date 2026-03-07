@@ -1,0 +1,148 @@
+.section {
+    margin: 2.5rem auto 0;
+    width: 100%;
+    padding: 2rem 2.5rem;
+    position: relative;
+    isolation: isolate;
+    background-image: url("/images/backgorund.webp");
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.eyebrow {
+    margin-bottom: 0;
+}
+
+.allServicesLink {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--black);
+    transition: color 200ms ease;
+}
+
+.allServicesLink:hover,
+.allServicesLink:focus-visible {
+    color: var(--primary);
+}
+
+.layout {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.leftColumn {
+    display: grid;
+    gap: 1.3rem;
+}
+
+.serviceList {
+    display: grid;
+}
+
+.serviceTrigger {
+    position: relative;
+    display: inline-block;
+    justify-self: start;
+    width: fit-content;
+    border: 0;
+    background: transparent;
+    text-align: left;
+    font-family: var(--font-display), sans-serif;
+    font-size: clamp(2.05rem, 6vw, 4rem);
+    line-height: 0.93;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: rgba(17, 17, 17, 0.32);
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: color 220ms ease;
+}
+
+.serviceTrigger::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: width 300ms ease;
+    bottom: -0.02em;
+    background: var(--black);
+}
+
+.serviceTrigger:hover,
+.serviceTrigger:focus-visible {
+    color: var(--black);
+}
+
+.serviceTrigger:hover::before,
+.serviceTrigger:focus-visible::before {
+    width: 100%;
+}
+
+.serviceTriggerActive {
+    color: var(--black);
+}
+
+.detailBlock {
+    max-width: 35rem;
+}
+
+.description {
+    font-size: clamp(1rem, 1.25vw, 1.16rem);
+    line-height: 1.6;
+    color: var(--secondary-500);
+}
+
+.cta {
+    margin-top: 1.15rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 2.4rem;
+    border: 1px solid var(--black);
+    padding: 0 1.15rem;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--black);
+    transition:
+        color 180ms ease,
+        border-color 180ms ease,
+        background-color 180ms ease;
+}
+
+.cta:hover,
+.cta:focus-visible {
+    border-color: var(--primary);
+    background: var(--white);
+    color: var(--primary);
+}
+
+@media (min-width: 920px) {
+
+    .section {
+        margin: 4.5rem auto 0;
+    }
+
+    .layout {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 2rem;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .serviceTrigger {
+        font-size: clamp(1.9rem, 10vw, 3rem);
+    }
+}

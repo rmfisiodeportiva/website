@@ -85,8 +85,7 @@ body {
 .section-wrap {
     margin: 0 auto;
     width: 100%;
-    max-width: 76rem;
-    padding: 4rem 1.5rem 0;
+    padding: 4rem 2.5rem 0;
 }
 
 .section-heading {
@@ -244,7 +243,7 @@ body {
     }
 
     .section-wrap {
-        padding-top: 3.2rem;
+        padding-top: 2rem;
     }
 
     .btn-primary,

@@ -1,31 +1,8 @@
-function buildWhatsAppLink(phone: string, message: string) {
-  return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
-}
-
-const WHATSAPP_PHONES = {
-  physio: "34600123456",
-  training: "34600123457",
-} as const;
-
-export const contactInfo = {
-  email: "info@rehab-strength.com",
-  instagramLabel: "@rehabstrength",
-  instagramHref: "https://instagram.com/rehabstrength",
-  physioPhoneDisplay: "+34 600 123 456",
-  trainingPhoneDisplay: "+34 600 123 457",
-  city: "Molina de Segura",
-  region: "Murcia",
-} as const;
-
-export const physioWhatsAppHref = buildWhatsAppLink(
-  WHATSAPP_PHONES.physio,
-  "Hola, quiero reservar una cita de fisioterapia en Rehab Strength.",
-);
-
-export const trainingWhatsAppHref = buildWhatsAppLink(
-  WHATSAPP_PHONES.training,
-  "Hola, quiero reservar una cita de entrenamiento personalizado en Rehab Strength.",
-);
+import {
+  contactInfo,
+  physioWhatsAppHref,
+  trainingWhatsAppHref,
+} from "@/lib/constants/contact";
 
 export const services = [
   {
@@ -77,11 +54,11 @@ export const homeJsonLd = {
   areaServed: ["Molina de Segura", "Murcia"],
   address: {
     "@type": "PostalAddress",
-    addressStreet:"Calle Campoamor 86",
+    addressStreet: "Calle Campoamor 86",
     addressLocality: "Molina de Segura",
     addressRegion: "Murcia",
     addressCountry: "España",
-    addressPostCode:"30500"
+    addressPostCode: "30500"
   },
   telephone: "+34 600 123 456",
   email: contactInfo.email,

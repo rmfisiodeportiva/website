@@ -14,7 +14,7 @@ const navItems = [
 const serviceItems = [
   { href: "/servicios/fisioterapia", label: "Fisioterapia" },
   { href: "/servicios/entrenamiento", label: "Entrenamiento" },
-  { href: "/servicios/adaptacion", label: "Adaptación" },
+  { href: "/servicios/readaptacion", label: "Readaptación" },
 ] as const;
 
 export function Header() {

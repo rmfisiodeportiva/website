@@ -1,0 +1,16 @@
+.heroLead {
+  max-width: 56rem;
+}
+
+.longText {
+  margin-top: 1rem;
+  display: grid;
+  gap: 1rem;
+  color: var(--neutral-950);
+  line-height: 1.7;
+}
+
+.closingText {
+  margin-top: 1.5rem;
+  color: var(--neutral-950);
+}

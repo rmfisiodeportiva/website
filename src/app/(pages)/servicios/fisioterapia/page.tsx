@@ -8,14 +8,15 @@ import {
   physioTreatments,
 } from "@/lib/extra-pages-data";
 import { physioWhatsAppHref } from "@/lib/home-page-data";
+import {
+  fisioterapiaHeroContent,
+  fisioterapiaPageMetadata,
+  fisioterapiaSectionsContent,
+} from "./constants";
 import sharedStyles from "../services-global.module.css";
 import styles from "./fisioterapia-page.module.css";
 
-export const metadata: Metadata = {
-  title: "Fisioterapia",
-  description:
-    "Fisioterapia en Molina de Segura (Murcia): valoración, diagnóstico funcional, tratamiento y plan de ejercicio.",
-};
+export const metadata: Metadata = fisioterapiaPageMetadata;
 
 export default function FisioterapiaPage() {
   return (
@@ -24,26 +25,25 @@ export default function FisioterapiaPage() {
         <div className="electric-lines" aria-hidden="true" />
         <div className={sharedStyles.heroInner}>
           <div>
-            <p className={sharedStyles.eyebrow}>Fisioterapia</p>
-            <h1 className={sharedStyles.heroTitle}>Enfoque clínico, movimiento y fuerza</h1>
+            <p className={sharedStyles.eyebrow}>{fisioterapiaHeroContent.eyebrow}</p>
+            <h1 className={sharedStyles.heroTitle}>{fisioterapiaHeroContent.title}</h1>
             <p className={`${sharedStyles.heroLead} ${styles.heroLead}`}>
-              Tratamos dolor y lesiones con un enfoque activo: evaluación, tratamiento y ejercicio
-              para que recuperes función y vuelvas a moverte con seguridad.
+              {fisioterapiaHeroContent.description}
             </p>
             <div className={sharedStyles.ctaRow}>
               <WhatsAppButton href={physioWhatsAppHref} className={sharedStyles.buttonPrimary}>
-                Reserva fisioterapia
+                {fisioterapiaHeroContent.primaryCta.label}
               </WhatsAppButton>
-              <Link href="/tarifas" className={sharedStyles.buttonGhost}>
-                Ver tarifas
+              <Link href={fisioterapiaHeroContent.secondaryCta.href} className={sharedStyles.buttonGhost}>
+                {fisioterapiaHeroContent.secondaryCta.label}
               </Link>
             </div>
           </div>
           <div className={sharedStyles.heroMediaCard}>
             <div className={sharedStyles.heroMedia}>
               <Image
-                src="/images/grey.avif"
-                alt="Zona de trabajo del centro en Molina de Segura"
+                src={fisioterapiaHeroContent.image.src}
+                alt={fisioterapiaHeroContent.image.alt}
                 fill
                 className={sharedStyles.imageCover}
               />
@@ -54,10 +54,8 @@ export default function FisioterapiaPage() {
 
       <section className={sharedStyles.section}>
         <div className={sharedStyles.sectionHeading}>
-          <p className={sharedStyles.eyebrow}>Proceso del paciente</p>
-          <h2 className={sharedStyles.sectionTitle}>
-            Te acompañamos con un proceso claro desde la primera visita.
-          </h2>
+          <p className={sharedStyles.eyebrow}>{fisioterapiaSectionsContent.process.eyebrow}</p>
+          <h2 className={sharedStyles.sectionTitle}>{fisioterapiaSectionsContent.process.title}</h2>
         </div>
         <div className={styles.processGrid}>
           {physioProcess.map((step, index) => (
@@ -72,8 +70,8 @@ export default function FisioterapiaPage() {
       <section className={sharedStyles.section}>
         <div className={sharedStyles.cardsGridTwo}>
           <article className={sharedStyles.infoCard}>
-            <p className={sharedStyles.eyebrow}>Tratamientos</p>
-            <h2 className={sharedStyles.cardTitle}>Herramientas de trabajo</h2>
+            <p className={sharedStyles.eyebrow}>{fisioterapiaSectionsContent.treatments.eyebrow}</p>
+            <h2 className={sharedStyles.cardTitle}>{fisioterapiaSectionsContent.treatments.title}</h2>
             <ul className={sharedStyles.bulletList}>
               {physioTreatments.map((item) => (
                 <li key={item} className={sharedStyles.bulletItem}>
@@ -85,8 +83,8 @@ export default function FisioterapiaPage() {
           </article>
 
           <article className={sharedStyles.infoCard}>
-            <p className={sharedStyles.eyebrow}>Servicios específicos</p>
-            <h2 className={sharedStyles.cardTitle}>Casos frecuentes</h2>
+            <p className={sharedStyles.eyebrow}>{fisioterapiaSectionsContent.specificServices.eyebrow}</p>
+            <h2 className={sharedStyles.cardTitle}>{fisioterapiaSectionsContent.specificServices.title}</h2>
             <ul className={sharedStyles.bulletList}>
               {physioSpecificServices.map((item) => (
                 <li key={item} className={sharedStyles.bulletItem}>
@@ -101,18 +99,15 @@ export default function FisioterapiaPage() {
 
       <section className={`${sharedStyles.section} ${sharedStyles.sectionLast}`}>
         <div className={sharedStyles.panel}>
-          <p className={sharedStyles.eyebrow}>Reserva</p>
-          <h2 className={sharedStyles.sectionTitle}>Solicita tu valoración o cita de fisioterapia</h2>
-          <p className={sharedStyles.text}>
-            Cuéntanos tu caso y te orientamos según tu dolor, lesión o fase de recuperación.
-            Confirmamos la cita por WhatsApp.
-          </p>
+          <p className={sharedStyles.eyebrow}>{fisioterapiaSectionsContent.booking.eyebrow}</p>
+          <h2 className={sharedStyles.sectionTitle}>{fisioterapiaSectionsContent.booking.title}</h2>
+          <p className={sharedStyles.text}>{fisioterapiaSectionsContent.booking.description}</p>
           <div className={sharedStyles.ctaRow}>
             <WhatsAppButton href={physioWhatsAppHref} className={sharedStyles.buttonPrimary}>
-              Solicita cita
+              {fisioterapiaSectionsContent.booking.primaryCta.label}
             </WhatsAppButton>
-            <Link href="/servicios" className={sharedStyles.buttonGhost}>
-              Volver a servicios
+            <Link href={fisioterapiaSectionsContent.booking.secondaryCta.href} className={sharedStyles.buttonGhost}>
+              {fisioterapiaSectionsContent.booking.secondaryCta.label}
             </Link>
           </div>
         </div>

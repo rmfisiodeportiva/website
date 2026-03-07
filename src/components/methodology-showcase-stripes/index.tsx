@@ -11,24 +11,14 @@ export function MethodologyShowcaseStripes() {
   const activePoint = points[activeIndex];
 
   return (
-    <section className={styles.section} aria-label="Enfoque de trabajo con stripes">
+    <section className={styles.section} aria-label="Enfoque de trabajo">
+      <div className={styles.heading}>
+        <p className={`eyebrow ${styles.eyebrow}`}>Metodología</p>
+      </div>
       <div className={styles.layout}>
-        <div className={styles.imagePanel}>
-          <Image
-            src={activePoint.image}
-            alt={activePoint.title}
-            fill
-            className={styles.activeImage}
-          />
-          <div className={styles.imageOverlay} />
-          <div className={styles.imageCopy}>
-            <p className={styles.imageTitle}>{activePoint.title}</p>
-            <p className={styles.mobileText}>{activePoint.text}</p>
-          </div>
-        </div>
+        <div className={styles.leftColumn}>
 
-        <div className={styles.menuPanel}>
-          <div className={styles.pointsList}>
+          <div className={styles.pointList}>
             {points.map((point, index) => {
               const isActive = activeIndex === index;
 
@@ -36,18 +26,24 @@ export function MethodologyShowcaseStripes() {
                 <button
                   key={point.title}
                   type="button"
-                  onMouseEnter={() => setActiveIndex(index)}
-                  onFocus={() => setActiveIndex(index)}
-                  className={`${styles.pointButton} ${isActive ? styles.pointButtonActive : ""}`}
+                  onClick={() => setActiveIndex(index)}
+                  aria-pressed={isActive}
+                  className={`${styles.pointTrigger} ${isActive ? styles.pointTriggerActive : ""}`}
                 >
-                  <div className={styles.pointContent}>
-                    <p className={styles.pointTitle}>{point.title}</p>
-                    <p className={styles.pointDescription}>{point.text}</p>
-                  </div>
+                  {point.title}
                 </button>
               );
             })}
           </div>
+
+          <div className={styles.detailBlock}>
+
+            <p className={styles.detailText}>{activePoint.text}</p>
+          </div>
+        </div>
+
+        <div className={styles.imagePanel}>
+          <Image src={activePoint.image} alt={activePoint.title} fill className={styles.activeImage} />
         </div>
       </div>
     </section>

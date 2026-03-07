@@ -2,19 +2,16 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import styles from "@/components/methodology-showcase.module.css";
+import styles from "@/components/methodology-showcase-stripes.module.css";
 import { homeMethodologyShowcasePoints } from "@/lib/home-methodology-showcase-data";
 
-export function MethodologyShowcase() {
+export function MethodologyShowcaseStripes() {
   const points = homeMethodologyShowcasePoints;
   const [activeIndex, setActiveIndex] = useState(0);
   const activePoint = points[activeIndex];
 
-  const activeBottomMaskClass =
-    activeIndex === 3 ? styles.maskLeft0 : activeIndex === 4 ? styles.maskLeft33 : styles.maskLeft66;
-
   return (
-    <section id="metodologia" className={styles.section} aria-label="Enfoque de trabajo">
+    <section className={styles.section} aria-label="Enfoque de trabajo con stripes">
       <div className={styles.layout}>
         <div className={styles.imagePanel}>
           <Image
@@ -31,7 +28,7 @@ export function MethodologyShowcase() {
         </div>
 
         <div className={styles.menuPanel}>
-          <div className={styles.pointsGrid}>
+          <div className={styles.pointsList}>
             {points.map((point, index) => {
               const isActive = activeIndex === index;
 
@@ -41,29 +38,15 @@ export function MethodologyShowcase() {
                   type="button"
                   onMouseEnter={() => setActiveIndex(index)}
                   onFocus={() => setActiveIndex(index)}
-                  className={`${styles.pointButton} ${isActive ? styles.pointButtonActive : styles.pointButtonInactive
-                    }`}
+                  className={`${styles.pointButton} ${isActive ? styles.pointButtonActive : ""}`}
                 >
-                  <p className={`${styles.pointTitle} ${isActive ? styles.pointTitleActive : styles.pointTitleInactive
-                    }`}>
-                    {point.title}
-                  </p>
+                  <div className={styles.pointContent}>
+                    <p className={styles.pointTitle}>{point.title}</p>
+                    <p className={styles.pointDescription}>{point.text}</p>
+                  </div>
                 </button>
               );
             })}
-          </div>
-
-          <div className={styles.desktopDetails}>
-            <div className={styles.separatorLine}>
-              {activeIndex >= 3 && (
-                <span aria-hidden="true" className={`${styles.separatorMask} ${activeBottomMaskClass}`} />
-              )}
-            </div>
-
-            <div className={styles.desktopCopy}>
-              <p className={styles.desktopEyebrow}>Enfoque de trabajo</p>
-              <p className={styles.desktopText}>{activePoint.text}</p>
-            </div>
           </div>
         </div>
       </div>

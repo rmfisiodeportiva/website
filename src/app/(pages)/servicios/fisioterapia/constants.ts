@@ -6,9 +6,10 @@ export const fisioterapiaPageMetadata = {
 
 export const fisioterapiaHeroContent = {
   eyebrow: "Fisioterapia",
-  title: "Enfoque clínico, movimiento y fuerza",
+  title: "FISIOTERAPIA",
+  subtitle: "Recupera tu movimiento. Vuelve a tu vida sin dolor.",
   description:
-    "Tratamos dolor y lesiones con un enfoque activo: evaluación, tratamiento y ejercicio para que recuperes función y vuelvas a moverte con seguridad.",
+    "Nuestro servicio de fisioterapia está orientado a identificar el origen del problema, aliviar el dolor y recuperar la función para que puedas volver a tu actividad diaria o deportiva con seguridad.",
   image: {
     src: "/images/grey.avif",
     alt: "Zona de trabajo del centro en Molina de Segura",
@@ -22,18 +23,26 @@ export const fisioterapiaHeroContent = {
   },
 } as const;
 
+export const fisioterapiaMainContent = {
+  paragraphs: [
+    "Cada sesión se adapta a lo que tu cuerpo necesita en ese momento del proceso de recuperación. Combinamos terapia manual, ejercicio terapéutico y trabajo funcional para avanzar de forma progresiva en cada fase del tratamiento.",
+    "El objetivo no es solo mejorar los síntomas, sino recuperar el movimiento, fortalecer la zona afectada y reducir al máximo el riesgo de recaídas.",
+  ],
+  bullets: [
+    "Valoración funcional individualizada",
+    "Tratamiento personalizado en cada sesión",
+    "Terapia manual y ejercicio terapéutico",
+    "Recuperación progresiva según la fase de la lesión",
+    "Seguimiento continuo y ajuste del tratamiento",
+  ],
+  closing:
+    "Tratamos la lesión, recuperamos tu movimiento y evitamos recaídas.",
+} as const;
+
 export const fisioterapiaSectionsContent = {
   process: {
     eyebrow: "Proceso del paciente",
     title: "Te acompañamos con un proceso claro desde la primera visita.",
-  },
-  treatments: {
-    eyebrow: "Tratamientos",
-    title: "Herramientas de trabajo",
-  },
-  specificServices: {
-    eyebrow: "Servicios específicos",
-    title: "Casos frecuentes",
   },
   booking: {
     eyebrow: "Reserva",

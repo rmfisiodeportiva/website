@@ -2,14 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { WhatsAppButton } from "@/components/whatsapp-button";
-import {
-  physioProcess,
-  physioSpecificServices,
-  physioTreatments,
-} from "@/lib/extra-pages-data";
+import { physioProcess } from "@/lib/extra-pages-data";
 import { physioWhatsAppHref } from "@/lib/constants/contact";
 import {
   fisioterapiaHeroContent,
+  fisioterapiaMainContent,
   fisioterapiaPageMetadata,
   fisioterapiaSectionsContent,
 } from "./constants";
@@ -27,6 +24,7 @@ export default function FisioterapiaPage() {
           <div>
             <p className={sharedStyles.eyebrow}>{fisioterapiaHeroContent.eyebrow}</p>
             <h1 className={sharedStyles.heroTitle}>{fisioterapiaHeroContent.title}</h1>
+            <h2 className={sharedStyles.sectionTitle}>{fisioterapiaHeroContent.subtitle}</h2>
             <p className={`${sharedStyles.heroLead} ${styles.heroLead}`}>
               {fisioterapiaHeroContent.description}
             </p>
@@ -70,33 +68,22 @@ export default function FisioterapiaPage() {
       </section>
 
       <section className={sharedStyles.section}>
-        <div className={sharedStyles.cardsGridTwo}>
-          <article className={sharedStyles.infoCard}>
-            <p className={sharedStyles.eyebrow}>{fisioterapiaSectionsContent.treatments.eyebrow}</p>
-            <h2 className={sharedStyles.cardTitle}>{fisioterapiaSectionsContent.treatments.title}</h2>
-            <ul className={sharedStyles.bulletList}>
-              {physioTreatments.map((item) => (
-                <li key={item} className={sharedStyles.bulletItem}>
-                  <span aria-hidden="true" className={sharedStyles.bulletDot} />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </article>
-
-          <article className={sharedStyles.infoCard}>
-            <p className={sharedStyles.eyebrow}>{fisioterapiaSectionsContent.specificServices.eyebrow}</p>
-            <h2 className={sharedStyles.cardTitle}>{fisioterapiaSectionsContent.specificServices.title}</h2>
-            <ul className={sharedStyles.bulletList}>
-              {physioSpecificServices.map((item) => (
-                <li key={item} className={sharedStyles.bulletItem}>
-                  <span aria-hidden="true" className={sharedStyles.bulletDot} />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </article>
-        </div>
+        <article className={sharedStyles.infoCard}>
+          {fisioterapiaMainContent.paragraphs.map((paragraph) => (
+            <p key={paragraph} className={sharedStyles.cardText}>
+              {paragraph}
+            </p>
+          ))}
+          <ul className={sharedStyles.bulletList}>
+            {fisioterapiaMainContent.bullets.map((bullet) => (
+              <li key={bullet} className={sharedStyles.bulletItem}>
+                <span aria-hidden="true" className={sharedStyles.bulletDot} />
+                <span>{bullet}</span>
+              </li>
+            ))}
+          </ul>
+          <p className={sharedStyles.cardText}>{fisioterapiaMainContent.closing}</p>
+        </article>
       </section>
 
       <section className={`${sharedStyles.section} ${sharedStyles.sectionLast}`}>

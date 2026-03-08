@@ -1,0 +1,86 @@
+.main {
+  display: grid;
+  gap: 2.25rem;
+  padding-bottom: 4rem;
+}
+
+.heroSection {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 1.25rem 0;
+}
+
+.heroInner {
+  width: 100%;
+  padding-left: 2px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 0 1.25rem;
+}
+
+.card {
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-soft-a90);
+  background: var(--white);
+  display: grid;
+  gap: 0.9rem;
+  color: var(--neutral-950);
+}
+
+.sectionTitle {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: underline;
+  line-height: 1.35;
+  color: var(--secondary-700);
+}
+
+.list {
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.highlightBlock {
+  display: grid;
+  gap: 0.7rem;
+  margin-top: 0.35rem;
+  padding: 1rem 1.1rem;
+  border-left: 4px solid var(--primary-500);
+  border-radius: 0.6rem;
+  background: color-mix(in srgb, var(--primary-500) 7%, var(--white));
+}
+
+.highlightBlock p {
+  margin: 0;
+}
+
+.inlineLink {
+  color: var(--primary);
+  text-underline-offset: 2px;
+  font-weight: 600;
+}
+
+.inlineLink:hover {
+  color: var(--primary-600);
+}
+
+@media (min-width: 768px) {
+  .heroSection {
+    padding: 2rem 2rem 0;
+  }
+
+  .section {
+    padding: 0 2rem;
+  }
+
+  .card {
+    padding: 2rem;
+  }
+}

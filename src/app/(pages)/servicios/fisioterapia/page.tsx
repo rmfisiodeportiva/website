@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { WhatsAppButton } from "@/components/whatsapp-button";
-import { physioProcess } from "@/lib/extra-pages-data";
-import { physioWhatsAppHref } from "@/lib/constants/contact";
 import {
   fisioterapiaHeroContent,
-  fisioterapiaMainContent,
   fisioterapiaPageMetadata,
+  physioProcess,
   fisioterapiaSectionsContent,
+  fisioterapiaMainContent,
 } from "./constants";
+import { physioWhatsAppHref } from "@/lib/constants/contact";
 import sharedStyles from "../services-global.module.css";
 import styles from "./fisioterapia-page.module.css";
 

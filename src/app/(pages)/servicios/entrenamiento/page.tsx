@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { trainingWhatsAppHref } from "@/lib/constants/contact";
 import {
@@ -20,29 +20,22 @@ export default function EntrenamientoPage() {
       <section className={`${sharedStyles.heroSection} hero-section`}>
         <div className="electric-lines" aria-hidden="true" />
         <div className={sharedStyles.heroInner}>
-          <div>
-            <p className={sharedStyles.eyebrow}>{entrenamientoHeroContent.eyebrow}</p>
+          <div
+            className={sharedStyles.heroContentWithMedia}
+            style={{ "--hero-bg": `url(${entrenamientoHeroContent.image.src})` } as CSSProperties}
+          >
+            <p className={sharedStyles.heroEyebrow}>{entrenamientoHeroContent.eyebrow}</p>
             <h1 className="sr-only">{entrenamientoHeroContent.title}</h1>
             <p className={`${sharedStyles.heroLead} ${styles.heroLead}`}>
               {entrenamientoHeroContent.description}
             </p>
             <div className={sharedStyles.ctaRow}>
-              <WhatsAppButton href={trainingWhatsAppHref} className={sharedStyles.buttonPrimary}>
+              <WhatsAppButton href={trainingWhatsAppHref} className="btn-primary gap-2">
                 {entrenamientoHeroContent.primaryCta.label}
               </WhatsAppButton>
-              <Link href={entrenamientoHeroContent.secondaryCta.href} className={sharedStyles.buttonGhost}>
+              <Link href={entrenamientoHeroContent.secondaryCta.href} className="btn-ghost">
                 {entrenamientoHeroContent.secondaryCta.label}
               </Link>
-            </div>
-          </div>
-          <div className={sharedStyles.heroMediaCard}>
-            <div className={sharedStyles.heroMedia}>
-              <Image
-                src={entrenamientoHeroContent.image.src}
-                alt={entrenamientoHeroContent.image.alt}
-                fill
-                className={sharedStyles.imageCover}
-              />
             </div>
           </div>
         </div>
@@ -72,13 +65,13 @@ export default function EntrenamientoPage() {
           <h2 className={sharedStyles.sectionTitle}>{entrenamientoBookingContent.title}</h2>
           <p className={sharedStyles.text}>{entrenamientoBookingContent.description}</p>
           <div className={sharedStyles.ctaRow}>
-            <WhatsAppButton href={trainingWhatsAppHref} className={sharedStyles.buttonPrimary}>
+            <WhatsAppButton href={trainingWhatsAppHref} className="btn-primary gap-2">
               {entrenamientoBookingContent.ctas[0].label}
             </WhatsAppButton>
-            <Link href={entrenamientoBookingContent.ctas[1].href} className={sharedStyles.buttonGhost}>
+            <Link href={entrenamientoBookingContent.ctas[1].href} className="btn-ghost">
               {entrenamientoBookingContent.ctas[1].label}
             </Link>
-            <Link href={entrenamientoBookingContent.ctas[2].href} className={sharedStyles.buttonGhost}>
+            <Link href={entrenamientoBookingContent.ctas[2].href} className="btn-ghost">
               {entrenamientoBookingContent.ctas[2].label}
             </Link>
           </div>

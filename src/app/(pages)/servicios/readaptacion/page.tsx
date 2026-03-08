@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { physioWhatsAppHref } from "@/lib/constants/contact";
 import {
@@ -20,29 +20,22 @@ export default function ReadaptacionPage() {
       <section className={`${sharedStyles.heroSection} hero-section`}>
         <div className="electric-lines" aria-hidden="true" />
         <div className={sharedStyles.heroInner}>
-          <div>
-            <p className={sharedStyles.eyebrow}>{readaptacionHeroContent.eyebrow}</p>
+          <div
+            className={sharedStyles.heroContentWithMedia}
+            style={{ "--hero-bg": `url(${readaptacionHeroContent.image.src})` } as CSSProperties}
+          >
+            <p className={sharedStyles.heroEyebrow}>{readaptacionHeroContent.eyebrow}</p>
             <h1 className="sr-only">{readaptacionHeroContent.title}</h1>
             <p className={`${sharedStyles.heroLead} ${styles.heroLead}`}>
               {readaptacionHeroContent.description}
             </p>
             <div className={sharedStyles.ctaRow}>
-              <WhatsAppButton href={physioWhatsAppHref} className={sharedStyles.buttonPrimary}>
+              <WhatsAppButton href={physioWhatsAppHref} className="btn-primary gap-2">
                 {readaptacionHeroContent.primaryCta.label}
               </WhatsAppButton>
-              <Link href={readaptacionHeroContent.secondaryCta.href} className={sharedStyles.buttonGhost}>
+              <Link href={readaptacionHeroContent.secondaryCta.href} className="btn-ghost">
                 {readaptacionHeroContent.secondaryCta.label}
               </Link>
-            </div>
-          </div>
-          <div className={sharedStyles.heroMediaCard}>
-            <div className={sharedStyles.heroMedia}>
-              <Image
-                src={readaptacionHeroContent.image.src}
-                alt={readaptacionHeroContent.image.alt}
-                fill
-                className={sharedStyles.imageCover}
-              />
             </div>
           </div>
         </div>
@@ -76,13 +69,13 @@ export default function ReadaptacionPage() {
           <h2 className={sharedStyles.sectionTitle}>{readaptacionBookingContent.title}</h2>
           <p className={sharedStyles.text}>{readaptacionBookingContent.description}</p>
           <div className={sharedStyles.ctaRow}>
-            <WhatsAppButton href={physioWhatsAppHref} className={sharedStyles.buttonPrimary}>
+            <WhatsAppButton href={physioWhatsAppHref} className="btn-primary gap-2">
               {readaptacionBookingContent.ctas[0].label}
             </WhatsAppButton>
-            <Link href={readaptacionBookingContent.ctas[1].href} className={sharedStyles.buttonGhost}>
+            <Link href={readaptacionBookingContent.ctas[1].href} className="btn-ghost">
               {readaptacionBookingContent.ctas[1].label}
             </Link>
-            <Link href={readaptacionBookingContent.ctas[2].href} className={sharedStyles.buttonGhost}>
+            <Link href={readaptacionBookingContent.ctas[2].href} className="btn-ghost">
               {readaptacionBookingContent.ctas[2].label}
             </Link>
           </div>

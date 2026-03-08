@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import {
   fisioterapiaHeroContent,
@@ -21,29 +21,22 @@ export default function FisioterapiaPage() {
       <section className={`${sharedStyles.heroSection} hero-section`}>
         <div className="electric-lines" aria-hidden="true" />
         <div className={sharedStyles.heroInner}>
-          <div>
-            <p className={sharedStyles.eyebrow}>{fisioterapiaHeroContent.eyebrow}</p>
+          <div
+            className={sharedStyles.heroContentWithMedia}
+            style={{ "--hero-bg": `url(${fisioterapiaHeroContent.image.src})` } as CSSProperties}
+          >
+            <p className={sharedStyles.heroEyebrow}>{fisioterapiaHeroContent.eyebrow}</p>
             <h1 className="sr-only">{fisioterapiaHeroContent.title}</h1>
             <p className={`${sharedStyles.heroLead} ${styles.heroLead}`}>
               {fisioterapiaHeroContent.description}
             </p>
             <div className={sharedStyles.ctaRow}>
-              <WhatsAppButton href={physioWhatsAppHref} className={sharedStyles.buttonPrimary}>
+              <WhatsAppButton href={physioWhatsAppHref} className="btn-primary gap-2">
                 {fisioterapiaHeroContent.primaryCta.label}
               </WhatsAppButton>
-              <Link href={fisioterapiaHeroContent.secondaryCta.href} className={sharedStyles.buttonGhost}>
+              <Link href={fisioterapiaHeroContent.secondaryCta.href} className="btn-ghost">
                 {fisioterapiaHeroContent.secondaryCta.label}
               </Link>
-            </div>
-          </div>
-          <div className={sharedStyles.heroMediaCard}>
-            <div className={sharedStyles.heroMedia}>
-              <Image
-                src={fisioterapiaHeroContent.image.src}
-                alt={fisioterapiaHeroContent.image.alt}
-                fill
-                className={sharedStyles.imageCover}
-              />
             </div>
           </div>
         </div>
@@ -91,10 +84,10 @@ export default function FisioterapiaPage() {
           <h2 className={sharedStyles.sectionTitle}>{fisioterapiaSectionsContent.booking.title}</h2>
           <p className={sharedStyles.text}>{fisioterapiaSectionsContent.booking.description}</p>
           <div className={sharedStyles.ctaRow}>
-            <WhatsAppButton href={physioWhatsAppHref} className={sharedStyles.buttonPrimary}>
+            <WhatsAppButton href={physioWhatsAppHref} className="btn-primary gap-2">
               {fisioterapiaSectionsContent.booking.primaryCta.label}
             </WhatsAppButton>
-            <Link href={fisioterapiaSectionsContent.booking.secondaryCta.href} className={sharedStyles.buttonGhost}>
+            <Link href={fisioterapiaSectionsContent.booking.secondaryCta.href} className="btn-ghost">
               {fisioterapiaSectionsContent.booking.secondaryCta.label}
             </Link>
           </div>

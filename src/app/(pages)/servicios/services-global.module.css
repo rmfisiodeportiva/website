@@ -11,7 +11,8 @@
     align-items: start;
     width: 100%;
     gap: 2rem;
-    padding: 1.5rem 1.5rem 4rem;
+    padding: 0rem 0rem 2rem;
+    margin-top: -1.5rem;
 }
 
 .eyebrow {
@@ -21,6 +22,17 @@
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: var(--primary);
+}
+
+.heroEyebrow {
+    margin-bottom: 0.7rem;
+    font-family: var(--font-display), sans-serif;
+    font-size: clamp(2rem, 6vw, 4.4rem);
+    line-height: 0.9;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: var(--black);
 }
 
 .heroTitle {
@@ -39,69 +51,51 @@
     color: var(--neutral-950);
 }
 
+.heroContentWithMedia {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 21rem;
+    padding: 1.4rem 1.2rem 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--white);
+}
+
+.heroContentWithMedia::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image: var(--hero-bg);
+    background-size: cover;
+    background-position: center;
+    filter: saturate(0.9);
+}
+
+.heroContentWithMedia::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: linear-gradient(90deg,
+            rgba(247, 247, 247, 0.9) 0%,
+            rgba(247, 247, 247, 0.78) 45%,
+            rgba(247, 247, 247, 0.35) 62%,
+            rgba(247, 247, 247, 0.02) 100%);
+}
+
+.heroContentWithMedia>* {
+    position: relative;
+    z-index: 1;
+}
+
 .ctaRow {
     margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-}
-
-.buttonPrimary,
-.buttonGhost {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 2.75rem;
-    padding: 0 1.2rem;
-    font-size: 0.9rem;
-    font-weight: 700;
-    transition: all 220ms ease;
-    gap: 5px;
-}
-
-.buttonPrimary {
-    border: 2px solid transparent;
-    background: var(--primary);
-    color: var(--white);
-}
-
-.buttonPrimary:hover,
-.buttonPrimary:focus-visible {
-    border-color: var(--black);
-    background: var(--white-a95);
-    color: var(--black);
-}
-
-.buttonGhost {
-    border: 1px solid var(--black);
-    background: var(--white-a95);
-    color: var(--black);
-}
-
-.buttonGhost:hover,
-.buttonGhost:focus-visible {
-    border-color: var(--primary);
-    background: var(--white);
-    color: var(--primary);
-}
-
-.heroMediaCard {
-    align-self: start;
-    overflow: hidden;
-    border-radius: 1rem;
-    border: 1px solid var(--border);
-    background: var(--white);
-    box-shadow: 0 18px 36px var(--shadow-card-a08);
-}
-
-.heroMedia {
-    position: relative;
-    height: 360px;
-    width: 100%;
-}
-
-.imageCover {
-    object-fit: cover;
 }
 
 .section {
@@ -191,8 +185,13 @@
 
 @media (min-width: 1024px) {
     .heroInner {
-        grid-template-columns: 1fr 0.95fr;
-        padding: 2.25rem 2.5rem 5rem;
+        grid-template-columns: 1fr;
+        padding: 0rem 0rem 4rem;
+    }
+
+    .heroContentWithMedia {
+        min-height: 22.5rem;
+        padding: 1.75rem 1.9rem 2rem;
     }
 
     .section {

@@ -22,7 +22,7 @@ export default function ReadaptacionPage() {
         <div className={sharedStyles.heroInner}>
           <div>
             <p className={sharedStyles.eyebrow}>{readaptacionHeroContent.eyebrow}</p>
-            <h1 className={sharedStyles.heroTitle}>{readaptacionHeroContent.title}</h1>
+            <h1 className="sr-only">{readaptacionHeroContent.title}</h1>
             <p className={`${sharedStyles.heroLead} ${styles.heroLead}`}>
               {readaptacionHeroContent.description}
             </p>

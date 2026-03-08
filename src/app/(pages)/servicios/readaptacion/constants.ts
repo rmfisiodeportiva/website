@@ -6,7 +6,7 @@ export const readaptacionPageMetadata = {
 
 export const readaptacionHeroContent = {
   eyebrow: "Readaptación",
-  title: "Plan de readaptación",
+  title: "Plan de readaptacion de lesiones en Molina de Segura",
   description:
     "Fisioterapia y entrenamiento coordinados para recuperar función, reducir recaídas y volver a tu actividad con seguridad.",
   image: {

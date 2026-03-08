@@ -6,8 +6,7 @@ export const fisioterapiaPageMetadata = {
 
 export const fisioterapiaHeroContent = {
   eyebrow: "Fisioterapia",
-  title: "FISIOTERAPIA",
-  subtitle: "Recupera tu movimiento. Vuelve a tu vida sin dolor.",
+  title: "Fisioterapia en Molina de Segura para dolor y lesiones",
   description:
     "Nuestro servicio de fisioterapia está orientado a identificar el origen del problema, aliviar el dolor y recuperar la función para que puedas volver a tu actividad diaria o deportiva con seguridad.",
   image: {

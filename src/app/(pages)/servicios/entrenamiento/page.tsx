@@ -22,7 +22,7 @@ export default function EntrenamientoPage() {
         <div className={sharedStyles.heroInner}>
           <div>
             <p className={sharedStyles.eyebrow}>{entrenamientoHeroContent.eyebrow}</p>
-            <h1 className={sharedStyles.heroTitle}>{entrenamientoHeroContent.title}</h1>
+            <h1 className="sr-only">{entrenamientoHeroContent.title}</h1>
             <p className={`${sharedStyles.heroLead} ${styles.heroLead}`}>
               {entrenamientoHeroContent.description}
             </p>

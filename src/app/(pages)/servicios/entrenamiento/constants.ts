@@ -6,7 +6,7 @@ export const entrenamientoPageMetadata = {
 
 export const entrenamientoHeroContent = {
   eyebrow: "Entrenamiento físico",
-  title: "Fuerza como pilar del rendimiento y la salud",
+  title: "Entrenamiento fisico en Molina de Segura para fuerza y rendimiento",
   description:
     "Entrenamiento para mejorar fuerza, rendimiento y salud con progresión estructurada, supervisión y foco en prevención de lesiones.",
   image: {

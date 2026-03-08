@@ -23,8 +23,7 @@ export default function FisioterapiaPage() {
         <div className={sharedStyles.heroInner}>
           <div>
             <p className={sharedStyles.eyebrow}>{fisioterapiaHeroContent.eyebrow}</p>
-            <h1 className={sharedStyles.heroTitle}>{fisioterapiaHeroContent.title}</h1>
-            <h2 className={sharedStyles.sectionTitle}>{fisioterapiaHeroContent.subtitle}</h2>
+            <h1 className="sr-only">{fisioterapiaHeroContent.title}</h1>
             <p className={`${sharedStyles.heroLead} ${styles.heroLead}`}>
               {fisioterapiaHeroContent.description}
             </p>

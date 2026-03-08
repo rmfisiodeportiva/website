@@ -7,7 +7,7 @@ import { HomeReviewsSection } from "@/components/home-reviews-section";
 import { HomeTeamSection } from "@/components/home-team-section";
 import { QuoteBlock } from "@/components/quote-block";
 import { WhatsAppBookingSection } from "@/components/whatsapp-booking-section";
-import { homeJsonLd } from "@/lib/home-page-data";
+import { homeJsonLd } from "@/lib/constants/home";
 import { homeQuotes } from "@/components/quote-block/constants";
 
 export const metadata: Metadata = {

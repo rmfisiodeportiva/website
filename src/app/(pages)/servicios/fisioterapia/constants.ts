@@ -58,3 +58,28 @@ export const fisioterapiaSectionsContent = {
     },
   },
 } as const;
+
+export const physioProcess = [
+  "Entrevista inicial",
+  "Diagnóstico funcional",
+  "Tratamiento",
+  "Plan de ejercicio",
+] as const;
+
+export const physioTreatments = [
+  "Terapia manual",
+  "Ejercicio terapéutico",
+  "Electropunción",
+  "Ecografía",
+  "Diatermia",
+] as const;
+
+export const physioSpecificServices = [
+  "Lesiones musculares",
+  "Tendinopatías",
+  "Dolor lumbar",
+  "Pubalgia",
+  "Postcirugía",
+  "ATM",
+  "Suelo pélvico (si aplica)",
+] as const;

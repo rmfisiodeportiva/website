@@ -6,7 +6,7 @@ import {
 } from "@/lib/constants/contact";
 import {
   homeJsonLd,
-} from "@/lib/home-page-data";
+} from "@/lib/constants/home";
 import {
   InstagramIcon,
   PhoneIcon,

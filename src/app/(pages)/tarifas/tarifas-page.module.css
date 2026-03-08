@@ -1,0 +1,313 @@
+.main {
+  width: 100%;
+}
+
+.heroSection {
+  position: relative;
+}
+
+.heroInner {
+  width: 100%;
+  padding: 3.5rem 1.5rem 0;
+}
+
+.heroDescription {
+  margin-top: 1.5rem;
+  max-width: 48rem;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--neutral-950);
+}
+
+.section {
+  width: 100%;
+  padding: 4rem 1.5rem 5rem;
+}
+
+.selectorSection {
+  width: 100%;
+  border: 1px solid var(--border-soft-a90);
+  background-image: url("/images/backgorund.webp");
+  padding: 1.75rem;
+}
+
+.selectorHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.selectorEyebrow {
+  margin-bottom: 0;
+}
+
+.allServicesLink {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.selectorLayout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.selectorList {
+  display: grid;
+  gap: 1rem;
+}
+
+.selectorTrigger {
+  position: relative;
+  display: inline-block;
+  justify-self: start;
+  width: fit-content;
+  border: 0;
+  background: transparent;
+  text-align: left;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(2rem, 6vw, 3.8rem);
+  line-height: 0.95;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: rgba(17, 17, 17, 0.28);
+  cursor: pointer;
+  transition: color 180ms ease;
+}
+
+.selectorTrigger::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: width 300ms ease;
+  bottom: -0.02em;
+  background: var(--black);
+}
+
+.selectorTrigger:hover,
+.selectorTrigger:focus-visible {
+  color: var(--black);
+}
+
+.selectorTrigger:hover::before,
+.selectorTrigger:focus-visible::before {
+  width: 100%;
+}
+
+.selectorTriggerActive {
+  color: var(--black);
+}
+
+.selectorDetail {
+  min-width: 0;
+}
+
+.selectorDescription {
+  max-width: 44rem;
+  font-size: clamp(1rem, 1.2vw, 1.25rem);
+  line-height: 1.55;
+  color: var(--secondary-500);
+}
+
+.tableWrap {
+  margin-top: 1.25rem;
+  overflow: auto;
+  background: var(--white-a95);
+}
+
+.tableHead,
+.tableRow {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+}
+
+.tableHead {
+  background: #f8fafc;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.tableRow {
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 0.875rem;
+}
+
+.tableRow:last-child {
+  border-bottom: 0;
+}
+
+.sessionLabel {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.price,
+.trainingPrice {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.note {
+  margin-top: 0.25rem;
+  color: var(--neutral-950);
+}
+
+.tableHeadTraining,
+.tableRowTraining {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr 1.25fr;
+  gap: 0.75rem;
+  padding: 0.65rem 0.9rem;
+}
+
+.tableHeadTraining {
+  background: #f8fafc;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #0f172a;
+}
+
+.tableRowTraining {
+  font-size: 0.85rem;
+}
+
+.tableRowTraining:last-child {
+  border-bottom: 0;
+}
+
+.trainingModality,
+.trainingPlan {
+  color: var(--secondary-700);
+}
+
+.trainingPrice {
+  text-align: right;
+}
+
+.trainingCardsGrid {
+  margin-top: 1.25rem;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.trainingCard {
+  background: var(--white-a95);
+  padding: 0.9rem;
+}
+
+.trainingCardTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.trainingCardList {
+  margin-top: 0.65rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.trainingCardRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.65rem;
+}
+
+.trainingPlan {
+  font-size: 0.86rem;
+  font-weight: 500;
+}
+
+.trainingPriceWrap {
+  text-align: right;
+}
+
+.trainingPrice {
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.trainingValidity {
+  display: block;
+  font-size: 0.74rem;
+  color: var(--secondary-500);
+}
+
+.readaptationInline {
+  margin-top: 1.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--accent-a20);
+  background: var(--accent-a05);
+  padding: 1rem;
+}
+
+.readaptationTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.readaptationDescription {
+  margin-top: 0.55rem;
+  color: var(--neutral-950);
+  line-height: 1.6;
+}
+
+.selectorCtaWrap {
+  margin-top: 1rem;
+}
+
+.ctaButton {
+  width: 100%;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .selectorSection {
+    padding: 2rem;
+  }
+
+  .ctaButton {
+    width: fit-content;
+  }
+
+  .trainingCardsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroInner {
+    padding: 6rem 2.5rem 0;
+  }
+
+  .section {
+    padding: 4rem 2.5rem 5rem;
+  }
+
+  .selectorLayout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .selectorTrigger {
+    font-size: clamp(2.2rem, 4.6vw, 4rem);
+  }
+
+  .trainingCardsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

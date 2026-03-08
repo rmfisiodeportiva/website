@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { WhatsAppButton } from "@/components/whatsapp-button";
-import { scheduleNotes, trainingSchedule } from "@/lib/extra-pages-data";
 import { trainingWhatsAppHref } from "@/lib/constants/contact";
+import { scheduleNotes, trainingSchedule } from "./constants";
 
 export const metadata: Metadata = {
   title: "Horarios de Entrenamientos",

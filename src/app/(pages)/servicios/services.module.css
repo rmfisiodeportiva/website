@@ -1,0 +1,89 @@
+.heroInner {
+    width: 100%;
+    padding: 1.25rem 1.5rem 0;
+    max-width: 70rem;
+}
+
+.heroTitle {
+    margin-top: 1.1rem;
+    font-size: clamp(2.8rem, 8.2vw, 6rem);
+    line-height: 0.92;
+    letter-spacing: 0.01em;
+}
+
+.heroLead {
+    margin-top: 1rem;
+    max-width: 62ch;
+    font-size: clamp(1rem, 1.4vw, 1.2rem);
+    font-weight: 500;
+    color: var(--secondary-500);
+}
+
+.servicesSection {
+    padding-top: 2.3rem;
+}
+
+.servicesGrid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.serviceCard {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 1.1rem;
+    border: 1px solid var(--border-soft-a90);
+    background: var(--white);
+}
+
+.serviceMedia {
+    position: relative;
+    height: 224px;
+    width: 100%;
+}
+
+.serviceBody {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.serviceTitle {
+    font-family: var(--font-display), sans-serif;
+    font-size: 1.9rem;
+    color: var(--secondary-700);
+}
+
+.serviceDescription {
+    margin-top: 1rem;
+    color: var(--neutral-950);
+}
+
+.serviceBullets {
+    margin-top: 1.25rem;
+    display: grid;
+    gap: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--neutral-950);
+}
+
+.serviceActions {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+    .servicesGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .heroInner {
+        padding: 1.2rem 2.5rem 0;
+    }
+}

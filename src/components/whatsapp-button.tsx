@@ -4,6 +4,8 @@ type WhatsAppButtonProps = {
   href: string;
   children: ReactNode;
   className?: string;
+  iconClassName?: string;
+  ariaLabel?: string;
 };
 
 type WhatsAppIconProps = {
@@ -23,11 +25,23 @@ export function WhatsAppIcon({ className }: WhatsAppIconProps) {
   );
 }
 
-export function WhatsAppButton({ href, children, className }: WhatsAppButtonProps) {
+export function WhatsAppButton({
+  href,
+  children,
+  className,
+  iconClassName,
+  ariaLabel,
+}: WhatsAppButtonProps) {
   return (
-    <a href={href} target="_blank" rel="noreferrer" className={className}>
+    <a
+      href={href}
+      target="_blank"
+      rel="noreferrer"
+      className={className}
+      aria-label={ariaLabel}
+    >
       {children}
-      <WhatsAppIcon />
+      <WhatsAppIcon className={iconClassName} />
     </a>
   );
 }

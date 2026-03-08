@@ -123,13 +123,13 @@ body {
 }
 
 .btn-primary {
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     background: var(--primary);
     color: var(--white);
 }
 
 .btn-secondary {
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     background: var(--black);
     color: var(--white);
 }

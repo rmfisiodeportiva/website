@@ -8,7 +8,7 @@ export const serviciosPageMetadata = {
 
 export const serviciosHeroContent = {
   eyebrow: "SERVICIOS",
-  title: "Fisioterapia, entrenamiento y readaptación",
+  title: "Fisioterapia y entrenamiento para recuperar y rendir mejor",
   description:
     "Ofrecemos fisioterapia, entrenamiento físico y readaptación para reducir dolor, recuperar función y mejorar tu rendimiento con un plan adaptado a tu situación.",
 } as const;

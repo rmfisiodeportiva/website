@@ -15,7 +15,10 @@ export default function ServiciosPage() {
       <section className={`${sharedStyles.heroSection} hero-section`}>
         <div className="electric-lines" aria-hidden="true" />
         <div className={styles.heroInner}>
-          <h1 className={sharedStyles.eyebrow}>{serviciosHeroContent.eyebrow}</h1>
+          <p className={sharedStyles.eyebrow}>{serviciosHeroContent.eyebrow}</p>
+          <h1 className="sr-only">
+            {serviciosHeroContent.title}
+          </h1>
           <p className={`${sharedStyles.heroLead} ${styles.heroLead}`}>
             {serviciosHeroContent.description}
           </p>

@@ -25,7 +25,7 @@ export const entrenamientoHeroContent = {
 export const trainingPrograms = [
   {
     title: "Grupos reducidos",
-    subtitle: "(máximo 8 personas)",
+    subtitle: "máximo 8 personas",
     description:
       "Entrenamientos guiados en grupos pequeños para garantizar una atención cercana y una correcta ejecución de los ejercicios. Trabajamos fuerza, movilidad, resistencia y control corporal en sesiones dinámicas adaptadas a todos los niveles.",
     bullets: [
@@ -36,7 +36,7 @@ export const trainingPrograms = [
   },
   {
     title: "Grupo rendimiento",
-    subtitle: "(máximo 5 personas)",
+    subtitle: "máximo 5 personas",
     description:
       "Entrenamientos enfocados a personas que quieren llevar su rendimiento físico a un nivel superior. Ideal para deportistas o personas que buscan mejorar fuerza, potencia y capacidad física.",
     bullets: [
@@ -47,7 +47,7 @@ export const trainingPrograms = [
   },
   {
     title: "Entrenamiento personal",
-    subtitle: "(individual o dúo)",
+    subtitle: "individual o dúo",
     description:
       "Sesiones totalmente personalizadas diseñadas en función de tus objetivos, nivel y necesidades. Una opción ideal si buscas máxima atención, recuperar una lesión, mejorar tu rendimiento o empezar a entrenar con seguridad.",
     bullets: [

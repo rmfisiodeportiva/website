@@ -43,14 +43,16 @@ export default function EntrenamientoPage() {
 
       <section className={`${sharedStyles.section} ${sharedStyles.sectionLast}`}>
         <div className={styles.programGrid}>
-          {trainingPrograms.map((program) => (
-            <article key={program.title} className={sharedStyles.infoCard}>
-              <p className={sharedStyles.eyebrow}>{program.title}</p>
-              {program.subtitle ? <h2 className={sharedStyles.cardTitle}>{program.subtitle}</h2> : null}
-              <p className={sharedStyles.cardText}>{program.description}</p>
-              <ul className={sharedStyles.bulletList}>
+          {trainingPrograms.map(program => (
+            <article key={program.title} className={styles.programCard}>
+              <div className={styles.programCardTop}>
+                <p className={styles.programTitle}>{program.title}</p>
+                {program.subtitle ? <h2 className={styles.programCapacity}>{program.subtitle}</h2> : null}
+                <p className={styles.programDescription}>{program.description}</p>
+              </div>
+              <ul className={`${sharedStyles.bulletList} ${styles.programBulletList}`}>
                 {program.bullets.map((bullet) => (
-                  <li key={bullet} className={sharedStyles.bulletItem}>
+                  <li key={bullet} className={`${sharedStyles.bulletItem} ${styles.programBulletItem}`}>
                     <span aria-hidden="true" className={sharedStyles.bulletDot} />
                     <span>{bullet}</span>
                   </li>

@@ -25,8 +25,10 @@ export default function ServiciosPage() {
         </div>
       </section>
 
-      <section className={`${sharedStyles.section} ${sharedStyles.sectionLast} ${styles.servicesSection}`}>
-        <ServicesAccordionShowcase />
+      <section >
+        <div className={sharedStyles.panel}>
+          <ServicesAccordionShowcase />
+        </div>
       </section>
     </main>
   );

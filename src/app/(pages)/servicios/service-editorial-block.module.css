@@ -1,0 +1,105 @@
+.editorialOption {
+  padding-top: 0.5rem;
+}
+
+.optionHeading {
+  max-width: 44rem;
+}
+
+.optionTitle {
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1;
+  color: var(--black);
+}
+
+.editorialGrid {
+  display: grid;
+  gap: 1.4rem;
+  margin-top: 1.5rem;
+}
+
+.editorialCopy {
+  max-width: 43rem;
+}
+
+.editorialParagraph {
+  max-width: var(--editorial-paragraph-width, 40ch);
+  font-size: clamp(1.08rem, 1.7vw, 1.3rem);
+  line-height: 1.78;
+  color: var(--neutral-950);
+}
+
+.editorialParagraph + .editorialParagraph {
+  margin-top: 1.35rem;
+}
+
+.keyPointsPanel {
+  position: relative;
+  overflow: hidden;
+  padding: 0 1.15rem;
+}
+
+.keyPointsPanel::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0.3rem;
+  background: linear-gradient(180deg, var(--primary) 0%, rgba(0, 134, 214, 0.14) 100%);
+}
+
+.keyPointsLabel {
+  padding-left: 0.45rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+.keyPointsList {
+  display: grid;
+  gap: 0.9rem;
+  margin-top: 1rem;
+  padding-left: 0.45rem;
+}
+
+.keyPointsItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  line-height: 1.5;
+  color: var(--neutral-950);
+}
+
+.keyPointsMarker {
+  width: 0.55rem;
+  height: 0.55rem;
+  margin-top: 0.5rem;
+  flex-shrink: 0;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+.keyPointsClosing {
+  max-width: 16ch;
+  margin-top: 1.35rem;
+  padding-left: 0.45rem;
+  font-family: var(--font-display), sans-serif;
+  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
+  line-height: 1;
+  color: var(--black);
+}
+
+@media (min-width: 768px) {
+  .editorialGrid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+    align-items: start;
+    gap: 2rem;
+    margin-top: 1.7rem;
+  }
+
+  .keyPointsPanel {
+    padding: 0 1.4rem;
+  }
+}

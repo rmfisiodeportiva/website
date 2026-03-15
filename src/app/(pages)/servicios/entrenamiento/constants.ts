@@ -25,7 +25,7 @@ export const entrenamientoHeroContent = {
 export const trainingPrograms = [
   {
     title: "Grupos reducidos",
-    subtitle: "máximo 8 personas",
+    subtitle: "Máximo 8 personas",
     description:
       "Entrenamientos guiados en grupos pequeños para garantizar una atención cercana y una correcta ejecución de los ejercicios. Trabajamos fuerza, movilidad, resistencia y control corporal en sesiones dinámicas adaptadas a todos los niveles.",
     bullets: [
@@ -33,10 +33,11 @@ export const trainingPrograms = [
       "Programación progresiva",
       "Mejora de fuerza, condición física y salud",
     ],
+    promo: ""
   },
   {
     title: "Grupo rendimiento",
-    subtitle: "máximo 5 personas",
+    subtitle: "Máximo 5 personas",
     description:
       "Entrenamientos enfocados a personas que quieren llevar su rendimiento físico a un nivel superior. Ideal para deportistas o personas que buscan mejorar fuerza, potencia y capacidad física.",
     bullets: [
@@ -44,18 +45,19 @@ export const trainingPrograms = [
       "Control técnico de los ejercicios",
       "Programación estructurada para progresar",
     ],
+    promo: ""
   },
   {
     title: "Entrenamiento personal",
-    subtitle: "individual o dúo",
+    subtitle: "Individual o dúo",
     description:
       "Sesiones totalmente personalizadas diseñadas en función de tus objetivos, nivel y necesidades. Una opción ideal si buscas máxima atención, recuperar una lesión, mejorar tu rendimiento o empezar a entrenar con seguridad.",
     bullets: [
-      "Evaluación inicial (GRATUITA)",
       "Plan de entrenamiento individualizado",
       "Seguimiento continuo de la evolución",
       "Recomendable: niños, adultos mayores, embarazo y post-parto, cualquier tipo de lesión o enfermedad que requiera máxima individualización.",
     ],
+    promo: "Valoración gratis",
   },
   {
     title: "Entrenamiento online",
@@ -67,6 +69,7 @@ export const trainingPrograms = [
       "Seguimiento y comunicación constante",
       "Adaptación del programa según evolución",
     ],
+    promo: ""
   },
 ] as const;
 

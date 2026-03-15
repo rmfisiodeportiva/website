@@ -56,25 +56,28 @@ export default function EntrenamientoPage() {
         <div className={styles.programGrid}>
           {trainingPrograms.map(program => {
             return (
-            <article key={program.title} className={styles.programCard}>
-              <div className={styles.programCardTop}>
-                <p className={styles.programTitle}>{program.title}</p>
-                <div className={styles.programMetaRow}>
-                  {program.subtitle ? <h2 className={styles.programCapacity}>{program.subtitle}</h2> : null}
+              <article key={program.title} className={styles.programCard}>
+                <div className={styles.programCardTop}>
+                  <h2 className={styles.programTitle}>{program.title}</h2>
+                  {program.subtitle ? (
+                    <div className={styles.programMetaRow}>
+                      <p className={styles.programCapacity}>{program.subtitle}</p>
+                    </div>
+                  ) : null}
                   {program.promo ? <p className={styles.programPromoBadge}>{program.promo}</p> : null}
+                  <p className={styles.programDescription}>{program.description}</p>
                 </div>
-                <p className={styles.programDescription}>{program.description}</p>
-              </div>
-              <ul className={`${sharedStyles.bulletList} ${styles.programBulletList}`}>
-                {program.bullets.map((bullet) => (
-                  <li key={bullet} className={`${sharedStyles.bulletItem} ${styles.programBulletItem}`}>
-                    <span aria-hidden="true" className={sharedStyles.bulletDot} />
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          )})}
+                <ul className={`${sharedStyles.bulletList} ${styles.programBulletList}`}>
+                  {program.bullets.map((bullet) => (
+                    <li key={bullet} className={`${sharedStyles.bulletItem} ${styles.programBulletItem}`}>
+                      <span aria-hidden="true" className={sharedStyles.bulletDot} />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            );
+          })}
         </div>
 
       </section>

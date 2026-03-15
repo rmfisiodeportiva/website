@@ -1,3 +1,11 @@
+type TrainingProgram = {
+  title: string;
+  subtitle?: string;
+  description: string;
+  bullets: string[];
+  promo?: string;
+};
+
 export const entrenamientoPageMetadata = {
   title: "Entrenamiento Fisico",
   description:
@@ -22,7 +30,7 @@ export const entrenamientoHeroContent = {
   },
 } as const;
 
-export const trainingPrograms = [
+export const trainingPrograms: readonly TrainingProgram[] = [
   {
     title: "Grupos reducidos",
     subtitle: "Máximo 8 personas",
@@ -33,7 +41,6 @@ export const trainingPrograms = [
       "Programación progresiva",
       "Mejora de fuerza, condición física y salud",
     ],
-    promo: ""
   },
   {
     title: "Grupo rendimiento",
@@ -45,7 +52,6 @@ export const trainingPrograms = [
       "Control técnico de los ejercicios",
       "Programación estructurada para progresar",
     ],
-    promo: ""
   },
   {
     title: "Entrenamiento personal",
@@ -61,7 +67,6 @@ export const trainingPrograms = [
   },
   {
     title: "Entrenamiento online",
-    subtitle: "",
     description:
       "Programa de entrenamiento personalizado que puedes realizar desde cualquier lugar (casa, gimnasio…). Incluye planificación adaptada a tus objetivos, nutricionista, seguimiento y ajustes periódicos para asegurar tu progreso.",
     bullets: [
@@ -69,9 +74,8 @@ export const trainingPrograms = [
       "Seguimiento y comunicación constante",
       "Adaptación del programa según evolución",
     ],
-    promo: ""
   },
-] as const;
+];
 
 export const entrenamientoBookingContent = {
   eyebrow: "Reserva y plazas",

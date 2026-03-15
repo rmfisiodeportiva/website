@@ -1,0 +1,348 @@
+.main {
+  width: 100%;
+  background: var(--white);
+}
+
+.heroInner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.heroTitle {
+  text-align: left;
+  width: fit-content;
+  font-family: var(--font-display), sans-serif;
+  text-transform: uppercase;
+  color: #000000e5;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  justify-self: start;
+  font-size: clamp(2rem, 6vw, 3.8rem);
+  font-weight: 900;
+  line-height: 0.95;
+  transition: color 0.18s;
+  display: inline-block;
+  position: relative;
+}
+
+.heroDescription {
+  margin-top: 1.5rem;
+  max-width: 48rem;
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--neutral-950);
+}
+
+.scheduleSection {
+  width: 100%;
+  background-image: url("/images/background.webp");
+  background-position: center;
+  background-size: cover;
+  padding: 2.5rem;
+  margin-top: 2rem;
+}
+
+.scheduleInner {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.tableShell {
+  width: 100%;
+}
+
+.tableSurface {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  background: rgb(255, 255, 255);
+  box-shadow: 0 18px 40px var(--shadow-card-a08);
+}
+
+.scheduleTable {
+  width: 100%;
+  min-width: 0;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.headerRow {
+  background: var(--neutral-950);
+}
+
+.headCell {
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--white);
+  border-right: 1px solid var(--border);
+}
+.headCell:last-child {
+  border-right: 0;
+}
+
+.bodyRow {
+  border-bottom: 1px solid var(--border);
+}
+
+.bodyRow:last-child {
+  border-bottom: 0;
+}
+
+.separatorRow td {
+  height: 0.9rem;
+  padding: 0;
+  border-top: 1px solid #f4f5f5;
+  border-bottom: 1px solid #f4f5f5;
+  background: #f4f5f5;
+}
+
+.shiftCell {
+  width: 7rem;
+  padding: 0.75rem 1rem;
+  background: #f8fafc;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.timeCell {
+  width: 9rem;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-weight: 500;
+  color: #0f172a;
+  border: 0.5px solid var(--border);
+}
+
+.bodyRow:nth-child(odd) .timeCell {
+  background: rgba(15, 23, 42, 0.06);
+}
+
+.bodyRow:nth-child(even) .timeCell {
+  background: rgba(15, 23, 42, 0.12);
+}
+
+.slotCell {
+  height: 5.4rem;
+  padding: 0.75rem 1rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--white);
+  font-weight: 600;
+  font-family: var(--font-display), sans-serif;
+  border: 0.5px solid var(--border);
+}
+
+.groupType {
+  background: var(--training-group-bg);
+}
+
+.performanceType {
+  background: var(--training-performance-bg);
+}
+
+.personalType {
+  background: var(--training-personal-bg);
+}
+
+.onlineType {
+  background: var(--training-online-bg);
+  color: var(--white);
+}
+
+.postSection {
+  background: var(--white);
+}
+
+.postInner {
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.trainingGrid {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+.trainingCard {
+  border: 1px solid var(--border-soft-a90);
+  background: var(--white);
+  padding: 1rem;
+}
+
+.groupCard {
+  background: var(--training-group-bg);
+}
+
+.performanceCard {
+  background: var(--training-performance-bg);
+}
+
+.personalCard {
+  background: var(--training-personal-bg);
+}
+
+.onlineCard {
+  background: var(--training-online-bg);
+}
+
+.onlineCard .trainingCardTitle,
+.onlineCard .trainingCardText {
+  color: var(--white);
+}
+
+.trainingCardTitle {
+  font-family: var(--font-display), sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.1;
+  color: var(--white);
+}
+
+.trainingCardText {
+  margin-top: 0.6rem;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--white);
+}
+
+.ctaRow {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.heroCtaRow {
+  margin-top: 0;
+}
+
+.primaryCta {
+  gap: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .heroInner {
+    padding: 0 3rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .heroCtaRow {
+    justify-content: flex-end;
+    flex-shrink: 0;
+    margin-top: 0.4rem;
+  }
+
+  .scheduleInner {
+    padding: 0;
+    font-size: 1rem;
+  }
+  .slotCell {
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.3;
+    padding: 0.45rem;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .trainingGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 769px) {
+  .tableSurface {
+    overflow-x: hidden;
+  }
+
+  .scheduleTable {
+    table-layout: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroInner {
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    gap: 0;
+  }
+  .ctaRow {
+    justify-content: end;
+  }
+
+  .scheduleTable {
+    min-width: 760px;
+    table-layout: auto;
+  }
+
+  .scheduleSection {
+    padding: 0;
+  }
+
+  .headCell {
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
+    padding: 0.6rem 0.45rem;
+  }
+
+  .timeCell {
+    width: 7rem;
+    font-size: 0.74rem;
+    line-height: 1.25;
+  }
+
+  .slotCell {
+    font-size: 0.72rem;
+    line-height: 1.3;
+    padding: 0.65rem 0.45rem;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .postSection {
+    padding: 1rem;
+  }
+  .trainingGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 425px) {
+  .slotCell {
+    height: 3rem;
+  }
+  .heroInner {
+    padding: 0 1rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .scheduleSection {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .ctaRow {
+    gap: inherit;
+  }
+
+  .trainingGrid {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}

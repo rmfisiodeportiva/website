@@ -1,3 +1,11 @@
+type TrainingProgram = {
+  title: string;
+  subtitle?: string;
+  description: string;
+  bullets: string[];
+  promo?: string;
+};
+
 export const entrenamientoPageMetadata = {
   title: "Entrenamiento Fisico",
   description:
@@ -22,10 +30,10 @@ export const entrenamientoHeroContent = {
   },
 } as const;
 
-export const trainingPrograms = [
+export const trainingPrograms: readonly TrainingProgram[] = [
   {
     title: "Grupos reducidos",
-    subtitle: "máximo 8 personas",
+    subtitle: "Máximo 8 personas",
     description:
       "Entrenamientos guiados en grupos pequeños para garantizar una atención cercana y una correcta ejecución de los ejercicios. Trabajamos fuerza, movilidad, resistencia y control corporal en sesiones dinámicas adaptadas a todos los niveles.",
     bullets: [
@@ -36,7 +44,7 @@ export const trainingPrograms = [
   },
   {
     title: "Grupo rendimiento",
-    subtitle: "máximo 5 personas",
+    subtitle: "Máximo 5 personas",
     description:
       "Entrenamientos enfocados a personas que quieren llevar su rendimiento físico a un nivel superior. Ideal para deportistas o personas que buscan mejorar fuerza, potencia y capacidad física.",
     bullets: [
@@ -47,19 +55,18 @@ export const trainingPrograms = [
   },
   {
     title: "Entrenamiento personal",
-    subtitle: "individual o dúo",
+    subtitle: "Individual o dúo",
     description:
       "Sesiones totalmente personalizadas diseñadas en función de tus objetivos, nivel y necesidades. Una opción ideal si buscas máxima atención, recuperar una lesión, mejorar tu rendimiento o empezar a entrenar con seguridad.",
     bullets: [
-      "Evaluación inicial (GRATUITA)",
       "Plan de entrenamiento individualizado",
       "Seguimiento continuo de la evolución",
       "Recomendable: niños, adultos mayores, embarazo y post-parto, cualquier tipo de lesión o enfermedad que requiera máxima individualización.",
     ],
+    promo: "Valoración gratis",
   },
   {
     title: "Entrenamiento online",
-    subtitle: "",
     description:
       "Programa de entrenamiento personalizado que puedes realizar desde cualquier lugar (casa, gimnasio…). Incluye planificación adaptada a tus objetivos, nutricionista, seguimiento y ajustes periódicos para asegurar tu progreso.",
     bullets: [
@@ -68,7 +75,7 @@ export const trainingPrograms = [
       "Adaptación del programa según evolución",
     ],
   },
-] as const;
+];
 
 export const entrenamientoBookingContent = {
   eyebrow: "Reserva y plazas",

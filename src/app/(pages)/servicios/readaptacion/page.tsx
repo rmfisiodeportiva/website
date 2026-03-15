@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { CSSProperties } from "react";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { physioWhatsAppHref } from "@/lib/constants/contact";
+import { ServiceEditorialBlock } from "../service-editorial-block";
 import {
   readaptationPlan,
   readaptacionBookingContent,
@@ -42,28 +43,14 @@ export default function ReadaptacionPage() {
       </section>
 
       <section className={`${sharedStyles.section}`}>
-        <article className={sharedStyles.textBlock}>
-          <p className={sharedStyles.eyebrow}>{readaptationPlan.title}</p>
-          <h2 className={sharedStyles.cardTitle}>{readaptationPlan.subtitle}</h2>
-
-          <div className={styles.longText}>
-            {readaptationPlan.description.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-
-          <ul className={sharedStyles.bulletList}>
-            {readaptationPlan.bullets.map((bullet) => (
-              <li key={bullet} className={sharedStyles.bulletItem}>
-                <span aria-hidden="true" className={sharedStyles.bulletDot} />
-                <span>{bullet}</span>
-              </li>
-            ))}
-          </ul>
-
-          <p className={styles.closingText}>{readaptationPlan.closing}</p>
-        </article>
-
+        <ServiceEditorialBlock
+          eyebrow={readaptationPlan.title}
+          title="Readaptacion progresiva para volver a tu actividad con control y confianza."
+          paragraphs={readaptationPlan.description}
+          bullets={readaptationPlan.bullets}
+          closing={readaptationPlan.closing}
+          paragraphWidth="39ch"
+        />
       </section>
       <section>
         <div className={sharedStyles.panel}>

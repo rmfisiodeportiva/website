@@ -10,6 +10,7 @@ import {
   fisioterapiaMainContent,
 } from "./constants";
 import { physioWhatsAppHref } from "@/lib/constants/contact";
+import { ServiceEditorialBlock } from "../service-editorial-block";
 import sharedStyles from "../services-global.module.css";
 import styles from "./fisioterapia-page.module.css";
 
@@ -63,22 +64,12 @@ export default function FisioterapiaPage() {
       </section>
 
       <section className={sharedStyles.section}>
-        <article className={sharedStyles.textBlock}>
-          {fisioterapiaMainContent.paragraphs.map((paragraph) => (
-            <p key={paragraph} className={sharedStyles.cardText}>
-              {paragraph}
-            </p>
-          ))}
-          <ul className={sharedStyles.bulletList}>
-            {fisioterapiaMainContent.bullets.map((bullet) => (
-              <li key={bullet} className={sharedStyles.bulletItem}>
-                <span aria-hidden="true" className={sharedStyles.bulletDot} />
-                <span>{bullet}</span>
-              </li>
-            ))}
-          </ul>
-          <p className={sharedStyles.cardText}>{fisioterapiaMainContent.closing}</p>
-        </article>
+        <ServiceEditorialBlock
+          title="Recuperar funcion, reducir dolor y volver a moverte con seguridad."
+          paragraphs={fisioterapiaMainContent.paragraphs}
+          bullets={fisioterapiaMainContent.bullets}
+          closing={fisioterapiaMainContent.closing}
+        />
       </section>
 
       <section>

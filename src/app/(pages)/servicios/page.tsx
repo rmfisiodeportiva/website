@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import {
   serviciosHeroContent,
   serviciosPageMetadata,
@@ -16,16 +17,25 @@ export default function ServiciosPage() {
         <div className="electric-lines" aria-hidden="true" />
         <div className={styles.heroInner}>
           <p className={sharedStyles.eyebrow}>{serviciosHeroContent.eyebrow}</p>
-          <h1 className="sr-only">
-            {serviciosHeroContent.title}
-          </h1>
+          <h1 className={styles.heroTitle}>{serviciosHeroContent.title}</h1>
           <p className={`${sharedStyles.heroLead} ${styles.heroLead}`}>
             {serviciosHeroContent.description}
           </p>
+          <div className={styles.serviceJumpRow}>
+            <Link href="/servicios/fisioterapia" className={styles.serviceJumpLink}>
+              Fisioterapia
+            </Link>
+            <Link href="/servicios/entrenamiento" className={styles.serviceJumpLink}>
+              Entrenamiento
+            </Link>
+            <Link href="/servicios/readaptacion" className={styles.serviceJumpLink}>
+              Readaptación
+            </Link>
+          </div>
         </div>
       </section>
 
-      <section >
+      <section className={styles.accordionSection}>
         <div className={sharedStyles.panel}>
           <ServicesAccordionShowcase />
         </div>

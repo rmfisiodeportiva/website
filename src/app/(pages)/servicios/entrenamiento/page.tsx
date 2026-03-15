@@ -41,25 +41,43 @@ export default function EntrenamientoPage() {
         </div>
       </section>
 
-      <section className={`${sharedStyles.section} ${sharedStyles.sectionLast}`}>
+      <section className={sharedStyles.section}>
+        <div className={styles.programsIntro}>
+          <p className={sharedStyles.eyebrow}>Formatos de entrenamiento</p>
+          <h2 className={styles.programsIntroTitle}>Elige el formato de entrenamiento que mejor encaja contigo.</h2>
+          <p className={styles.programsIntroText}>
+            Ofrecemos distintos formatos según tu objetivo, experiencia y nivel de atención que
+            necesites: grupos reducidos, rendimiento, entrenamiento personal y formato online.
+          </p>
+        </div>
+      </section>
+
+      <section className={`${sharedStyles.section} ${sharedStyles.sectionLast} ${styles.programsSection}`}>
         <div className={styles.programGrid}>
-          {trainingPrograms.map(program => (
-            <article key={program.title} className={styles.programCard}>
-              <div className={styles.programCardTop}>
-                <p className={styles.programTitle}>{program.title}</p>
-                {program.subtitle ? <h2 className={styles.programCapacity}>{program.subtitle}</h2> : null}
-                <p className={styles.programDescription}>{program.description}</p>
-              </div>
-              <ul className={`${sharedStyles.bulletList} ${styles.programBulletList}`}>
-                {program.bullets.map((bullet) => (
-                  <li key={bullet} className={`${sharedStyles.bulletItem} ${styles.programBulletItem}`}>
-                    <span aria-hidden="true" className={sharedStyles.bulletDot} />
-                    <span>{bullet}</span>
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
+          {trainingPrograms.map(program => {
+            return (
+              <article key={program.title} className={styles.programCard}>
+                <div className={styles.programCardTop}>
+                  <h2 className={styles.programTitle}>{program.title}</h2>
+                  {program.subtitle ? (
+                    <div className={styles.programMetaRow}>
+                      <p className={styles.programCapacity}>{program.subtitle}</p>
+                    </div>
+                  ) : null}
+                  {program.promo ? <p className={styles.programPromoBadge}>{program.promo}</p> : null}
+                  <p className={styles.programDescription}>{program.description}</p>
+                </div>
+                <ul className={`${sharedStyles.bulletList} ${styles.programBulletList}`}>
+                  {program.bullets.map((bullet) => (
+                    <li key={bullet} className={`${sharedStyles.bulletItem} ${styles.programBulletItem}`}>
+                      <span aria-hidden="true" className={sharedStyles.bulletDot} />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            );
+          })}
         </div>
 
       </section>

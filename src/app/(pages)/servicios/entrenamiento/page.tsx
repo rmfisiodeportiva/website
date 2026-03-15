@@ -60,6 +60,8 @@ export default function EntrenamientoPage() {
           ))}
         </div>
 
+      </section>
+      <section>
         <div className={sharedStyles.panel}>
           <p className={sharedStyles.eyebrow}>{entrenamientoBookingContent.eyebrow}</p>
           <h2 className={sharedStyles.sectionTitle}>{entrenamientoBookingContent.title}</h2>

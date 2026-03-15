@@ -2,10 +2,16 @@
   max-width: 56rem;
 }
 
+.timelineSection {
+  background-image: url("/images/backgorund.webp");
+  margin: 1rem 0;
+  padding: 0.25rem 1.5rem;
+}
+
 .timeline {
   position: relative;
-  margin-top: 4rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
   display: grid;
   gap: 1.25rem;
 }
@@ -44,12 +50,12 @@
   font-family: var(--font-display), sans-serif;
   font-size: 1.5rem;
   line-height: 1;
-  color: var(--accent);
+  color: var(--primary);
 }
 
 .processText {
   padding-top: 0.5rem;
-  color: var(--accent);
+  color: var(--primary);
   font-size: 0.84rem;
   font-weight: 700;
   letter-spacing: 0.13em;
@@ -57,13 +63,20 @@
 }
 
 @media (min-width: 768px) {
+
+  .timelineSection {
+    margin: 2rem 0;
+    padding: 0.25rem 0 1rem 0;
+  }
+
   .timeline {
     --timeline-line-offset: 0rem;
     --timeline-marker-size: 2.7rem;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 1rem;
-    padding-top: 0.75rem;
     padding-bottom: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
 
   .timeline::before {

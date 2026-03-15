@@ -47,6 +47,9 @@ export default function FisioterapiaPage() {
           <p className={sharedStyles.eyebrow}>{fisioterapiaSectionsContent.process.eyebrow}</p>
           <h2 className={sharedStyles.sectionTitle}>{fisioterapiaSectionsContent.process.title}</h2>
         </div>
+      </section>
+
+      <section className={styles.timelineSection}>
         <div className={styles.timeline}>
           {physioProcess.map((step, index) => (
             <div key={step} className={styles.timelineItem}>
@@ -60,7 +63,7 @@ export default function FisioterapiaPage() {
       </section>
 
       <section className={sharedStyles.section}>
-        <article className={sharedStyles.infoCard}>
+        <article>
           {fisioterapiaMainContent.paragraphs.map((paragraph) => (
             <p key={paragraph} className={sharedStyles.cardText}>
               {paragraph}
@@ -78,8 +81,8 @@ export default function FisioterapiaPage() {
         </article>
       </section>
 
-      <section className={`${sharedStyles.section} ${sharedStyles.sectionLast}`}>
-        <div className={sharedStyles.panel}>
+      <section>
+        <div className={`${sharedStyles.panel}`}>
           <p className={sharedStyles.eyebrow}>{fisioterapiaSectionsContent.booking.eyebrow}</p>
           <h2 className={sharedStyles.sectionTitle}>{fisioterapiaSectionsContent.booking.title}</h2>
           <p className={sharedStyles.text}>{fisioterapiaSectionsContent.booking.description}</p>

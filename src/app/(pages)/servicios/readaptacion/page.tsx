@@ -41,8 +41,8 @@ export default function ReadaptacionPage() {
         </div>
       </section>
 
-      <section className={`${sharedStyles.section} ${sharedStyles.sectionLast}`}>
-        <article className={sharedStyles.infoCard}>
+      <section className={`${sharedStyles.section}`}>
+        <article>
           <p className={sharedStyles.eyebrow}>{readaptationPlan.title}</p>
           <h2 className={sharedStyles.cardTitle}>{readaptationPlan.subtitle}</h2>
 
@@ -64,6 +64,8 @@ export default function ReadaptacionPage() {
           <p className={styles.closingText}>{readaptationPlan.closing}</p>
         </article>
 
+      </section>
+      <section>
         <div className={sharedStyles.panel}>
           <p className={sharedStyles.eyebrow}>{readaptacionBookingContent.eyebrow}</p>
           <h2 className={sharedStyles.sectionTitle}>{readaptacionBookingContent.title}</h2>

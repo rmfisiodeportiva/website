@@ -42,7 +42,7 @@ export default function ReadaptacionPage() {
       </section>
 
       <section className={`${sharedStyles.section}`}>
-        <article>
+        <article className={sharedStyles.textBlock}>
           <p className={sharedStyles.eyebrow}>{readaptationPlan.title}</p>
           <h2 className={sharedStyles.cardTitle}>{readaptationPlan.subtitle}</h2>
 

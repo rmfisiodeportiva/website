@@ -140,6 +140,18 @@
     color: var(--neutral-950);
 }
 
+.textBlock {
+    max-width: 72rem;
+}
+
+.textBlock :global(p) {
+    max-width: 66ch;
+}
+
+.textBlock :global(ul) {
+    max-width: 58ch;
+}
+
 .bulletList {
     margin-top: 1.5rem;
     display: grid;

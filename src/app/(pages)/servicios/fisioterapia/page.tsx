@@ -63,7 +63,7 @@ export default function FisioterapiaPage() {
       </section>
 
       <section className={sharedStyles.section}>
-        <article>
+        <article className={sharedStyles.textBlock}>
           {fisioterapiaMainContent.paragraphs.map((paragraph) => (
             <p key={paragraph} className={sharedStyles.cardText}>
               {paragraph}

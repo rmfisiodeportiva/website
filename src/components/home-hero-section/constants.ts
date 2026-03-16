@@ -5,14 +5,8 @@ export const homeHeroSectionContent = {
     src: "/images/Pesas imagen.avif",
     alt: "Pesas en la zona de entrenamiento del centro Rehab Strength",
   },
-  topPills: {
-    left: "Recuperación + rendimiento",
-    right: "Fisioterapia · Entrenamiento",
-  },
   title: "Donde la recuperación se encuentra con el rendimiento",
-  description:
-    "Tratamos el dolor y construimos fuerza con un plan coordinado para volver a moverte, entrenar y progresar con seguridad.",
-  bottomText: "Valoración, tratamiento y progresión de cargas en el mismo proceso.",
+  description: "Tratamos el dolor y construimos fuerza con un plan coordinado para moverte y progresar con seguridad.",
   cta: {
     label: "Explorar servicios",
     href: "#servicios",

@@ -10,7 +10,7 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="site-shell">
       <Header />
-      <div className="py-5">
+      <div>
       {children}
       </div>
       <Footer />

@@ -481,7 +481,7 @@
   }
 
   .price {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   .note {
@@ -503,28 +503,33 @@
     gap: 0.45rem;
   }
 
-  .personalCombinedHeader,
-  .personalCombinedRow {
-    grid-template-columns: 1fr;
-    gap: 0.45rem;
+  .personalCombinedHeader {
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 0.5rem;
+    font-size: 0.72rem;
+    padding: 0.75rem 1rem;
   }
 
-  .personalCombinedHeader {
-    font-size: 0.72rem;
+  .personalCombinedRow {
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 0.5rem;
+    padding: 0.85rem 1rem;
   }
 
   .personalCombinedRow .trainingPrice {
-    text-align: left;
+    text-align: right;
+    font-size: 1.55rem;
   }
 
   .personalCombinedValidity {
-    grid-column: 1 / -1;
-    grid-row: auto;
+    grid-column: 1 / 2;
+    grid-row: 2;
+    font-size: 0.84rem;
   }
 
   .personalPriceWithValidity {
-    grid-row: auto;
-    align-self: start;
+    grid-row: 1 / span 2;
+    align-self: center;
   }
 
   .trainingPriceWrap {
@@ -533,6 +538,6 @@
   }
 
   .trainingPrice {
-    font-size: 1.7rem;
+    font-size: 1.45rem;
   }
 }

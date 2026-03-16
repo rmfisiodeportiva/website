@@ -8,24 +8,15 @@
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  padding: 0 2.5rem;
 }
 
 .heroTitle {
-  text-align: left;
-  width: fit-content;
-  font-family: var(--font-display), sans-serif;
-  text-transform: uppercase;
-  color: #000000e5;
-  cursor: pointer;
-  background: none;
-  border: 0;
-  justify-self: start;
-  font-size: clamp(2rem, 6vw, 3.8rem);
-  font-weight: 900;
-  line-height: 0.95;
-  transition: color 0.18s;
-  display: inline-block;
-  position: relative;
+  margin-top: 0.7rem;
+  font-size: clamp(1.95rem, 4.6vw, 4.1rem);
+  line-height: 0.96;
+  letter-spacing: 0.01em;
+  max-width: 18ch;
 }
 
 .heroDescription {
@@ -47,6 +38,7 @@
 
 .scheduleInner {
   width: 100%;
+  max-width: 92rem;
   margin: 0 auto;
   padding: 0;
 }
@@ -231,15 +223,13 @@
 
 @media (min-width: 1024px) {
   .heroInner {
-    padding: 0 3rem;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 2rem;
+    gap: 1rem;
   }
 
   .heroCtaRow {
-    justify-content: flex-end;
     flex-shrink: 0;
     margin-top: 0.4rem;
   }
@@ -270,18 +260,18 @@
   .scheduleTable {
     table-layout: fixed;
   }
+
+  .scheduleSection {
+    padding: 1rem 0;
+  }
 }
 
 @media (max-width: 768px) {
   .heroInner {
     padding: 0 1.5rem;
     display: flex;
-    flex-direction: row;
     align-items: start;
-    gap: 0;
-  }
-  .ctaRow {
-    justify-content: end;
+    gap: 1.5rem;
   }
 
   .scheduleTable {
@@ -290,7 +280,7 @@
   }
 
   .scheduleSection {
-    padding: 0;
+    padding: 1rem 0;
   }
 
   .headCell {
@@ -325,19 +315,15 @@
   .slotCell {
     height: 3rem;
   }
+
   .heroInner {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     flex-direction: column;
-    align-items: center;
-    gap: 20px;
-  }
-  .scheduleSection {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    gap: 1rem;
   }
 
   .ctaRow {
-    gap: inherit;
+    gap: 0.5rem;
   }
 
   .trainingGrid {

@@ -11,6 +11,14 @@
   padding: 1.5rem 2.5rem;
 }
 
+.heroTitle {
+  margin-top: 0.7rem;
+  font-size: clamp(1.95rem, 4.6vw, 4.1rem);
+  line-height: 0.96;
+  letter-spacing: 0.01em;
+  max-width: 18ch;
+}
+
 .heroDescription {
   margin-top: 1.5rem;
   max-width: 48rem;
@@ -19,16 +27,9 @@
   color: var(--neutral-950);
 }
 
-.section {
-  width: 100%;
-  padding: 4rem 1.5rem 5rem;
-}
-
 .selectorSection {
   width: 100%;
-  border: 1px solid var(--border-soft-a90);
   background-image: url("/images/backgorund.webp");
-  box-shadow: 0 24px 60px var(--shadow-card-a08);
   padding: 1.5rem;
 }
 
@@ -53,6 +54,8 @@
 }
 
 .selectorLayout {
+  width: 100%;
+  max-width: 92rem;
   display: grid;
   gap: 2rem;
 }

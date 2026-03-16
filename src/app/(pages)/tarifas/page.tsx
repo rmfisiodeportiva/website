@@ -12,14 +12,12 @@ export default function TarifasPage() {
         <div className="electric-lines" aria-hidden="true" />
         <div className={styles.heroInner}>
           <p className="eyebrow">{tarifasHeroContent.eyebrow}</p>
-          <h1 className="hero-title">{tarifasHeroContent.title}</h1>
+          <h1 className={styles.heroTitle}>{tarifasHeroContent.title}</h1>
           <p className={styles.heroDescription}>{tarifasHeroContent.description}</p>
         </div>
       </section>
 
-      <section className={styles.section}>
-        <PricingSelector />
-      </section>
+      <PricingSelector />
     </main>
   );
 }

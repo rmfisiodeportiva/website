@@ -58,7 +58,7 @@
     background: transparent;
     text-align: left;
     font-family: var(--font-display), sans-serif;
-    font-size: clamp(2.05rem, 6vw, 4rem);
+    font-size: clamp(1.9rem, 10vw, 3rem);
     line-height: 0.93;
     letter-spacing: 0.01em;
     text-transform: uppercase;
@@ -143,8 +143,8 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 920px) {
     .serviceTrigger {
-        font-size: clamp(1.9rem, 10vw, 3rem);
+        font-size: clamp(2.05rem, 6vw, 4rem);
     }
 }

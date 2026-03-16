@@ -43,7 +43,7 @@
     position: relative;
     display: inline-block;
     font-family: var(--font-display), sans-serif;
-    font-size: clamp(1.35rem, 3.6vw, 2.35rem);
+    font-size: clamp(1.15rem, 7vw, 1.85rem);
     line-height: 0.9;
     letter-spacing: 0.01em;
     text-transform: uppercase;
@@ -133,11 +133,5 @@
     .serviceLink:hover .serviceIcon,
     .serviceLink:focus-visible .serviceIcon {
         transform: translateY(-1px) scale(1.06);
-    }
-}
-
-@media (max-width: 768px) {
-    .serviceLabel {
-        font-size: clamp(1.15rem, 7vw, 1.85rem);
     }
 }

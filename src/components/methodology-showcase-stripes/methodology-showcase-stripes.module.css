@@ -33,7 +33,7 @@
     background: transparent;
     text-align: left;
     font-family: var(--font-display), sans-serif;
-    font-size: clamp(1.35rem, 3.6vw, 2.35rem);
+    font-size: clamp(1.2rem, 7.2vw, 1.95rem);
     line-height: 0.93;
     letter-spacing: 0.01em;
     text-transform: uppercase;
@@ -131,8 +131,8 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (min-width: 920px) {
     .pointTrigger {
-        font-size: clamp(1.2rem, 7.2vw, 1.95rem);
+        font-size: clamp(1.35rem, 3.6vw, 2.35rem);
     }
 }

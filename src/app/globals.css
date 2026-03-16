@@ -85,7 +85,7 @@ body {
 .section-wrap {
     margin: 0 auto;
     width: 100%;
-    padding: 4rem 2.5rem 0;
+    padding: 2rem 2.5rem 0;
 }
 
 .section-heading {
@@ -128,6 +128,7 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    font-size: small;
     font-weight: 700;
     transition: all 220ms ease;
     min-height: 2.5rem;
@@ -248,20 +249,14 @@ body {
     color: var(--white);
 }
 
-@media (max-width: 768px) {
-    .page-flow>section+section::before {
-        top: -85px;
-        height: 105px;
-    }
-
+@media (min-width: 769px) {
     .section-wrap {
-        padding-top: 2rem;
+        padding-top: 4rem;
     }
 
     .btn-primary,
     .btn-secondary,
     .btn-ghost {
-        font-size: small;
+        font-size: 1rem;
     }
-
 }

@@ -58,7 +58,7 @@
 }
 
 .programTitle {
-  max-width: 14ch;
+  max-width: none;
   font-family: var(--font-display), sans-serif;
   font-size: clamp(1.85rem, 3.4vw, 2.45rem);
   line-height: 0.94;
@@ -70,7 +70,7 @@
 .programMetaRow {
   display: flex;
   align-items: flex-start;
-  margin-top: 1rem;
+  margin-top: 0.6rem;
 }
 
 .programCapacity {
@@ -95,7 +95,7 @@
   align-self: flex-start;
   width: fit-content;
   max-width: 100%;
-  margin-top: 0.32rem;
+  margin-top: 0.28rem;
   padding: 0.3rem 0.62rem;
   border-radius: 999px;
   background: var(--black);
@@ -109,7 +109,7 @@
 
 .programDescription {
   max-width: 70ch;
-  margin-top: 1.25rem;
+  margin-top: 0.85rem;
   line-height: 1.75;
   color: var(--neutral-950);
 }
@@ -125,24 +125,6 @@
 .programBulletItem {
   gap: 0.65rem;
   line-height: 1.45;
-}
-
-@media (max-width: 767px) {
-  .programTitle {
-    max-width: none;
-  }
-
-  .programMetaRow {
-    margin-top: 0.6rem;
-  }
-
-  .programPromoBadge {
-    margin-top: 0.28rem;
-  }
-
-  .programDescription {
-    margin-top: 0.85rem;
-  }
 }
 
 @media (min-width: 768px) {
@@ -161,6 +143,22 @@
 
   .programBulletList {
     padding: 1.1rem 1.6rem 1.3rem;
+  }
+
+  .programTitle {
+    max-width: 14ch;
+  }
+
+  .programMetaRow {
+    margin-top: 1rem;
+  }
+
+  .programPromoBadge {
+    margin-top: 0.32rem;
+  }
+
+  .programDescription {
+    margin-top: 1.25rem;
   }
 }
 

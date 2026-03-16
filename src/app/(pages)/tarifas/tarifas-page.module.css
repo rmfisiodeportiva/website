@@ -8,7 +8,7 @@
 
 .heroInner {
   width: 100%;
-  padding: 1.5rem 2.5rem;
+  padding: 1.5rem 1.5rem 0;
 }
 
 .heroTitle {
@@ -30,7 +30,7 @@
 .selectorSection {
   width: 100%;
   background-image: url("/images/backgorund.webp");
-  padding: 1.5rem;
+  padding: 1.15rem 0.95rem;
 }
 
 .selectorHeader {
@@ -130,9 +130,9 @@
 .tableHead,
 .tableRowMain {
   display: grid;
-  grid-template-columns: minmax(120px, 1fr) auto;
-  gap: 1.25rem;
-  padding: 1.2rem 1.35rem;
+  grid-template-columns: 1fr;
+  gap: 0.7rem;
+  padding: 1rem 0.95rem;
 }
 
 .tableHead {
@@ -147,6 +147,7 @@
 .tableHead span:last-child {
   justify-self: end;
   text-align: right;
+  display: none;
 }
 
 .tableRow {
@@ -169,7 +170,7 @@
 }
 
 .sessionLabel {
-  font-size: clamp(1.35rem, 2vw, 1.9rem);
+  font-size: 1.45rem;
   font-family: var(--font-display), sans-serif;
   line-height: 1;
   font-weight: 900;
@@ -196,15 +197,15 @@
 .note {
   grid-column: 1 / -1;
   width: 100%;
-  padding: 0 1.35rem 1.2rem;
-  font-size: clamp(1rem, 1.05vw, 1.15rem);
+  padding: 0 0.95rem 1rem;
+  font-size: 0.98rem;
   line-height: 1.55;
   color: var(--neutral-950);
   opacity: 0.88;
 }
 
 .price {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 .tableHeadTraining,
@@ -248,13 +249,14 @@
 }
 
 .trainingCard {
+  padding: 1rem 0.95rem;
   border: 1px solid var(--border-soft-a90);
   background: linear-gradient(180deg, var(--white-a95), var(--white));
   box-shadow: 0 16px 30px var(--shadow-main-a05);
 }
 
 .trainingCardTitle {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   line-height: 1.1;
   font-family: var(--font-display), sans-serif;
   color: #0f172a;
@@ -278,11 +280,11 @@
 .personalCombinedHeader {
   margin-top: 1rem;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.75rem;
-  padding: 1rem;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
   border-bottom: 1px solid #d8e5f2;
-  font-size: 0.76rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -297,10 +299,10 @@
 
 .personalCombinedRow {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.75rem;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 0.5rem;
   align-items: start;
-  padding: 1rem;
+  padding: 0.85rem 1rem;
   border-top: 1px solid #e3ecf5;
 }
 
@@ -345,9 +347,9 @@
 
 .trainingCardRowMain {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: 1fr;
   align-items: start;
-  gap: 0.75rem;
+  gap: 0.45rem;
 }
 
 .trainingCard:not(.personalCombinedCard) .trainingCardRow {
@@ -416,9 +418,51 @@
   gap: 0.5rem;
 }
 
+.personalCombinedRow .trainingPrice {
+  text-align: right;
+  font-size: 1.55rem;
+}
+
+.personalCombinedValidity {
+  font-size: 0.84rem;
+}
+
+.trainingPriceWrap {
+  justify-items: start;
+  text-align: left;
+}
+
+.trainingPrice {
+  font-size: 1.45rem;
+}
+
 @media (min-width: 768px) {
   .selectorSection {
     padding: 2.35rem;
+  }
+
+  .tableHead,
+  .tableRowMain {
+    grid-template-columns: minmax(120px, 1fr) auto;
+    gap: 1.25rem;
+    padding: 1.2rem 1.35rem;
+  }
+
+  .tableHead span:last-child {
+    display: block;
+  }
+
+  .sessionLabel {
+    font-size: clamp(1.35rem, 2vw, 1.9rem);
+  }
+
+  .price {
+    font-size: 2rem;
+  }
+
+  .note {
+    padding: 0 1.35rem 1.2rem;
+    font-size: clamp(1rem, 1.05vw, 1.15rem);
   }
 
   .ctaButton {
@@ -427,6 +471,49 @@
 
   .trainingCardsGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .trainingCard {
+    padding: 0;
+  }
+
+  .trainingCardTitle {
+    font-size: 1.3rem;
+  }
+
+  .trainingCardRowMain {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.75rem;
+  }
+
+  .personalCombinedHeader {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    padding: 1rem;
+    font-size: 0.76rem;
+  }
+
+  .personalCombinedRow {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .personalCombinedRow .trainingPrice {
+    font-size: inherit;
+  }
+
+  .personalCombinedValidity {
+    font-size: 0.86rem;
+  }
+
+  .trainingPriceWrap {
+    justify-items: end;
+    text-align: right;
+  }
+
+  .trainingPrice {
+    font-size: clamp(1.45rem, 2.1vw, 2rem);
   }
 }
 
@@ -452,95 +539,5 @@
   .trainingCardsGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.3rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .selectorSection {
-    padding: 1.15rem 0.95rem;
-  }
-
-  .selectorDescription {
-    font-size: 1rem;
-  }
-
-  .tableHead,
-  .tableRowMain {
-    grid-template-columns: 1fr;
-    gap: 0.7rem;
-    padding: 1rem 0.95rem;
-  }
-
-  .tableHead span:last-child {
-    display: none;
-  }
-
-  .tableRow {
-    min-height: 0;
-  }
-
-  .sessionLabel {
-    font-size: 1.45rem;
-  }
-
-  .price {
-    font-size: 1.7rem;
-  }
-
-  .note {
-    padding: 0 0.95rem 1rem;
-    font-size: 0.98rem;
-  }
-
-  .trainingCard {
-    padding: 1rem 0.95rem;
-  }
-
-  .trainingCardTitle {
-    font-size: 1.2rem;
-    background: linear-gradient(#f8fafc, #f3f7fc);
-  }
-
-  .trainingCardRowMain {
-    grid-template-columns: 1fr;
-    gap: 0.45rem;
-  }
-
-  .personalCombinedHeader {
-    grid-template-columns: 1.4fr 1fr 1fr;
-    gap: 0.5rem;
-    font-size: 0.72rem;
-    padding: 0.75rem 1rem;
-  }
-
-  .personalCombinedRow {
-    grid-template-columns: 1.4fr 1fr 1fr;
-    gap: 0.5rem;
-    padding: 0.85rem 1rem;
-  }
-
-  .personalCombinedRow .trainingPrice {
-    text-align: right;
-    font-size: 1.55rem;
-  }
-
-  .personalCombinedValidity {
-    grid-column: 1 / 2;
-    grid-row: 2;
-    font-size: 0.84rem;
-  }
-
-  .personalPriceWithValidity {
-    grid-row: 1 / span 2;
-    align-self: center;
-  }
-
-  .trainingPriceWrap {
-    justify-items: start;
-    text-align: left;
-  }
-
-  .trainingPrice {
-    font-size: 1.45rem;
   }
 }

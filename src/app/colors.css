@@ -64,9 +64,14 @@
   --training-personal-bg: #2563eb;
   --training-online-bg: #7c3aed; */
 
-  /* Training type colors - Opción 4: azul + verde energía */
-  --training-group-bg: #1fb5f5;
-  --training-performance-bg: #199b49;
-  --training-personal-bg: #2563eb;
-  --training-online-bg: #6366f1;
+  /* Training type colors */
+  --training-group-surface: #edf7fb;
+  --training-performance-surface: #eef3f7;
+  --training-personal-surface: #eef4ff;
+  --training-online-surface: #f1f4f8;
+
+  --training-group-bg: #d9edf7;
+  --training-performance-bg: #dde6ee;
+  --training-personal-bg: #dbe7fd;
+  --training-online-bg: #e4e9f1;
 }

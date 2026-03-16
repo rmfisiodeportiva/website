@@ -12,7 +12,7 @@ export type TrainingType = (typeof TRAINING_TYPE)[keyof typeof TRAINING_TYPE];
 export const TRAINING_TYPE_LABEL: Record<TrainingType, string> = {
   [TRAINING_TYPE.GROUP]: "Grupo reducido",
   [TRAINING_TYPE.PERFORMANCE]: "Grupo rendimiento",
-  [TRAINING_TYPE.PERSONAL]: "Entrenamiento personal",
+  [TRAINING_TYPE.PERSONAL]: "Personal",
   [TRAINING_TYPE.ONLINE]: "Online",
 };
 

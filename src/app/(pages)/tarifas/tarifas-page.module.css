@@ -8,7 +8,7 @@
 
 .heroInner {
   width: 100%;
-  padding: 3.5rem 1.5rem 0;
+  padding: 1.5rem 2.5rem;
 }
 
 .heroDescription {
@@ -28,7 +28,8 @@
   width: 100%;
   border: 1px solid var(--border-soft-a90);
   background-image: url("/images/backgorund.webp");
-  padding: 1.75rem;
+  box-shadow: 0 24px 60px var(--shadow-card-a08);
+  padding: 1.5rem;
 }
 
 .selectorHeader {
@@ -53,12 +54,12 @@
 
 .selectorLayout {
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
 }
 
 .selectorList {
   display: grid;
-  gap: 1rem;
+  gap: 0.85rem;
 }
 
 .selectorTrigger {
@@ -109,36 +110,55 @@
 }
 
 .selectorDescription {
-  max-width: 44rem;
-  font-size: clamp(1rem, 1.2vw, 1.25rem);
-  line-height: 1.55;
+  max-width: 46rem;
+  font-size: clamp(1rem, 1.15vw, 1.2rem);
+  line-height: 1.6;
   color: var(--secondary-500);
 }
 
 .tableWrap {
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
   overflow: auto;
+  border: 1px solid var(--border-soft-a90);
   background: var(--white-a95);
+  box-shadow: 0 16px 34px var(--shadow-main-a05);
 }
 
 .tableHead,
-.tableRow {
+.tableRowMain {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 1rem;
-  padding: 0.75rem 1rem;
+  grid-template-columns: minmax(120px, 1fr) auto;
+  gap: 1.25rem;
+  padding: 1.2rem 1.35rem;
 }
 
 .tableHead {
-  background: #f8fafc;
-  font-size: 0.875rem;
-  font-weight: 600;
+  background: linear-gradient(180deg, #f8fafc, #f3f7fc);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: #0f172a;
 }
 
+.tableHead span:last-child {
+  justify-self: end;
+  text-align: right;
+}
+
 .tableRow {
-  border-bottom: 1px solid #e2e8f0;
-  font-size: 0.875rem;
+  border-bottom: 1px solid #dbe5f0;
+  font-size: 1rem;
+  min-height: 0;
+}
+
+.tableRowMain {
+  align-items: start;
+  min-height: 0;
+}
+
+.tableRowWithNote .tableRowMain {
+  padding-bottom: 0.45rem;
 }
 
 .tableRow:last-child {
@@ -146,19 +166,42 @@
 }
 
 .sessionLabel {
-  font-weight: 600;
+  font-size: clamp(1.35rem, 2vw, 1.9rem);
+  font-family: var(--font-display), sans-serif;
+  line-height: 1;
+  font-weight: 900;
   color: #0f172a;
+  margin-top: 0.2rem;
+}
+
+.priceBlock {
+  display: grid;
+  gap: 0.65rem;
+  justify-items: end;
+  text-align: right;
 }
 
 .price,
 .trainingPrice {
-  font-weight: 600;
+  font-weight: 900;
   color: var(--primary);
+  font-family: var(--font-display), sans-serif;
+  line-height: 0.95;
+  letter-spacing: 0.01em;
 }
 
 .note {
-  margin-top: 0.25rem;
+  grid-column: 1 / -1;
+  width: 100%;
+  padding: 0 1.35rem 1.2rem;
+  font-size: clamp(1rem, 1.05vw, 1.15rem);
+  line-height: 1.55;
   color: var(--neutral-950);
+  opacity: 0.88;
+}
+
+.price {
+  font-size: 2rem;
 }
 
 .tableHeadTraining,
@@ -196,58 +239,154 @@
 }
 
 .trainingCardsGrid {
-  margin-top: 1.25rem;
+  margin-top: 1.5rem;
   display: grid;
-  gap: 0.9rem;
+  gap: 1.15rem;
 }
 
 .trainingCard {
-  background: var(--white-a95);
-  padding: 0.9rem;
+  border: 1px solid var(--border-soft-a90);
+  background: linear-gradient(180deg, var(--white-a95), var(--white));
+  box-shadow: 0 16px 30px var(--shadow-main-a05);
 }
 
 .trainingCardTitle {
-  font-size: 0.95rem;
-  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.1;
+  font-family: var(--font-display), sans-serif;
   color: #0f172a;
+  font-weight: 600;
+  text-align: center;
+  background: linear-gradient(#f8fafc, #f3f7fc);
+  padding: 1rem;
+  margin-bottom: 10px;
+}
+
+.personalCombinedCard {
+  grid-column: 1 / -1;
+}
+
+.personalCombinedSubtitle {
+  margin-top: 0.35rem;
+  font-size: 0.98rem;
+  color: var(--secondary-500);
+}
+
+.personalCombinedHeader {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  padding: 1rem;
+  border-bottom: 1px solid #d8e5f2;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--secondary-700);
+  text-align: left;
+}
+
+.personalCombinedHeader span:nth-child(2),
+.personalCombinedHeader span:nth-child(3) {
+  text-align: right;
+}
+
+.personalCombinedRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  align-items: start;
+  padding: 1rem;
+  border-top: 1px solid #e3ecf5;
+}
+
+.personalCombinedRow:first-child {
+  border-top: 0;
+}
+
+.personalCombinedRow .trainingPrice {
+  text-align: right;
+}
+
+.personalCombinedValidity {
+  grid-column: 1 / 2;
+  grid-row: 2;
+  font-size: 0.86rem;
+  color: var(--secondary-500);
+  opacity: 0.9;
+  text-align: left;
+}
+
+.personalPriceWithValidity {
+  grid-row: 1 / span 2;
+  align-self: center;
 }
 
 .trainingCardList {
-  margin-top: 0.65rem;
   display: grid;
-  gap: 0.5rem;
+  gap: 0.75rem;
 }
 
 .trainingCardRow {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 0.65rem;
+  display: grid;
+  gap: 0.35rem;
+  padding: 0.4rem 0;
+  border-top: 1px solid #e3ecf5;
+}
+
+.trainingCardRow:first-child {
+  border-top: 0;
+  padding-top: 0;
+}
+
+.trainingCardRowMain {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 0.75rem;
+}
+
+.trainingCard:not(.personalCombinedCard) .trainingCardRow {
+  padding: 0.5rem 2rem;
+}
+
+.trainingCard:not(.personalCombinedCard) .trainingCardRowMain {
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
 }
 
 .trainingPlan {
-  font-size: 0.86rem;
-  font-weight: 500;
+  font-size: clamp(1rem, 1.1vw, 1.25rem);
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--secondary-700);
 }
 
 .trainingPriceWrap {
+  display: grid;
+  justify-items: end;
+  gap: 0.25rem;
   text-align: right;
 }
 
 .trainingPrice {
-  font-size: 0.86rem;
-  font-weight: 700;
+  font-size: clamp(1.45rem, 2.1vw, 2rem);
+  line-height: 0.95;
 }
 
 .trainingValidity {
   display: block;
-  font-size: 0.74rem;
+  width: 100%;
+  margin-top: 0.15rem;
+  font-size: 0.86rem;
+  line-height: 1.35;
   color: var(--secondary-500);
+  opacity: 0.9;
 }
 
 .readaptationInline {
   margin-top: 1.25rem;
-  border-radius: 0.75rem;
   border: 1px solid var(--accent-a20);
   background: var(--accent-a05);
   padding: 1rem;
@@ -266,7 +405,7 @@
 }
 
 .selectorCtaWrap {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 .ctaButton {
@@ -276,7 +415,7 @@
 
 @media (min-width: 768px) {
   .selectorSection {
-    padding: 2rem;
+    padding: 2.35rem;
   }
 
   .ctaButton {
@@ -290,7 +429,7 @@
 
 @media (min-width: 1024px) {
   .heroInner {
-    padding: 6rem 2.5rem 0;
+    padding: 1.5rem 2.5rem;
   }
 
   .section {
@@ -299,7 +438,7 @@
 
   .selectorLayout {
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 2rem;
+    gap: 2.6rem;
     align-items: start;
   }
 
@@ -309,5 +448,91 @@
 
   .trainingCardsGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .selectorSection {
+    padding: 1.15rem 0.95rem;
+  }
+
+  .selectorDescription {
+    font-size: 1rem;
+  }
+
+  .tableHead,
+  .tableRowMain {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+    padding: 1rem 0.95rem;
+  }
+
+  .tableHead span:last-child {
+    display: none;
+  }
+
+  .tableRow {
+    min-height: 0;
+  }
+
+  .sessionLabel {
+    font-size: 1.45rem;
+  }
+
+  .price {
+    font-size: 2rem;
+  }
+
+  .note {
+    padding: 0 0.95rem 1rem;
+    font-size: 0.98rem;
+  }
+
+  .trainingCard {
+    padding: 1rem 0.95rem;
+  }
+
+  .trainingCardTitle {
+    font-size: 1.2rem;
+    background: linear-gradient(#f8fafc, #f3f7fc);
+  }
+
+  .trainingCardRowMain {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+
+  .personalCombinedHeader,
+  .personalCombinedRow {
+    grid-template-columns: 1fr;
+    gap: 0.45rem;
+  }
+
+  .personalCombinedHeader {
+    font-size: 0.72rem;
+  }
+
+  .personalCombinedRow .trainingPrice {
+    text-align: left;
+  }
+
+  .personalCombinedValidity {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+
+  .personalPriceWithValidity {
+    grid-row: auto;
+    align-self: start;
+  }
+
+  .trainingPriceWrap {
+    justify-items: start;
+    text-align: left;
+  }
+
+  .trainingPrice {
+    font-size: 1.7rem;
   }
 }

@@ -8,7 +8,7 @@
 
 .heroInner {
   width: 100%;
-  padding: 1.5rem 1.5rem 0;
+  padding: 1.25rem 1.5rem 0;
 }
 
 .heroTitle {
@@ -30,7 +30,8 @@
 .selectorSection {
   width: 100%;
   background-image: url("/images/backgorund.webp");
-  padding: 1.15rem 0.95rem;
+  padding: 2rem 1.5rem;
+  margin-top: 1rem;
 }
 
 .selectorHeader {
@@ -437,9 +438,6 @@
 }
 
 @media (min-width: 768px) {
-  .selectorSection {
-    padding: 2.35rem;
-  }
 
   .tableHead,
   .tableRowMain {
@@ -519,11 +517,16 @@
 
 @media (min-width: 1024px) {
   .heroInner {
-    padding: 1.5rem 2.5rem;
+    padding: 1.2rem 2.5rem 0;
   }
 
   .section {
     padding: 4rem 2.5rem 5rem;
+  }
+
+  .selectorSection {
+    padding: 2rem 2.5rem;
+    margin-top: 1.5rem;
   }
 
   .selectorLayout {

@@ -13,12 +13,12 @@ export default function AvisoLegalPage() {
       <section className={styles.heroSection}>
         <div className={styles.heroInner}>
           <p className="eyebrow">Información legal</p>
+          <h1 className={styles.heroTitle}>Aviso Legal</h1>
         </div>
       </section>
 
       <section className={styles.section}>
         <article className={styles.card}>
-          <h1 className="hero-title">Aviso Legal</h1>
           <h2 className={styles.sectionTitle}>1. Datos Identificativos del Titular de la Web</h2>
           <p>
             En cumplimiento del deber de información establecido en la Ley

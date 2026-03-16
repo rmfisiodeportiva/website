@@ -13,12 +13,12 @@ export default function PoliticaPrivacidadPage() {
       <section className={styles.heroSection}>
         <div className={styles.heroInner}>
           <p className="eyebrow">Protección de datos</p>
+          <h1 className={styles.heroTitle}>Política de Privacidad</h1>
         </div>
       </section>
 
       <section className={styles.section}>
         <article className={styles.card}>
-          <h1 className="hero-title">Política de Privacidad</h1>
           <h2 className={styles.sectionTitle}>1. Responsable del Tratamiento de sus Datos</h2>
           <div className={styles.highlightBlock}>
             <p>

@@ -22,13 +22,13 @@ export default function ServiciosPage() {
             {serviciosHeroContent.description}
           </p>
           <div className={styles.serviceJumpRow}>
-            <Link href="/servicios/fisioterapia" className={styles.serviceJumpLink}>
+            <Link href="/servicios/fisioterapia" className="btn-ghost">
               Fisioterapia
             </Link>
-            <Link href="/servicios/entrenamiento" className={styles.serviceJumpLink}>
+            <Link href="/servicios/entrenamiento" className="btn-ghost">
               Entrenamiento
             </Link>
-            <Link href="/servicios/readaptacion" className={styles.serviceJumpLink}>
+            <Link href="/servicios/readaptacion" className="btn-ghost">
               Readaptación
             </Link>
           </div>

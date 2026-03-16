@@ -93,9 +93,11 @@
 
 @media (min-width: 768px) {
   .editorialGrid {
-    grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+    max-width: 72rem;
+    grid-template-columns: minmax(0, 38rem) minmax(18rem, 22rem);
+    justify-content: space-between;
     align-items: start;
-    gap: 2rem;
+    gap: 2.5rem;
     margin-top: 1.7rem;
   }
 

@@ -80,6 +80,11 @@
     width: 100%;
 }
 
+.serviceTrigger:hover,
+.serviceTrigger:focus-visible {
+    color: var(--black);
+}
+
 .contentWrap {
     display: grid;
     grid-template-rows: 0fr;
